@@ -121,8 +121,12 @@ details p{margin:0 0 16px;color:var(--muted)}
 .contact h2{font-size:clamp(28px,4vw,42px);font-weight:800}
 .contact p{color:color-mix(in srgb,var(--bg) 70%,transparent);margin:12px 0 0}
 .c-list{display:grid;gap:10px}
-.c-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--bg) 10%,transparent)}
-.c-item b{font-variant-numeric:tabular-nums;user-select:all}
+.c-item{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"l b" "v v";align-items:center;gap:4px 10px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--bg) 10%,transparent)}
+.c-item>span{grid-area:l;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.c-item>a{grid-area:v;font-size:clamp(14px,4vw,17px)}
+.c-item>button{grid-area:b}
+.c-item b,.c-item a{font-weight:700;font-variant-numeric:tabular-nums;user-select:all;min-width:0;overflow-wrap:anywhere;text-decoration:none;color:inherit}
+.c-item a:hover{text-decoration:underline}
 .c-item button{font:inherit;font-size:13px;font-weight:700;border:0;border-radius:999px;padding:6px 12px;background:var(--bg);color:var(--ink);cursor:pointer}
 footer{padding-block:30px 40px;color:var(--muted);font-size:13px}
 @media (max-width:900px){.hero{grid-template-columns:1fr}.fan{height:430px;max-width:600px;width:100%;justify-self:center}.fan .phone{width:160px}.styles{grid-template-columns:1fr}.feats{grid-template-columns:repeat(2,minmax(0,1fr))}.peek{grid-template-columns:repeat(2,minmax(0,1fr))}.tent-row,.contact{grid-template-columns:1fr}}
@@ -145,7 +149,7 @@ footer{padding-block:30px 40px;color:var(--muted);font-size:13px}
    <p class="lead" data-t="h_lead">Müşteriniz QR kodu okutur, menüyü kendi dilinde görür ve siparişini WhatsApp'tan doğrudan size gönderir. Uygulama indirmek gerekmez.</p>
    <div class="ctas">
     <a class="btn solid" href="#tasarimlar"><span data-t="h_cta1">6 tasarımı inceleyin</span></a>
-    <a class="btn" href="#iletisim"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="h_cta2">Bize yazın</span></a>
+    <a class="btn" href="https://wa.me/905367819837?text=Merhaba%2C%20QR%20men%C3%BC%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="h_cta2">Bize yazın</span></a>
    </div>
    <div class="proof">
     <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span data-t="p1">Türkçe · English · العربية</span></span>
@@ -289,9 +293,9 @@ footer{padding-block:30px 40px;color:var(--muted);font-size:13px}
   <div class="contact">
    <div><h2 data-t="ct_title">Menünüzü dijitale taşıyalım.</h2><p data-t="ct_lead">Örneklerden birini seçin, menünüzü gönderin. Sizin işletmenizle hazırlanmış bir önizlemeyi ücretsiz gösterelim.</p></div>
    <div class="c-list">
-    <div class="c-item"><span>WhatsApp</span><b id="cPhone">+90 5367819837</b><button data-copy="cPhone" data-t="copy">Kopyala</button></div>
-    <div class="c-item"><span>Instagram</span><b id="cEmail">mohamed.shetaa09001@gmail.com</b><button data-copy="cInsta" data-t="copy">Kopyala</button></div>
-   </div>
+    <div class="c-item"><span>WhatsApp</span><a id="cPhone" href="https://wa.me/905367819837" target="_blank" rel="noopener">+90 536 781 98 37</a><button data-copy="cPhone" data-t="copy">Kopyala</button></div>
+    <div class="c-item"><span data-t="mail">E-posta</span><a id="cEmail" href="mailto:mohamed.shetaa09001@gmail.com">mohamed.shetaa09001@gmail.com</a><button data-copy="cEmail" data-t="copy">Kopyala</button></div>
+  </div>
   </div>
  </section>
  <footer data-t="foot">Örnek menülerdeki işletme adları, adresler ve numaralar temsilidir.</footer>
@@ -306,7 +310,7 @@ c1:"Cart and WhatsApp order",c2:"Item options",c3:"Arabic, right-to-left",c4:"Vi
 st_eye:"Process",st_title:"On your tables in three steps",st1:"Send us your menu",st1p:"A photo, PDF or spreadsheet of your current menu is enough. Add product photos if you have them.",st2:"Design and translation",st2p:"Choose a style; we match the colours and logo to your brand and prepare the English and Arabic translations.",st3:"QR codes on the tables",st3p:"Table cards and stickers arrive print-ready. We update price changes for you.",
 tent:"Menu için okutun<br>Scan for menu · امسح للقائمة",tno:"TABLE 12",t_eye:"Print",t_title:"How it looks on the table",t_lead:"Codes are prepared for table cards, stickers, shop windows and takeaway flyers.",u1:"Each table gets its own number, so waiter calls reach the right table.",u2:"No reprinting when prices change; the code stays the same.",u3:"Tourists read the menu in their own language, so fewer order mistakes.",
 q_eye:"FAQ",q_title:"Questions you may have",q1:"Do guests need to install an app?",q1a:"No. Scanning the QR code with the phone camera is enough; the menu opens in the browser.",q2:"What happens when I change prices?",q2a:"Send us the new prices and the menu is updated the same day. The QR code on the table stays the same.",q3:"Can we use our own product photos?",q3a:"Yes. Your photos replace the icons in the samples; if you don't have photos, the icon version works too.",q4:"Where do the orders go?",q4a:"To your business WhatsApp number, as a ready message with items, options, table number and total.",
-ct_title:"Let's take your menu digital.",ct_lead:"Pick one of the samples and send us your menu. We'll show you a free preview made with your own business.",copy:"Copy",foot:"Business names, addresses and numbers in the sample menus are for demonstration."};
+ct_title:"Let's take your menu digital.",ct_lead:"Pick one of the samples and send us your menu. We'll show you a free preview made with your own business.",copy:"Copy",mail:"Email",foot:"Business names, addresses and numbers in the sample menus are for demonstration."};
 const TR={};document.querySelectorAll("[data-t]").forEach(e=>{TR[e.dataset.t]=e.innerHTML});
 function set(l){const d=l==="en"?EN:TR;document.documentElement.lang=l;document.querySelectorAll("[data-t]").forEach(e=>{const v=d[e.dataset.t];if(v!=null)e.innerHTML=v});document.querySelectorAll(".lng button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));try{localStorage.setItem("qrmenu-lang",l)}catch(e){}}
 document.querySelector(".lng").addEventListener("click",e=>{const b=e.target.closest("button");if(b)set(b.dataset.l)});
