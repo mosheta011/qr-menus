@@ -1,0 +1,1720 @@
+<!doctype html>
+<html lang="tr" dir="ltr" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0b1310" id="metaTheme">
+<meta name="description" content="Maison Noor · Kahve, pastane ve yüksek çay salonu · Örnek dijital menü">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Maison Noor · Menü">
+<meta property="og:description" content="Maison Noor · Kahve, pastane ve yüksek çay salonu · Örnek dijital menü">
+<meta property="og:url" content="https://mosheta011.github.io/qr-menus/noor/">
+<meta property="og:image" content="https://mosheta011.github.io/qr-menus/assets/noor.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<title>Maison Noor · Menü</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1310'/%3E%3Cpath d='M8 27V15C8 9 12 5 16 3c4 2 8 6 8 12v12' fill='none' stroke='%23d8bb82' stroke-width='1.8'/%3E%3Cpath d='M12.5 22V13l7 9v-9' fill='none' stroke='%23d8bb82' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Maison Noor">
+<script>try{var __t=JSON.parse(localStorage.getItem("maison-noor:theme")||"null");if(__t==="day"||__t==="night"){document.documentElement.setAttribute("data-theme",__t)}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Manrope:wght@400..800&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+/* ===== Maison Noor — luxury café ===== */
+:root{
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,"Times New Roman",serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --ar-display:"Amiri","Noto Naskh Arabic","Traditional Arabic",serif;
+  --ar-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  --pattern:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%3E%3Cpath%20d='M14%200L28%2014L14%2028L0%2014Z'%20fill='none'%20stroke='%23b89650'%20stroke-width='.7'/%3E%3Ccircle%20cx='14'%20cy='14'%20r='1.1'%20fill='%23b89650'/%3E%3C/svg%3E");
+  --pad:20px;
+}
+html[data-theme=night]{
+  color-scheme:dark;
+  --bg:#0b1310; --bg2:#111b17; --bg3:#182620; --sheet:#0f1914;
+  --ink:#f2ebdc; --muted:#b9b3a3; --faint:#97917f;
+  --gold:#d8bb82; --gold-hi:#f1dfb4; --gold-ink:#1b1507;
+  --line:rgba(216,187,130,.2); --line2:rgba(216,187,130,.4);
+  --glow:rgba(44,102,80,.5); --scrim:rgba(3,8,5,.7);
+  --danger:#f19b8d; --ok:#96d8ae;
+  --plate-a:30%; --plate-b:12%; --plate-ink:80%; --plate-s1:40%; --plate-s2:30%;
+}
+html[data-theme=day]{
+  color-scheme:light;
+  --bg:#f6f0e3; --bg2:#fffaf0; --bg3:#efe6d3; --sheet:#fbf6ea;
+  --ink:#1d1a14; --muted:#524c3d; --faint:#645d4b;
+  --gold:#7f5b17; --gold-hi:#664610; --gold-ink:#fff8e8;
+  --line:rgba(127,91,23,.24); --line2:rgba(127,91,23,.46);
+  --glow:rgba(216,187,130,.6); --scrim:rgba(30,24,10,.5);
+  --danger:#a63a2a; --ok:#1d6b3f;
+  --plate-a:92%; --plate-b:80%; --plate-ink:26%; --plate-s1:62%; --plate-s2:48%;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scrollbar-gutter:stable;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;min-width:320px}
+body.locked{overflow:hidden}
+html[lang=ar] body{font-family:var(--ar-body);font-size:16px;line-height:1.7}
+html[lang=ar] *{letter-spacing:0!important}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button:disabled{cursor:not-allowed}
+a{color:inherit}
+input,textarea,select{font:inherit;font-size:16px;color:var(--ink)}
+svg{display:block;flex:none}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+bdi.m{unicode-bidi:isolate;white-space:nowrap}
+.app{position:relative;overflow-x:clip}
+.app>*{padding-inline:max(var(--pad),calc((100% - 720px)/2))}
+
+/* ---------- hero ---------- */
+.hero{position:relative;isolation:isolate;text-align:center;padding-top:max(14px,env(safe-area-inset-top));padding-bottom:30px;
+  background:radial-gradient(90% 60% at 50% 0%,var(--glow),transparent 72%),var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--pattern);background-size:28px 28px;opacity:.5;
+  -webkit-mask-image:linear-gradient(#000 0,transparent 78%);mask-image:linear-gradient(#000 0,transparent 78%)}
+html[data-theme=day] .hero::before{opacity:.38}
+.util{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.util-r{display:flex;align-items:center;gap:8px}
+.lang{display:inline-flex;border-radius:999px;padding:0;height:44px;align-items:center;box-shadow:inset 0 0 0 1px var(--line2)}
+.lang button{min-width:46px;height:44px;padding:0 10px;border-radius:999px;font:600 12px var(--body);letter-spacing:.08em;color:var(--muted)}
+.lang button[aria-pressed=true]{background:var(--gold);color:var(--gold-ink)}
+.lang button[lang=ar]{font-family:var(--ar-body);font-size:13px}
+.icon-btn{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;color:var(--gold);transition:background .2s,color .2s}
+.icon-btn svg{width:20px;height:20px}
+.icon-btn:hover{background:var(--bg3)}
+.icon-btn[aria-pressed=true]{background:var(--gold);color:var(--gold-ink)}
+.chip-btn{height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line2);font:600 12px var(--body);letter-spacing:.08em;color:var(--gold);display:inline-flex;align-items:center;gap:6px}
+.chip-btn:hover{background:var(--bg3)}
+.emblem{width:92px;height:auto;margin:18px auto 6px;color:var(--gold)}
+.eyebrow{font:600 11px/1.4 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+html[lang=ar] .eyebrow{font-size:13px;text-transform:none}
+.brand{margin:8px 0 0;font-weight:400}
+.brand span{display:block}
+.brand .b1{font:500 13px/1 var(--body);letter-spacing:.7em;text-transform:uppercase;color:var(--ink);padding-inline-start:.7em}
+.brand .b2{font:italic 500 clamp(64px,22vw,96px)/.95 var(--display);color:var(--gold-hi);margin-top:6px;padding-bottom:6px}
+html[lang=ar] .brand .b1{font-family:var(--ar-display);font-size:22px;letter-spacing:0;padding:0;text-transform:none}
+html[lang=ar] .brand .b2{font-family:var(--ar-display);font-style:normal;font-weight:700;line-height:1.2}
+.tagline{font:italic 400 17px/1.45 var(--display);color:var(--muted);max-width:30ch;margin:6px auto 0}
+html[lang=ar] .tagline{font-family:var(--ar-display);font-style:normal;font-size:20px}
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 14px;color:var(--gold);max-width:260px}
+.orn::before,.orn::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--line2))}
+.orn::after{transform:scaleX(-1)}
+.orn i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 14px;font-size:13px;color:var(--muted)}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--danger)}
+.status.is-open i{background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent)}
+.status em{font-style:normal;font-weight:500;color:var(--muted)}
+.table-chip{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:7px 16px;border:1px solid var(--line2);border-radius:999px;font:600 13px var(--body);color:var(--gold-hi);background:var(--bg2)}
+.table-chip svg{width:16px;height:16px}
+.hero-cta{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{min-height:48px;padding:0 24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 12px var(--body);letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--gold);transition:background .2s,color .2s}
+html[lang=ar] .btn{font-size:15px;text-transform:none}
+.btn svg{width:18px;height:18px}
+.btn.gold{background:var(--gold);color:var(--gold-ink)}
+.btn.gold:hover{background:var(--gold-hi)}
+.btn.ghost{color:var(--gold)}
+.btn.ghost:hover{background:var(--bg3)}
+
+/* ---------- toolbar ---------- */
+.toolbar{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line);padding-top:8px;padding-bottom:0}
+.tb-row{display:flex;gap:8px;align-items:center}
+.tb-row .icon-btn{width:46px;height:46px}
+.search{flex:1;min-width:0;display:flex;align-items:center;gap:10px;height:46px;padding:0 16px;border:1px solid var(--line2);border-radius:999px;background:var(--bg2);color:var(--gold)}
+.search svg{width:18px;height:18px}
+.search input{flex:1;min-width:0;height:44px;border:0;background:none;outline:0;color:var(--ink)}
+.search input::placeholder{color:var(--faint);opacity:1}
+.search input::-webkit-search-cancel-button{-webkit-appearance:none}
+.search:focus-within{border-color:var(--gold-hi);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 25%,transparent)}
+.badge{position:absolute;top:-4px;inset-inline-end:-4px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--gold);color:var(--gold-ink);font:700 11px/20px var(--body);text-align:center;border:2px solid var(--bg)}
+.cats{display:flex;gap:26px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad)}
+.cats::-webkit-scrollbar{display:none}
+.cats button{position:relative;flex:none;padding:17px 2px 16px;font:700 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap;transition:color .2s}
+html[lang=ar] .cats button{font-size:15px;text-transform:none}
+.cats button::after{content:"";position:absolute;inset-inline:0;bottom:6px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .25s}
+.cats button.on{color:var(--gold-hi)}
+.cats button.on::after{transform:scaleX(1)}
+
+/* ---------- menu ---------- */
+main{padding-top:28px;padding-bottom:150px;min-height:60vh}
+.sec-title{font:italic 500 30px/1.15 var(--display);color:var(--ink)}
+html[lang=ar] .sec-title{font-family:var(--ar-display);font-style:normal;font-weight:700;font-size:32px}
+.sec-title.sm{font-size:24px}
+.pick{position:relative;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;padding:20px;border:1px solid var(--line2);border-radius:22px;background:linear-gradient(135deg,var(--bg3),var(--bg2));cursor:pointer;margin-bottom:34px;overflow:hidden}
+.pick::after{content:"";position:absolute;inset:6px;border:1px solid var(--line);border-radius:17px;pointer-events:none}
+.pick .plate{width:96px;height:96px}
+.pick h2{font:500 24px/1.15 var(--display);margin:6px 0 4px}
+.pick .name-btn{font:inherit}
+html[lang=ar] .pick h2{font-family:var(--ar-display);font-weight:700;font-size:26px}
+.pick p{font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pick-foot{display:flex;align-items:center;gap:14px;margin-top:12px}
+.sigs{margin-bottom:34px}
+.sig-row{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--pad) * -1);padding:14px var(--pad) 6px}
+.sig-row::-webkit-scrollbar{display:none}
+.sig{flex:none;width:148px;text-align:center;padding:16px 10px 14px;border:1px solid var(--line);border-radius:18px;background:var(--bg2);display:flex;flex-direction:column;align-items:center;gap:8px;color:inherit}
+.sig .plate{width:72px;height:72px}
+.sig b{font:500 16px/1.2 var(--display);display:block}
+html[lang=ar] .sig b{font-family:var(--ar-display);font-size:18px;font-weight:700}
+.sig .price{font-size:14px}
+.sig.off b,.sig.off .price{color:var(--muted)}
+.sig.off .plate{filter:saturate(.4)}
+
+.afbar{margin-bottom:22px}
+.af-chips{display:flex;flex-wrap:wrap;gap:8px}
+.af-chip{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 6px 0 14px;border:1px solid var(--line2);border-radius:999px;font:600 13px var(--body);color:var(--gold-hi);background:var(--bg2)}
+.af-chip svg{width:16px;height:16px}
+.af-chip span{display:grid;place-items:center;width:24px;height:24px}
+.af-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:13px;color:var(--muted)}
+.link{color:var(--gold-hi);font-weight:700;text-decoration:underline;text-underline-offset:3px;min-height:36px}
+
+.cat{margin-bottom:46px;scroll-margin-top:calc(var(--tb,110px) + 6px)}
+.cat-head{text-align:center;margin-bottom:10px}
+.cat-ornament{color:var(--gold);display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:10px}
+.cat-ornament::before,.cat-ornament::after{content:"";width:44px;height:1px;background:var(--line2)}
+.cat-ornament i{width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+.cat-note{margin-top:8px;font:italic 400 15px/1.5 var(--display);color:var(--muted);max-width:36ch;margin-inline:auto}
+html[lang=ar] .cat-note{font-family:var(--ar-display);font-style:normal;font-size:18px}
+.serve{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:5px 14px;border-radius:999px;font:700 11px/1.4 var(--body);letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line2);color:var(--gold-hi)}
+html[lang=ar] .serve{font-size:13px;text-transform:none}
+.serve i{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.serve.off{color:var(--muted)}
+.serve.off i{background:var(--faint)}
+.list{display:block}
+.item{position:relative;display:grid;gap:5px;padding:20px 0 12px;border-bottom:1px solid var(--line);cursor:pointer}
+.item:last-child{border-bottom:0}
+.i-head{display:flex;align-items:baseline;gap:10px}
+.name{font:500 21px/1.22 var(--display);min-width:0;overflow-wrap:anywhere}
+html[lang=ar] .name{font-family:var(--ar-display);font-weight:700;font-size:23px}
+.name-btn{display:block;font:inherit;color:inherit;text-align:start;letter-spacing:inherit;cursor:pointer;padding-block:10px;margin-block:-10px}
+.name-btn:focus-visible{outline-offset:4px}
+.leader{flex:1;min-width:14px;border-bottom:1px dotted var(--line2);transform:translateY(-4px)}
+.price{font:600 15px var(--body);color:var(--gold-hi);font-variant-numeric:tabular-nums;white-space:nowrap}
+.i-notes{font:italic 400 14.5px/1.4 var(--display);color:var(--gold)}
+html[lang=ar] .i-notes{font-family:var(--ar-display);font-style:normal;font-size:17px}
+.i-desc{font-size:14px;color:var(--muted)}
+.i-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;margin-top:2px}
+.badges{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-width:0}
+.lab{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px;border-radius:999px;font:700 10px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line2);color:var(--gold-hi)}
+html[lang=ar] .lab{font-size:12px;text-transform:none}
+.lab svg{width:12px;height:12px}
+.lab.sig-l{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.lab.new-l{border-style:dashed}
+.dot-badge{display:grid;place-items:center;min-width:24px;height:24px;padding:0 4px;border-radius:50%;border:1px solid var(--line2);font:700 9.5px/1 var(--body);letter-spacing:.02em;color:var(--muted)}
+.av{font-size:12px;color:var(--muted);font-weight:600}
+.item.off .name-btn{color:var(--muted)}
+.item.off .i-notes,.item.off .i-desc{color:var(--faint)}
+.item.off .price{color:var(--muted)}
+.acts{display:flex;gap:4px;flex:none}
+.heart{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--muted)}
+.heart svg{width:22px;height:22px;transition:transform .2s}
+.heart[aria-pressed=true]{color:var(--gold-hi)}
+.heart[aria-pressed=true] svg{fill:currentColor}
+.heart:active svg{transform:scale(.85)}
+.icon-btn[data-fav][aria-pressed=true] svg{fill:currentColor}
+.add{width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);transition:background .2s,color .2s}
+.add svg{width:20px;height:20px}
+.add:hover,.add:active{background:var(--gold);color:var(--gold-ink)}
+.add:disabled{opacity:.35;pointer-events:none}
+.none{text-align:center;color:var(--muted);padding:60px 0;font:italic 400 18px/1.5 var(--display)}
+html[lang=ar] .none{font-family:var(--ar-display);font-style:normal;font-size:20px}
+
+.foot{padding-top:10px;padding-bottom:140px;text-align:center;font-size:12px;color:var(--faint);display:grid;gap:6px;border-top:1px solid var(--line)}
+.foot .demo{color:var(--gold)}
+
+/* ---------- plate (medallion) ---------- */
+.plate{--h:30;position:relative;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:radial-gradient(circle at 50% 32%,hsl(var(--h) var(--plate-s1) var(--plate-a)),hsl(var(--h) var(--plate-s2) var(--plate-b)) 78%);
+  border:1px solid var(--line2);color:hsl(var(--h) 58% var(--plate-ink));box-shadow:inset 0 0 0 4px var(--bg),inset 0 0 0 5px var(--line)}
+.plate svg{width:56%;height:56%}
+
+/* ---------- dock ---------- */
+.dock{position:fixed;inset-inline:0;bottom:0;z-index:40;display:flex;gap:10px;align-items:center;justify-content:center;padding:12px var(--pad) max(14px,env(safe-area-inset-bottom));pointer-events:none;
+  background:linear-gradient(transparent,var(--bg) 60%)}
+.dock>*{pointer-events:auto}
+.round{width:54px;height:54px;border-radius:50%;background:var(--bg2);border:1px solid var(--line2);color:var(--gold);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.28);flex:none}
+.round svg{width:22px;height:22px}
+.reserve-bar,.cartbar{height:54px;border-radius:999px;display:flex;align-items:center;gap:12px;padding:0 22px;box-shadow:0 10px 30px rgba(0,0,0,.34);max-width:520px;flex:1;min-width:0}
+.reserve-bar{justify-content:center;background:var(--bg2);border:1px solid var(--gold);color:var(--gold-hi);font:700 12px var(--body);letter-spacing:.14em;text-transform:uppercase}
+html[lang=ar] .reserve-bar{font-size:15px;text-transform:none}
+.reserve-bar svg{width:20px;height:20px}
+.cartbar{background:var(--gold);color:var(--gold-ink);font:700 14px var(--body);justify-content:space-between}
+.cartbar .cb-count{display:grid;place-items:center;min-width:28px;height:28px;border-radius:50%;background:var(--gold-ink);color:var(--gold-hi);font-size:13px}
+html[data-theme=day] .cartbar .cb-count{color:var(--gold-ink);background:var(--gold-hi)}
+.cartbar .cb-label{flex:1;text-align:start;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:.04em}
+.cartbar.bump{animation:bump .3s}
+@keyframes bump{50%{transform:scale(1.04)}}
+body.has-cart .reserve-bar{display:none}
+@media (max-width:380px){body.has-cart .round{width:48px;height:48px}.cartbar{padding:0 16px;gap:8px}}
+
+/* ---------- sheets ---------- */
+.sheet{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center}
+.sheet-bg{position:absolute;inset:0;background:var(--scrim)}
+.panel{position:relative;width:100%;max-width:580px;max-height:92vh;max-height:92dvh;display:flex;flex-direction:column;background:var(--sheet);color:var(--ink);
+  border:1px solid var(--line2);border-bottom:0;border-radius:28px 28px 0 0;overflow:hidden;outline:0;animation:rise .34s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:720px){.sheet{align-items:center}.panel{border-radius:28px;border-bottom:1px solid var(--line2);max-height:88vh;max-height:88dvh}}
+#sheetBody{display:flex;flex-direction:column;min-height:0;flex:1 1 auto}
+.sheet-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.sheet-pad{padding:22px var(--pad) 24px}
+.sheet-acts{position:absolute;top:12px;inset-inline:12px;display:flex;justify-content:space-between;z-index:3;pointer-events:none}
+.sheet-acts>*{pointer-events:auto}
+.sheet-acts .l{display:flex;gap:8px}
+.close,.sheet-acts .icon-btn{width:44px;height:44px;border-radius:50%;background:var(--bg2);border:1px solid var(--line2);display:grid;place-items:center;color:var(--gold)}
+.sheet-acts .icon-btn[aria-pressed=true]{background:var(--gold);color:var(--gold-ink)}
+.close svg{width:20px;height:20px}
+.plate-wrap{position:relative;display:grid;place-items:center;padding:64px 0 26px;background:radial-gradient(70% 90% at 50% 40%,var(--glow),transparent 75%)}
+.plate-wrap::before{content:"";position:absolute;inset:0;background-image:var(--pattern);background-size:28px 28px;opacity:.4;-webkit-mask-image:linear-gradient(transparent,#000 40%,transparent);mask-image:linear-gradient(transparent,#000 40%,transparent)}
+.plate-wrap .plate{width:150px;height:150px}
+.sheet-title{font:500 32px/1.12 var(--display);margin:8px 0 6px;color:var(--ink)}
+html[lang=ar] .sheet-title{font-family:var(--ar-display);font-weight:700;font-size:34px}
+.sheet-title.plain{margin-top:34px}
+.sheet-desc{color:var(--muted);font-size:15px;margin:10px 0}
+.notes{font:italic 400 17px/1.4 var(--display);color:var(--gold)}
+html[lang=ar] .notes{font-family:var(--ar-display);font-style:normal;font-size:19px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.fact{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:999px;border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--muted)}
+.fact svg{width:15px;height:15px;color:var(--gold)}
+.meters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 16px;margin:18px 0}
+.meter{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+html[lang=ar] .meter{font-size:14px;text-transform:none}
+.meter span.dots{display:inline-flex;gap:5px;padding-inline-end:2px}
+.meter i{width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--gold)}
+.meter i.on{background:var(--gold)}
+.sub{font:700 11px/1.3 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:26px 0 10px;display:flex;align-items:center;gap:8px}
+html[lang=ar] .sub{font-size:14px;text-transform:none}
+.sub svg{width:16px;height:16px}
+.story p{font-size:15px;color:var(--muted);line-height:1.7}
+.pair-row{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--pad) * -1);padding:2px var(--pad)}
+.pair-row::-webkit-scrollbar{display:none}
+.pair{flex:none;display:flex;align-items:center;gap:12px;padding:10px 16px 10px 10px;border:1px solid var(--line);border-radius:999px;background:var(--bg2);text-align:start;max-width:260px}
+html[dir=rtl] .pair{padding:10px 10px 10px 16px}
+.pair .plate{width:44px;height:44px}
+.pair b{display:block;font:500 15px/1.2 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
+html[lang=ar] .pair b{font-family:var(--ar-display);font-weight:700;font-size:17px}
+.pair small{font-size:12px;color:var(--gold-hi);font-weight:700}
+.alg{font-size:13px;color:var(--muted);margin-top:14px}
+.alg b{color:var(--ink)}
+fieldset.opt{border:0;padding:0;margin:20px 0 0;min-width:0}
+fieldset.opt legend{padding:0;margin-bottom:8px;font:700 11px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;gap:10px;align-items:baseline;width:100%}
+html[lang=ar] fieldset.opt legend{font-size:14px;text-transform:none}
+fieldset.opt legend small{font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--faint);font-weight:600}
+.choice{display:flex;align-items:center;gap:12px;min-height:48px;padding:6px 14px;border:1px solid var(--line);border-radius:14px;margin-bottom:8px;cursor:pointer;background:var(--bg2)}
+.choice:has(input:checked){border-color:var(--gold);background:var(--bg3)}
+.choice input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0;background:none}
+.choice input[type=checkbox]{border-radius:6px}
+.choice input:checked{background:var(--gold)}
+.choice input:checked::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold-ink)}
+.choice input[type=checkbox]:checked::after{border-radius:2px;width:9px;height:9px}
+.choice input:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.c-name{flex:1;font-weight:600}
+.c-price{color:var(--gold-hi);font-weight:700;font-size:14px}
+.field{display:block;margin-top:18px}
+.field>span{display:block;font:700 11px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+html[lang=ar] .field>span{font-size:14px;text-transform:none}
+.field input,.field textarea,.field select{width:100%;min-height:48px;padding:12px 16px;border:1px solid var(--line2);border-radius:14px;background:var(--bg2);outline:0;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--gold-hi);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 25%,transparent)}
+.field input::placeholder,.field textarea::placeholder{color:var(--faint);opacity:1}
+.field.invalid input{border-color:var(--danger)}
+.err{margin-top:12px;color:var(--danger);font-weight:700;font-size:14px}
+.sheet-foot{flex:none;display:flex;gap:12px;align-items:center;padding:14px var(--pad) max(16px,env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--sheet)}
+.primary{flex:1;min-height:54px;padding:0 20px;border-radius:999px;background:var(--gold);color:var(--gold-ink);font:700 13px var(--body);letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;text-align:center;transition:background .2s}
+html[lang=ar] .primary{font-size:16px;text-transform:none}
+.primary:hover{background:var(--gold-hi)}
+.primary:disabled,.primary[aria-disabled=true]{opacity:.45;pointer-events:none}
+.primary svg{width:20px;height:20px}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line2);border-radius:999px;height:54px;flex:none}
+.stepper button{width:48px;height:100%;display:grid;place-items:center;color:var(--gold)}
+.stepper button:disabled{opacity:.35}
+.stepper svg{width:18px;height:18px}
+.stepper output{min-width:26px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.stepper.sm{height:46px}
+.stepper.sm button{width:44px}
+.link-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;color:var(--gold-hi);font-weight:700;font-size:14px;text-decoration:none}
+.link-btn svg{width:18px;height:18px}
+.link-btn.danger{color:var(--danger)}
+.seg{display:flex;gap:6px;padding:4px;border:1px solid var(--line2);border-radius:999px;margin-top:18px}
+.seg button{flex:1;min-height:44px;border-radius:999px;font-weight:700;font-size:14px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 8px}
+.seg button svg{width:18px;height:18px}
+.seg button[aria-checked=true]{background:var(--gold);color:var(--gold-ink)}
+.lines{margin-top:6px}
+.cline{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.cline .plate{width:52px;height:52px}
+.cl-body{flex:1;min-width:0;display:grid;gap:2px}
+.cl-body b{font:500 17px/1.25 var(--display)}
+html[lang=ar] .cl-body b{font-family:var(--ar-display);font-weight:700;font-size:19px}
+.cl-body small{color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.cl-body .cl-price{color:var(--gold-hi);font-weight:700;font-size:14px}
+.upsell .pair{max-width:none}
+.sum{margin-top:20px;border-top:1px solid var(--line2);padding-top:14px;display:grid;gap:8px}
+.sum>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;color:var(--muted);font-size:14px}
+.sum>div.total{color:var(--ink);font:500 24px var(--display);padding-top:6px}
+html[lang=ar] .sum>div.total{font-family:var(--ar-display);font-weight:700;font-size:26px}
+.sum .approx{font-size:12px;color:var(--faint)}
+.tips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+.tips button{min-height:44px;border:1px solid var(--line2);border-radius:12px;font-weight:700;font-size:14px;color:var(--muted)}
+.tips button[aria-pressed=true]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--muted)}
+.hours li.today{color:var(--gold-hi);font-weight:700}
+.sel{user-select:all;-webkit-user-select:all}
+.fine{font-size:12.5px;color:var(--faint);margin-top:14px}
+.wifi{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:space-between;font-size:14px}
+.rows{margin-top:12px;display:grid;gap:8px}
+.rowbtn{display:flex;align-items:center;gap:14px;min-height:56px;padding:8px 16px;border:1px solid var(--line);border-radius:16px;background:var(--bg2);text-align:start;width:100%}
+.rowbtn[aria-checked=true]{border-color:var(--gold);background:var(--bg3)}
+.rowbtn b{font:700 15px var(--body)}
+.rowbtn small{color:var(--muted);font-size:12.5px;display:block}
+.rowbtn .sym{width:40px;height:40px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font:700 15px var(--body);color:var(--gold);flex:none}
+.rowbtn .tick{margin-inline-start:auto;color:var(--gold);width:22px;height:22px;opacity:0}
+.rowbtn[aria-checked=true] .tick{opacity:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border:1px solid var(--line2);border-radius:999px;font-weight:700;font-size:14px;color:var(--muted);display:inline-flex;align-items:center;gap:8px}
+.chip svg{width:16px;height:16px}
+.chip[aria-pressed=true]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.dates{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--pad) * -1);padding:2px var(--pad) 6px}
+.dates::-webkit-scrollbar{display:none}
+.date{flex:none;min-width:64px;padding:0 12px;min-height:78px;border:1px solid var(--line2);border-radius:16px;display:grid;place-items:center;align-content:center;gap:1px;color:var(--muted)}
+.date small{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.date b{font:500 24px/1.1 var(--display);color:var(--ink)}
+.date em{font-style:normal;font-size:11px}
+.date[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
+.date[aria-pressed=true] b{color:var(--gold-ink)}
+.date:disabled{opacity:.4}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot{min-height:44px;border:1px solid var(--line2);border-radius:12px;font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.slot[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--gold-ink)}
+.slot:disabled{opacity:.35}
+.hint{font-size:13px;color:var(--muted);margin-top:8px}
+.guests{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sent{text-align:center;padding:56px var(--pad) 28px}
+.sent .tickc{width:72px;height:72px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold)}
+.sent .tickc svg{width:34px;height:34px}
+.sent p{color:var(--muted);margin-top:10px}
+.empty{display:grid;place-items:center;gap:14px;padding:30px 0;color:var(--muted);text-align:center}
+.empty svg{width:44px;height:44px;color:var(--gold)}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;inset-inline:0;bottom:calc(92px + env(safe-area-inset-bottom));margin:0 auto;width:max-content;max-width:calc(100% - 40px);z-index:200;padding:11px 20px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;font-size:14px;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;text-align:center}
+.toast.show{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+@media (min-width:720px){
+  .item{padding-top:24px}
+  .name{font-size:23px}
+  .brand .b2{font-size:104px}
+  .sig{width:168px}
+}
+@media print{.dock,.toolbar,.hero-cta,.util{display:none}body{background:#fff;color:#000}}
+
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="hero" id="hero">
+    <div class="util">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+      </div>
+      <div class="util-r">
+        <button type="button" class="chip-btn" id="curBtn" aria-haspopup="dialog"><span id="curLabel">₺ TRY</span></button>
+        <button type="button" class="icon-btn" id="themeBtn"></button>
+      </div>
+    </div>
+    <svg class="emblem" viewBox="0 0 140 150" fill="none" aria-hidden="true" focusable="false">
+      <path d="M14 150V76C14 42 40 16 70 4c30 12 56 38 56 72v74" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M25 150V78C25 48 46 26 70 15c24 11 45 33 45 63v72" stroke="currentColor" stroke-width=".8" opacity=".7"/>
+      <path d="M70 -1l4.5 6.5L70 12l-4.5-6.5z" fill="currentColor"/>
+      <text x="70" y="104" text-anchor="middle" font-family="Amiri,'Noto Naskh Arabic',serif" font-size="46" fill="currentColor">نور</text>
+      <path d="M46 122h48M58 130h24" stroke="currentColor" stroke-width=".9" stroke-linecap="round"/>
+    </svg>
+    <p class="eyebrow" id="greet"></p>
+    <h1 class="brand"><span class="b1" lang="fr">Maison</span> <span class="b2">Noor</span></h1>
+    <p class="tagline" id="tagline"></p>
+    <div class="orn" aria-hidden="true"><i></i></div>
+    <div class="meta"><span class="status" id="status"></span></div>
+    <p class="table-chip" id="tableChip" hidden></p>
+    <div class="hero-cta">
+      <button type="button" class="btn gold" id="reserveBtn"></button>
+      <button type="button" class="btn ghost" id="infoBtn"></button>
+    </div>
+  </header>
+  <div class="toolbar" id="toolbar">
+    <div class="tb-row" role="search">
+      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" autocomplete="off" enterkeyhint="search"></label>
+      <button type="button" class="icon-btn" id="favBtn" aria-pressed="false"></button>
+      <button type="button" class="icon-btn" id="filterBtn" aria-haspopup="dialog"></button>
+    </div>
+    <nav class="cats" id="cats"></nav>
+  </div>
+  <main id="menu"></main>
+  <footer class="foot"><span id="vat"></span><span id="algNote"></span><span class="demo" id="demoNote"></span></footer>
+</div>
+<p class="sr-only" id="live" role="status" aria-live="polite"></p>
+<div class="dock" id="dock">
+  <button type="button" class="round" id="waiterBtn"></button>
+  <button type="button" class="reserve-bar" id="reserveBar"></button>
+  <button type="button" class="cartbar" id="cartBar" hidden></button>
+</div>
+<div class="sheet" id="sheet" hidden><div class="sheet-bg" id="sheetBg"></div><div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" tabindex="-1"><div id="sheetBody"></div></div></div>
+<div class="toast" id="toast" hidden aria-hidden="true"></div>
+<script>
+window.ICONS = (function(){
+const s = (d, vb="0 0 48 48") => `<svg viewBox="${vb}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const u = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+return {
+ /* food illustrations, 48 grid */
+ coffee: s('<path d="M10 20h24v8a10 10 0 0 1-10 10h-4a10 10 0 0 1-10-10z"/><path d="M34 22h3a4 4 0 0 1 0 8h-3.5"/><path d="M7 42h30"/><path d="M17 8c-2 2.5 2 4.5 0 7M24 6c-2 2.5 2 4.5 0 7M31 8c-2 2.5 2 4.5 0 7"/>'),
+ latte: s('<path d="M14 10h20l-3 30a3 3 0 0 1-3 2.6h-8A3 3 0 0 1 17 40z"/><path d="M15.2 20h17.6"/><path d="M20 28c2-2 6-2 8 0-2 3-6 3-8 0z"/>'),
+ tea: s('<path d="M17 9h14c0 6-4 8-4 13 0 5 5 7 5 13 0 3-3 4-8 4s-8-1-8-4c0-6 5-8 5-13 0-5-4-7-4-13z"/><path d="M16.4 27h15.2"/><ellipse cx="24" cy="42" rx="13" ry="2.5"/>'),
+ iced: s('<path d="M12 12h24l-3 30H15z"/><path d="M28 12l5-8h4"/><rect x="17" y="20" width="6" height="6" rx="1" transform="rotate(-10 20 23)"/><rect x="24" y="26" width="6" height="6" rx="1" transform="rotate(12 27 29)"/><path d="M14 18h20"/>'),
+ croissant: s('<path d="M6 30c2-10 10-16 18-16s16 6 18 16c-3 2-6 2-8 0-2 3-6 4-10 4s-8-1-10-4c-2 2-5 2-8 0z"/><path d="M17 17l3 15M24 14v19M31 17l-3 15"/>'),
+ cake: s('<path d="M8 38V24l30-12v26z"/><path d="M8 24l30-12"/><path d="M8 31h30"/><circle cx="31" cy="9" r="2.6"/><path d="M8 38h30"/>'),
+ cookie: s('<circle cx="24" cy="24" r="16"/><circle cx="18" cy="19" r="1.6" fill="currentColor"/><circle cx="28" cy="17" r="1.6" fill="currentColor"/><circle cx="30" cy="28" r="1.6" fill="currentColor"/><circle cx="19" cy="30" r="1.6" fill="currentColor"/><circle cx="24" cy="24" r="1.2" fill="currentColor"/>'),
+ sandwich: s('<path d="M6 30l18-14 18 14z"/><path d="M6 30v4h36v-4"/><path d="M9 26c4 1 6-1 9 1s6-1 9 1 6-1 9 1 4 0 4 0"/>'),
+ egg: s('<circle cx="24" cy="26" r="16"/><path d="M24 15c6 0 10 4 9 9s-6 6-9 9c-3-3-8-4-9-9s3-9 9-9z"/><circle cx="24" cy="24" r="4.5" fill="currentColor" fill-opacity=".25"/>'),
+ bowl: s('<path d="M6 24h36a18 18 0 0 1-36 0z"/><path d="M16 42h16"/><path d="M15 24c0-5 3-8 7-8M26 24c0-4 2-7 6-7M20 18c-1-4 1-7 4-8"/>'),
+ salad: s('<path d="M6 24h36a18 18 0 0 1-36 0z"/><path d="M14 24c-2-6 2-11 8-10M24 24c0-7 5-10 11-8-1 4-4 7-7 8M20 20c2-3 5-4 8-3"/>'),
+ burger: s('<path d="M8 21c0-8 7-13 16-13s16 5 16 13z"/><path d="M6 27c3-2 6 2 9 0s6 2 9 0 6 2 9 0 6 2 9 0"/><path d="M8 32h32"/><path d="M8 37c0 2 2 4 5 4h22c3 0 5-2 5-4z"/><path d="M17 14h.01M24 12h.01M31 14h.01"/>'),
+ fries: s('<path d="M12 22l3 20h18l3-20z"/><path d="M15 22l-2-14 4-1 2 15M21 22V6h4v16M27 22l2-15 4 1-2 14"/><path d="M18 30c2 2 10 2 12 0"/>'),
+ wrap: s('<path d="M16 6l16 4-6 32a5 5 0 0 1-8-2z"/><path d="M17 12c4 2 9 3 14 3M18 18c4 1 8 2 12 2"/><path d="M14 26l18 4"/>'),
+ doner: s('<path d="M24 4v40"/><path d="M15 10c0-3 18-3 18 0l2 22c0 4-22 4-22 0z"/><path d="M15 16h18M14.5 22h19M14 28h20"/><path d="M14 44h20"/>'),
+ plate: s('<ellipse cx="24" cy="28" rx="19" ry="11"/><ellipse cx="24" cy="27" rx="12" ry="6"/><path d="M15 25c3-6 15-6 18 0"/><path d="M20 18c-1-3 1-5 3-6M27 18c-1-3 1-5 3-6"/>'),
+ chicken: s('<path d="M30 8c6 0 10 4 10 10 0 7-6 12-13 12l-5 5"/><path d="M30 8c-7 0-12 5-12 12 0 3 1 6 4 10"/><path d="M22 35l-6 6a3 3 0 1 1-4-1 3 3 0 1 1 1-4l6-6"/>'),
+ soda: s('<path d="M15 10h18v30a2 2 0 0 1-2 2H17a2 2 0 0 1-2-2z"/><path d="M15 10c0-2 1-4 3-4h12c2 0 3 2 3 4"/><path d="M15 18h18M15 34h18"/><path d="M26 6V3"/>'),
+ ayran: s('<path d="M13 14h22l-2 28H15z"/><path d="M13 14c2-4 6-6 11-6s9 2 11 6"/><path d="M14 22h20"/><path d="M19 8c1-2 3-3 5-3"/>'),
+ baklava: s('<path d="M24 6l18 18-18 18L6 24z"/><path d="M24 14l10 10-10 10-10-10z"/><path d="M24 22l2 2-2 2-2-2z" fill="currentColor"/>'),
+ sauce: s('<path d="M18 4h12v6l3 4v26a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4V14l3-4z"/><path d="M15 22h18v10H15z"/>'),
+ icecream: s('<path d="M14 22l10 22 10-22"/><path d="M14 22a10 10 0 0 1 20 0"/><path d="M14 22h20M18 30l10-3M21 36l6-2"/>'),
+ juice: s('<path d="M13 16h22l-3 26H16z"/><path d="M30 16l4-10"/><circle cx="34" cy="13" r="5"/><path d="M15 26h18"/>'),
+ cup: s('<path d="M12 16h24l-2 26H14z"/><path d="M10 16h28"/><path d="M14 11h20l2 5H12z"/><path d="M24 11V4l6-1"/>'),
+ waffle: s('<rect x="7" y="9" width="34" height="30" rx="5"/><path d="M7 19h34M7 29h34M18 9v30M30 9v30"/>'),
+ pide: s('<path d="M4 24c6-10 34-10 40 0-6 10-34 10-40 0z"/><path d="M12 24c4-5 20-5 24 0-4 5-20 5-24 0z"/><circle cx="20" cy="23" r="1.4" fill="currentColor"/><circle cx="27" cy="25" r="1.4" fill="currentColor"/>'),
+ lahmacun: s('<circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="13"/><circle cx="19" cy="20" r="1.4" fill="currentColor"/><circle cx="28" cy="19" r="1.4" fill="currentColor"/><circle cx="29" cy="28" r="1.4" fill="currentColor"/><circle cx="20" cy="29" r="1.4" fill="currentColor"/><path d="M30 30c3 0 5 2 5 5-3 0-5-2-5-5z"/>'),
+ simit: s('<circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="7"/><path d="M15 13l1.5 1M33 13l-1.5 1M10 25h2M36 25h2M16 35l1-1.5M32 35l-1-1.5M24 8v2M24 38v2"/>'),
+ combo: s('<path d="M5 22c0-6 5-10 12-10s12 4 12 10z"/><path d="M5 27h24M6 31c0 2 1 4 4 4h14c3 0 4-2 4-4z"/><path d="M31 18h12l-2 24H33z"/><path d="M39 18l2-10"/>'),
+
+ wine: s('<path d="M15 5h18c0 9-3 15-9 15s-9-6-9-15z"/><path d="M15.5 11h17"/><path d="M24 20v18M16 42h16"/>'),
+ steak: s('<path d="M9 22c0-9 8-14 17-14 9 0 14 6 14 13 0 9-8 13-14 16-5 2-8 5-12 3-4-2-5-9-5-18z"/><circle cx="28" cy="22" r="4"/><path d="M14 26c3 2 6 2 9 1"/>'),
+ fish: s('<path d="M6 24c6-9 18-12 28-6l8-6v24l-8-6C24 36 12 33 6 24z"/><circle cx="14" cy="22" r="1.6" fill="currentColor"/><path d="M22 18c2 4 2 8 0 12"/>'),
+ soup: s('<path d="M6 22h36a18 18 0 0 1-36 0z"/><path d="M16 42h16"/><path d="M18 8c-2 3 2 5 0 8M24 6c-2 3 2 5 0 8M30 8c-2 3 2 5 0 8"/>'),
+ cloche: s('<path d="M8 34a16 16 0 0 1 32 0z"/><path d="M4 38h40"/><path d="M24 14v4"/><circle cx="24" cy="12" r="2.2"/><path d="M15 26c2-3 5-5 8-5"/>'),
+ semaver: s('<path d="M18 4h12M20 4l-1 6h10l-1-6"/><path d="M16 10h16l2 22H14z"/><path d="M14 18H9M34 18h5"/><path d="M24 32v4M22 36h4"/><path d="M14 42h20l-4-6H18z"/><path d="M34 23h4l2 4"/>'),
+ honey: s('<path d="M12 18h24v20a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4z"/><path d="M10 14h28v4H10z"/><path d="M24 4v12"/><path d="M20 8h8M21 12h6"/><path d="M12 26c4 2 8-2 12 0s8-2 12 0"/>'),
+ pan: s('<circle cx="20" cy="26" r="14"/><path d="M33 22l11-6"/><circle cx="15" cy="24" r="4" fill="currentColor" fill-opacity=".25"/><circle cx="24" cy="30" r="4" fill="currentColor" fill-opacity=".25"/>'),
+ board: s('<rect x="4" y="10" width="40" height="28" rx="5"/><circle cx="14" cy="20" r="4"/><circle cx="30" cy="19" r="3"/><path d="M22 28h8l-4 5z"/><path d="M10 31h6M35 28l3 3M36 24h3"/>'),
+ /* utility, 24 grid */
+ plus: u('<path d="M12 5v14M5 12h14"/>'),
+ minus: u('<path d="M5 12h14"/>'),
+ x: u('<path d="M6 6l12 12M18 6L6 18"/>'),
+ trash: u('<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>'),
+ search: u('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>'),
+ bag: u('<path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/>'),
+ bell: u('<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/>'),
+ receipt: u('<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>'),
+ drop: u('<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>'),
+ info: u('<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/>'),
+ clock: u('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+ pin: u('<path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>'),
+ phone: u('<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>'),
+ wifi: u('<path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.5 9.5 0 0 1 13 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5v.01"/>'),
+ copy: u('<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h9"/>'),
+ insta: u('<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/>'),
+ wa: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>',
+ /* tag icons */
+ t_popular: u('<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>'),
+ t_new: u('<path d="M12 3l2.2 5.6L20 9l-4.5 3.7L17 18.5 12 15.3 7 18.5l1.5-5.8L4 9l5.8-.4z"/>'),
+ t_vegan: u('<path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19l8-8"/>'),
+ t_veg: u('<path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19l8-8"/>'),
+ t_spicy: u('<path d="M14 6c4 1 6 4 5 8-1 5-7 8-13 7 5-2 6-5 6-8s0-5 2-7z"/><path d="M14 6c0-1.5 1-3 3-3"/>'),
+ t_gf: u('<path d="M12 21V9M12 13c-3 0-4-2-4-4 3 0 4 2 4 4zm0 0c3 0 4-2 4-4-3 0-4 2-4 4zm0-4c-2 0-3-2-3-4 2 0 3 2 3 4zm0 0c2 0 3-2 3-4-2 0-3 2-3 4z"/><path d="M4 4l16 16"/>')
+};
+})();
+
+(function(){
+const s = d => `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const u = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+Object.assign(window.ICONS, {
+ macaron: s('<path d="M9 20c0-6 7-9 15-9s15 3 15 9z"/><path d="M9 28c0 6 7 9 15 9s15-3 15-9z"/><path d="M9 24c3 2 5-2 8 0s5-2 8 0 5-2 8 0 4-1 6 0"/>'),
+ stand: s('<path d="M24 7v34"/><ellipse cx="24" cy="13" rx="9" ry="3"/><ellipse cx="24" cy="24" rx="13" ry="3.4"/><ellipse cx="24" cy="35" rx="17" ry="4"/><path d="M17 43h14"/><circle cx="24" cy="5" r="1.8" fill="currentColor"/>'),
+ rose: s('<circle cx="24" cy="18" r="9"/><path d="M24 18c-3-4 3-6 4-2s-4 5-6 1"/><path d="M24 27v16"/><path d="M24 36c-6-1-9-4-9-8 5 0 8 3 9 8z"/>'),
+ heart: u('<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>'),
+ moon: u('<path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/>'),
+ sun: u('<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'),
+ calendar: u('<rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/>'),
+ share: u('<path d="M12 15V3M8 7l4-4 4 4"/><path d="M5 12v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>'),
+ sliders: u('<path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/>'),
+ download: u('<path d="M12 3v12M8 11l4 4 4-4"/><path d="M5 19h14"/>'),
+ check: u('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),
+ t_sig: u('<path d="M6 9l3-4h6l3 4-6 11z"/><path d="M6 9h12M9 5l3 15M15 5l-3 15"/>')
+});
+})();
+
+window.MENU = (function(){
+const n=(tr,en,ar)=>({tr,en,ar});
+const milk={name:n("Süt","Milk","الحليب"),type:"single",choices:[
+ {name:n("İnek sütü","Whole milk","حليب بقري"),price:0},
+ {name:n("Yulaf sütü","Oat milk","حليب الشوفان"),price:30},
+ {name:n("Badem sütü","Almond milk","حليب اللوز"),price:30},
+ {name:n("Laktozsuz","Lactose-free","خالٍ من اللاكتوز"),price:20}]};
+const extras={name:n("Ekstra","Extras","إضافات"),type:"multi",choices:[
+ {name:n("Ekstra shot","Extra shot","جرعة إسبريسو إضافية"),price:35},
+ {name:n("Vanilya şurubu","Vanilla syrup","شراب الفانيليا"),price:20},
+ {name:n("Karamel şurubu","Caramel syrup","شراب الكراميل"),price:20}]};
+const sugar={name:n("Şeker","Sugar","السكر"),type:"single",choices:[
+ {name:n("Sade","No sugar","سادة"),price:0},
+ {name:n("Az şekerli","Lightly sweet","سكر خفيف"),price:0},
+ {name:n("Orta","Medium","وسط"),price:0},
+ {name:n("Şekerli","Sweet","محلّاة"),price:0}]};
+
+return {
+ id:"maison-noor", defaultLang:"tr", whatsapp:"905367819837", orderLang:"tr", demo:true,
+ restaurant:{ name:"Maison Noor",
+  tagline:n("Kahve, pastane ve yüksek çay salonu","Coffee, pâtisserie & afternoon-tea salon","قهوة وحلويات وصالون شاي بعد الظهر"),
+  address:"Örnek Cd. No: 9, Nişantaşı / İstanbul", phone:"+90 212 000 00 07", mapUrl:"https://maps.google.com/?q=Nişantaşı+İstanbul",
+  wifi:{ssid:"Noor_Guest",pass:"luxe2026"},
+  hours:[["09:00","23:00"],["08:00","23:00"],["08:00","23:00"],["08:00","23:00"],["08:00","23:00"],["08:00","00:30"],["08:00","00:30"]],
+  lastSeatingMins:30 },
+ /* indicative rates, units of foreign currency per 1 TRY. Update before real use. */
+ rates:{USD:0.0227,EUR:0.0196,SAR:0.0853},
+ daily:{0:"h1",1:"c3",2:"p2",3:"t5",4:"b1",5:"p1",6:"p6"},
+ categories:[
+ {id:"coffee",name:n("Kahve","Coffee","القهوة"),note:n("Çekirdeklerimiz her hafta İstanbul'da kavrulur.","Our beans are roasted weekly in Istanbul.","تُحمَّص حبوبنا أسبوعيًا في إسطنبول."),items:[
+  {id:"c1",icon:"coffee",hue:28,price:150,kcal:5,prep:3,tags:["vegan","gf"],
+   name:n("Espresso Noor","Espresso Noor","إسبريسو نور"),
+   desc:n("Evin harmanı: yoğun, kadifemsi, uzun bitişli.","The house blend: dense, velvety, with a long finish.","مزيج المنزل: كثيف وحريري بنهاية طويلة."),
+   notes:n("Kakao · fındık · karamel","Cocoa · hazelnut · caramel","كاكاو · بندق · كراميل"),
+   meters:{intensity:5,body:4,acidity:2}, pair:["p8"],
+   options:[{name:n("Boy","Size","الحجم"),type:"single",choices:[{name:n("Tek","Single","مفرد"),price:0},{name:n("Duble","Double","مزدوج"),price:30}]}]},
+  {id:"c2",icon:"latte",hue:32,price:190,kcal:120,prep:4,tags:["popular"],allergens:["milk"],
+   name:n("Flat White","Flat White","فلات وايت"),
+   desc:n("Çift ristretto ve ipeksi süt köpüğü.","Double ristretto with silky microfoam.","جرعتا ريستريتو مع رغوة حليب ناعمة."),
+   notes:n("Sütlü çikolata · badem · bal","Milk chocolate · almond · honey","شوكولاتة بالحليب · لوز · عسل"),
+   meters:{intensity:4,body:4,sweetness:3}, pair:["p8","p5"], options:[milk,extras]},
+  {id:"c3",icon:"latte",hue:40,price:260,kcal:160,prep:5,sig:true,tags:["new"],allergens:["milk"],
+   name:n("Safranlı Latte","Saffron Latte","لاتيه بالزعفران"),
+   desc:n("Safran tellerinde demlenmiş süt, bal ve kakule.","Milk steeped with saffron threads, honey and cardamom.","حليب منقوع بخيوط الزعفران مع العسل والهيل."),
+   notes:n("Safran · bal · kakule","Saffron · honey · cardamom","زعفران · عسل · هيل"),
+   story:n("Safran dünyanın en değerli baharatlarından biridir; her çiçekten yalnızca üç tel elde edilir. Latte'mizde süte önceden demlenir, rengi ve kokusu yavaşça açılır.","Saffron is among the world's most precious spices; each flower yields only three threads. We steep it into the milk first, so its colour and aroma open slowly.","الزعفران من أثمن التوابل في العالم؛ فكل زهرة تعطي ثلاث خيوط فقط. ننقعه في الحليب أولًا ليتفتح لونه ورائحته ببطء."),
+   meters:{aroma:5,sweetness:3,richness:4}, pair:["p6","p2"], options:[milk]},
+  {id:"c4",icon:"latte",hue:95,price:270,kcal:210,prep:5,sig:true,tags:["popular"],allergens:["milk","nuts"],
+   name:n("Antep Fıstıklı Latte","Pistachio Latte","لاتيه بالفستق"),
+   desc:n("Kavrulmuş Antep fıstığı kreması, espresso ve süt.","Roasted Antep pistachio cream, espresso and milk.","كريمة فستق عنتاب المحمّص مع الإسبريسو والحليب."),
+   notes:n("Kavrulmuş fıstık · krema · vanilya","Roasted pistachio · cream · vanilla","فستق محمّص · كريمة · فانيليا"),
+   meters:{richness:4,sweetness:4,intensity:3}, pair:["p1"], options:[milk]},
+  {id:"c5",icon:"cup",hue:200,price:280,kcal:5,prep:8,tags:["new","vegan","gf"],
+   name:n("V60 Tek Köken","V60 Single Origin","V60 أحادي المصدر"),
+   desc:n("Elle demlenen filtre kahve; seçtiğiniz çekirdekle.","Hand-poured filter coffee made with the bean of your choice.","قهوة مقطّرة يدويًا من الحبوب التي تختارها."),
+   notes:n("Yasemin · bergamot · şeftali","Jasmine · bergamot · peach","ياسمين · برغموت · خوخ"),
+   story:n("V60, Japon Hario'nun konik süzgeç yöntemidir. Suyun akışı elle ayarlandığı için çekirdeğin asiditesi ve çiçeksi notaları en berrak halde bardağa gelir.","The V60 is Hario's conical Japanese pour-over method. Because the flow is controlled by hand, the bean's acidity and floral notes reach the cup at their clearest.","V60 طريقة التقطير المخروطية اليابانية من هاريو. وبما أن التدفق يُضبط يدويًا، تصل حموضة الحبوب ونكهاتها الزهرية إلى الكوب في أنقى صورها."),
+   meters:{acidity:5,aroma:4,sweetness:3}, pair:["p4"],
+   options:[{name:n("Çekirdek","Origin","المصدر"),type:"single",choices:[
+    {name:n("Etiyopya Guji","Ethiopia Guji","إثيوبيا غوجي"),price:0},
+    {name:n("Kolombiya Huila","Colombia Huila","كولومبيا هويلا"),price:0},
+    {name:n("Panama Geisha","Panama Geisha","بنما غيشا"),price:260}]}]},
+  {id:"c6",icon:"coffee",hue:20,price:240,kcal:20,prep:8,sig:true,tags:["popular","gf"],
+   name:n("Altın Türk Kahvesi","Golden Turkish Coffee","القهوة التركية الذهبية"),
+   desc:n("Bakır cezvede közde pişer; lokum ve yenilebilir altın varakla gelir.","Cooked over embers in a copper cezve, served with Turkish delight and edible gold leaf.","تُطهى على الجمر في ركوة نحاسية وتُقدَّم مع الحلقوم وورق الذهب الصالح للأكل."),
+   notes:n("Damla sakızı · kakule · altın varak","Mastic · cardamom · gold leaf","مستكة · هيل · ورق ذهب"),
+   story:n("Türk kahvesi kültürü ve geleneği 2013'te UNESCO listesine girdi. Biz geleneği bozmadan, yanına küçük bir gösteri ekledik.","Turkish coffee culture and tradition was added to the UNESCO list in 2013. We kept the tradition intact and added a small flourish.","أُدرجت ثقافة وتقاليد القهوة التركية في قائمة اليونسكو عام 2013. حافظنا على التقليد كما هو وأضفنا لمسة صغيرة."),
+   meters:{intensity:5,body:5,sweetness:2}, pair:["p6"], options:[sugar]},
+  {id:"c7",icon:"iced",hue:30,price:230,kcal:40,prep:4,tags:["vegan","gf"],
+   name:n("Cold Brew Tonic","Cold Brew Tonic","كولد برو تونك"),
+   desc:n("18 saat soğuk demlenmiş kahve, tonik ve portakal kabuğu.","18-hour cold brew with tonic and orange peel.","كولد برو منقوع 18 ساعة مع التونك وقشر البرتقال."),
+   notes:n("Narenciye · kakao · tonik","Citrus · cocoa · tonic","حمضيات · كاكاو · تونك"),
+   meters:{acidity:4,intensity:3,sweetness:2}},
+  {id:"c8",icon:"iced",hue:36,price:240,kcal:240,prep:4,allergens:["milk"],
+   name:n("İspanyol Latte","Spanish Latte","لاتيه إسباني"),
+   desc:n("Yoğunlaştırılmış süt ve çift shot espresso.","Condensed milk and a double shot of espresso.","حليب مكثّف مع جرعتين من الإسبريسو."),
+   notes:n("Karamel · süt kreması","Caramel · cream","كراميل · كريمة"),
+   meters:{sweetness:5,richness:4,intensity:3}, options:[extras]}
+ ]},
+ {id:"tea",name:n("Çay & Demleme","Tea & Infusions","الشاي والمنقوعات"),note:n("Yaprak çaylar demlikte, 1 kişilik servis edilir.","Loose-leaf teas are served by the pot, for one.","يُقدَّم الشاي الورقي في إبريق لشخص واحد."),items:[
+  {id:"t1",icon:"tea",hue:30,price:190,kcal:2,prep:5,tags:["vegan","gf"],
+   name:n("Earl Grey Imperial","Earl Grey Imperial","إيرل غراي إمبريال"),
+   desc:n("Bergamotlu siyah çay; demlikte, 1 kişilik.","Bergamot black tea, by the pot, for one.","شاي أسود بالبرغموت في إبريق لشخص."),
+   notes:n("Bergamot · narenciye · çiçek","Bergamot · citrus · flowers","برغموت · حمضيات · أزهار"),
+   meters:{aroma:4,intensity:3}, pair:["h3"]},
+  {id:"t2",icon:"tea",hue:90,price:210,kcal:2,prep:5,tags:["vegan","gf"],
+   name:n("Yasemin İncileri","Jasmine Pearls","لآلئ الياسمين"),
+   desc:n("El yapımı yeşil çay incileri, yasemin çiçeğiyle kokulandırılmış.","Hand-rolled green tea pearls scented with jasmine blossom.","لآلئ شاي أخضر ملفوفة يدويًا ومعطّرة بزهر الياسمين."),
+   notes:n("Yasemin · yeşil çay · tatlı","Jasmine · green tea · sweet","ياسمين · شاي أخضر · حلو"),
+   meters:{aroma:5,intensity:2}},
+  {id:"t3",icon:"tea",hue:60,price:220,kcal:2,prep:5,tags:["vegan","gf"],
+   name:n("Süt Oolong","Milk Oolong","أولونغ الحليب"),
+   desc:n("Kremamsı, yuvarlak içimli yarı fermente çay.","A creamy, round, semi-oxidised tea.","شاي شبه مؤكسد كريمي وناعم."),
+   notes:n("Krema · orkide · tereyağı","Cream · orchid · butter","كريمة · أوركيد · زبدة"),
+   meters:{body:4,aroma:4}},
+  {id:"t4",icon:"cup",hue:110,price:260,kcal:15,prep:6,tags:["vegan","gf"],
+   name:n("Seremonial Matcha","Ceremonial Matcha","ماتشا احتفالي"),
+   desc:n("Çırpılmış saf matcha, 80 ml.","Whisked pure matcha, 80 ml.","ماتشا نقي مخفوق، 80 مل."),
+   notes:n("Umami · taze çim · tatlı","Umami · fresh grass · sweet","أومامي · عشب طازج · حلو"),
+   meters:{intensity:4,sweetness:2,body:3}, pair:["p7"],
+   options:[{name:n("Servis","Serving","التقديم"),type:"single",choices:[{name:n("Sıcak","Hot","ساخن"),price:0},{name:n("Buzlu","Iced","مثلّج"),price:10}]}]},
+  {id:"t5",icon:"semaver",hue:140,price:170,kcal:25,prep:6,sig:true,tags:["popular","vegan","gf"],
+   name:n("Fas Usulü Nane Çayı","Moroccan Mint Tea","شاي النعناع المغربي"),
+   desc:n("Taze naneli yeşil çay; bakır demlikte, yüksekten dökülerek servis edilir.","Fresh-mint green tea in a copper pot, poured from height at the table.","شاي أخضر بالنعناع الطازج في إبريق نحاسي يُصبّ من علوّ على الطاولة."),
+   notes:n("Taze nane · yeşil çay · şeker","Fresh mint · green tea · sugar","نعناع طازج · شاي أخضر · سكر"),
+   story:n("Fas'ta çay misafire ikram edilen ilk şeydir. Yüksekten dökmek hem köpük yapar hem de tatları birleştirir.","In Morocco, tea is the first thing offered to a guest. Pouring from height builds the foam and marries the flavours.","في المغرب الشاي أول ما يُقدَّم للضيف. والصبّ من علوّ يصنع الرغوة ويمزج النكهات."),
+   meters:{aroma:5,sweetness:4,intensity:2}, pair:["p6"],
+   options:[{name:n("Şeker","Sugar","السكر"),type:"single",choices:[{name:n("Geleneksel","Traditional","تقليدي"),price:0},{name:n("Az şekerli","Light","خفيف"),price:0},{name:n("Şekersiz","No sugar","بدون سكر"),price:0}]}]},
+  {id:"t6",icon:"rose",hue:345,price:230,kcal:20,prep:5,tags:["new","vegan","gf"],
+   name:n("Gül & Safran Demlemesi","Rose & Saffron Infusion","منقوع الورد والزعفران"),
+   desc:n("Kurutulmuş gül yaprakları, safran ve elma; kafeinsiz.","Dried rose petals, saffron and apple; caffeine-free.","بتلات ورد مجففة وزعفران وتفاح؛ خالٍ من الكافيين."),
+   notes:n("Gül · safran · elma","Rose · saffron · apple","ورد · زعفران · تفاح"),
+   meters:{aroma:5,sweetness:2}},
+  {id:"t7",icon:"tea",hue:12,price:60,kcal:2,prep:3,tags:["popular","vegan","gf"],
+   name:n("Bardakta Rize Çayı","Rize Tea in a Glass","شاي ريزة في كأس"),
+   desc:n("Taze demlenmiş, ince belli bardakta.","Freshly brewed, in a tulip glass.","مُحضَّر طازجًا في كأس التوليب."),
+   notes:n("Tam gövdeli · odunsu","Full-bodied · woody","قوام كامل · خشبي"),
+   meters:{intensity:4,body:4}}
+ ]},
+ {id:"patisserie",name:n("Pastane","Pâtisserie","الحلويات الفرنسية"),note:n("Her sabah atölyemizde hazırlanır; bitince biter.","Made each morning in our atelier; when it's gone, it's gone.","تُحضَّر كل صباح في مشغلنا؛ وعندما تنفد، تنفد."),items:[
+  {id:"p1",icon:"cake",hue:100,price:290,kcal:410,prep:3,sig:true,tags:["popular"],allergens:["gluten","milk","egg","nuts"],
+   name:n("Fıstıklı Ekler","Pistachio Éclair","إكلير الفستق"),
+   desc:n("Antep fıstıklı krema, incecik çıtır hamur.","Antep pistachio cream in a thin, crisp choux.","كريمة فستق عنتاب في عجينة شو رقيقة ومقرمشة."),
+   notes:n("Antep fıstığı · vanilya · tereyağı","Pistachio · vanilla · butter","فستق · فانيليا · زبدة"),
+   meters:{sweetness:3,richness:4}, pair:["c4"]},
+  {id:"p2",icon:"baklava",hue:42,price:340,kcal:460,prep:3,sig:true,tags:["new"],allergens:["gluten","milk","egg"],
+   name:n("Safranlı Milföy","Saffron Mille-feuille","ميل فاي بالزعفران"),
+   desc:n("Çıtır milföy katları, safranlı vanilya kreması, karamel.","Crisp puff-pastry layers, saffron vanilla cream, caramel.","طبقات عجينة مقرمشة وكريمة فانيليا بالزعفران وكراميل."),
+   notes:n("Safran · vanilya · karamel","Saffron · vanilla · caramel","زعفران · فانيليا · كراميل"),
+   meters:{sweetness:3,richness:5}, pair:["c3"]},
+  {id:"p3",icon:"cake",hue:20,price:320,kcal:440,prep:3,tags:[],allergens:["gluten","milk","egg","nuts"],
+   name:n("Opéra","Opéra Cake","كعكة أوبرا"),
+   desc:n("Badem bisküvisi, kahve şurubu, bitter çikolata ganajı.","Almond sponge, coffee syrup, dark-chocolate ganache.","إسفنج اللوز وشراب القهوة وغاناش الشوكولاتة الداكنة."),
+   notes:n("Kahve · bitter çikolata · badem","Coffee · dark chocolate · almond","قهوة · شوكولاتة داكنة · لوز"),
+   meters:{intensity:4,sweetness:3,richness:5}, pair:["c1"]},
+  {id:"p4",icon:"cake",hue:28,price:330,kcal:430,prep:3,tags:["new"],allergens:["milk","egg"],
+   name:n("Kestaneli Mont Blanc","Chestnut Mont Blanc","مون بلان بالكستناء"),
+   desc:n("Kestane kreması, hafif krem şanti, çıtır beze.","Chestnut cream, light whipped cream, crisp meringue.","كريمة الكستناء وكريمة مخفوقة خفيفة ومارنغ مقرمش."),
+   notes:n("Kestane · vanilya · beze","Chestnut · vanilla · meringue","كستناء · فانيليا · مارنغ"),
+   story:n("Kestane mevsimine özel; ekim ve kasım aylarında sunulur.","A chestnut-season special, served in October and November.","طبق خاص بموسم الكستناء، يُقدَّم في أكتوبر ونوفمبر."),
+   meters:{sweetness:3,richness:3}, pair:["c5"]},
+  {id:"p5",icon:"cake",hue:38,price:300,kcal:520,prep:3,tags:[],allergens:["gluten","milk","egg"],
+   name:n("San Sebastian Cheesecake","Basque Cheesecake","تشيز كيك سان سيباستيان"),
+   desc:n("Yanık yüzeyli, akışkan kıvamlı; bitter çikolata sosuyla.","Burnt top, creamy centre; with dark-chocolate sauce.","سطح محروق وقلب كريمي مع صلصة الشوكولاتة الداكنة."),
+   notes:n("Karamelize · krema · vanilya","Caramelised · cream · vanilla","مكرمل · كريمة · فانيليا"),
+   meters:{richness:5,sweetness:3}},
+  {id:"p6",icon:"baklava",hue:90,price:380,kcal:520,prep:3,sig:true,tags:["popular"],allergens:["gluten","milk","nuts"],
+   name:n("Baklava Seçkisi (4 dilim)","Baklava Selection (4 pieces)","تشكيلة بقلاوة (4 قطع)"),
+   desc:n("El açması yufka, tereyağı, şerbet; üzerinde altın varak.","Hand-rolled pastry, butter and syrup, finished with gold leaf.","عجين مفرود يدويًا وزبدة وقطر، تعلوه ورقة ذهب."),
+   notes:n("Fıstık · tereyağı · şerbet","Pistachio · butter · syrup","فستق · زبدة · قطر"),
+   story:n("Her tepsi kırk kata yakın el açması yufkayla hazırlanır. Şerbet, yufka sıcakken ve ölçülü dökülür; böylece kıtırlığı bozulmaz.","Each tray is built from close to forty hand-rolled layers. The syrup goes on while the pastry is hot and in measure, so the crunch stays.","تُحضَّر كل صينية من نحو أربعين طبقة مفرودة يدويًا. يُسكب القطر والعجين ساخن وبمقدار محسوب فتبقى القرمشة."),
+   meters:{sweetness:5,richness:4}, pair:["c6","t5"],
+   options:[{name:n("Çeşit","Variety","النوع"),type:"single",choices:[{name:n("Fıstıklı","Pistachio","بالفستق"),price:0},{name:n("Cevizli","Walnut","بالجوز"),price:0},{name:n("Karışık","Mixed","مشكّل"),price:0}]}]},
+  {id:"p7",icon:"macaron",hue:330,price:420,kcal:360,prep:3,tags:[],allergens:["egg","nuts","milk"],
+   name:n("Makaron Kutusu (6 adet)","Macaron Box (6 pieces)","علبة ماكارون (6 قطع)"),
+   desc:n("Altı farklı aroma. Seçim yapmazsanız şefin karışımı gelir.","Six flavours. If you don't choose, the chef's assortment arrives.","ست نكهات. إن لم تختر يصلك تشكيل الشيف."),
+   notes:n("Gül · fıstık · frambuaz","Rose · pistachio · raspberry","ورد · فستق · توت"),
+   meters:{sweetness:4}, pair:["t4"],
+   options:[{name:n("Aromalar (isteğe bağlı)","Flavours (optional)","النكهات (اختياري)"),type:"multi",choices:[
+    {name:n("Antep fıstığı","Pistachio","فستق"),price:0},{name:n("Frambuaz","Raspberry","توت"),price:0},{name:n("Gül-lokum","Rose & delight","ورد وحلقوم"),price:0},{name:n("Bitter çikolata","Dark chocolate","شوكولاتة داكنة"),price:0},{name:n("Vanilya","Vanilla","فانيليا"),price:0},{name:n("Kahve","Coffee","قهوة"),price:0}]}]},
+  {id:"p8",icon:"croissant",hue:36,price:210,kcal:410,prep:3,serve:["07:00","16:00"],tags:[],allergens:["gluten","milk","egg","nuts"],
+   name:n("Badem Kruvasan","Almond Croissant","كرواسون باللوز"),
+   desc:n("Badem kremalı, kavrulmuş badem yapraklı; sabah fırınından.","Almond cream, toasted flaked almonds; from the morning bake.","كريمة اللوز وشرائح لوز محمّصة؛ من خبز الصباح."),
+   notes:n("Badem · tereyağı · karamel","Almond · butter · caramel","لوز · زبدة · كراميل"),
+   meters:{sweetness:3,richness:4}, pair:["c2","c1"]},
+  {id:"p9",icon:"icecream",hue:45,price:250,kcal:260,prep:4,tags:[],allergens:["milk"],
+   name:n("Affogato","Affogato","أفوغاتو"),
+   desc:n("Maraş dondurması, üzerine sıcak espresso.","Maraş ice cream with hot espresso poured over.","بوظة مرعش مع إسبريسو ساخن."),
+   notes:n("Sahlep · espresso · krema","Salep · espresso · cream","سحلب · إسبريسو · كريمة"),
+   meters:{sweetness:3,intensity:4}, pair:["c1"]}
+ ]},
+ {id:"brunch",serve:["08:00","15:00"],name:n("Brunch & Tuzlu","Brunch & Savoury","برانش ومالح"),note:n("Her gün 08:00 – 15:00 arası.","Daily from 08:00 to 15:00.","يوميًا من 08:00 إلى 15:00."),items:[
+  {id:"b1",icon:"egg",hue:45,price:520,kcal:540,prep:12,sig:true,tags:["popular","veg"],allergens:["egg","milk","gluten"],
+   name:n("Trüflü Çırpılmış Yumurta","Truffled Scrambled Eggs","بيض مخفوق بالكمأة"),
+   desc:n("Yavaş çırpılmış yumurta, siyah trüf, tereyağlı brioche.","Slow-scrambled eggs, black truffle, buttered brioche.","بيض مخفوق ببطء مع الكمأة السوداء وبريوش بالزبدة."),
+   notes:n("Siyah trüf · tereyağı · brioche","Black truffle · butter · brioche","كمأة سوداء · زبدة · بريوش"),
+   meters:{richness:5,aroma:4}, pair:["c2"]},
+  {id:"b2",icon:"salad",hue:100,price:480,kcal:420,prep:8,tags:["new","veg"],allergens:["milk","nuts"],
+   name:n("Burrata & İncir Salatası","Burrata & Fig Salad","سلطة بوراتا وتين"),
+   desc:n("Burrata, taze incir, roka, nar ekşisi, kavrulmuş ceviz.","Burrata, fresh figs, rocket, pomegranate molasses, toasted walnuts.","بوراتا وتين طازج وجرجير ودبس الرمان وجوز محمّص."),
+   notes:n("Krema · incir · nar ekşisi","Cream · fig · pomegranate","كريمة · تين · رمان")},
+  {id:"b3",icon:"sandwich",hue:15,price:560,kcal:520,prep:10,tags:[],allergens:["gluten","milk","sesame"],
+   name:n("Füme Somon Bagel","Smoked Salmon Bagel","باجل السلمون المدخن"),
+   desc:n("Krem peynir, kapari, kırmızı soğan, dereotu.","Cream cheese, capers, red onion, dill.","جبنة كريمية وكبر وبصل أحمر وشبت.")},
+  {id:"b4",icon:"sandwich",hue:40,price:460,kcal:610,prep:12,tags:[],allergens:["gluten","milk","egg"],
+   name:n("Croque Madame","Croque Madame","كروك مدام"),
+   desc:n("Jambonsuz: füme hindi, gruyère, beşamel, üzerinde yumurta.","Smoked turkey, gruyère, béchamel, a fried egg on top.","ديك رومي مدخن وغرويير وبشاميل وبيضة مقلية فوقها.")},
+  {id:"b5",icon:"egg",hue:90,price:420,kcal:470,prep:10,tags:["veg"],allergens:["egg","gluten"],
+   name:n("Avokado & Poşe Yumurta","Avocado & Poached Egg","أفوكادو وبيض مسلوق"),
+   desc:n("Ekşi maya üzerinde ezilmiş avokado, poşe yumurta, pul biber.","Smashed avocado and a poached egg on sourdough, chilli flakes.","أفوكادو مهروس وبيض مسلوق على خبز العجين المخمّر مع رقائق الفلفل.")}
+ ]},
+ {id:"hightea",serve:["15:00","18:00"],name:n("Yüksek Çay","Afternoon Tea","شاي بعد الظهر"),note:n("Her gün 15:00 – 18:00 arası. Rezervasyon önerilir.","Daily from 15:00 to 18:00. Booking recommended.","يوميًا من 15:00 إلى 18:00. يُنصح بالحجز."),items:[
+  {id:"h1",icon:"stand",hue:330,price:1950,kcal:1400,prep:20,sig:true,tags:["popular"],allergens:["gluten","milk","egg","nuts"],
+   name:n("Noor Yüksek Çay (2 kişilik)","Noor Afternoon Tea (for two)","شاي نور بعد الظهر (لشخصين)"),
+   desc:n("Üç katlı servis: tuzlular, scone'lar ve pastane seçkisi; 2 demlik çay.","Three tiers: savouries, scones and a pâtisserie selection; two pots of tea.","ثلاث طبقات: مالح وسكون وتشكيلة حلويات؛ إبريقا شاي."),
+   notes:n("Tuzlular · scone · tatlılar","Savouries · scones · sweets","مالح · سكون · حلويات"),
+   story:n("Alttan üste: önce tuzlular, sonra sıcak scone'lar, en üstte tatlılar. Çayınız taze demlenir ve istediğiniz kadar yenilenir.","From the bottom up: savouries first, then warm scones, sweets on top. Your tea is brewed fresh and refilled as often as you like.","من الأسفل إلى الأعلى: المالح أولًا ثم السكون الدافئ وفي القمة الحلويات. يُحضَّر شايك طازجًا ويُعاد ملؤه كما تشاء."),
+   options:[{name:n("Çay seçimi","Tea selection","اختيار الشاي"),type:"single",choices:[
+    {name:n("Earl Grey Imperial","Earl Grey Imperial","إيرل غراي إمبريال"),price:0},
+    {name:n("Yasemin İncileri","Jasmine Pearls","لآلئ الياسمين"),price:0},
+    {name:n("Fas usulü nane","Moroccan mint","نعناع مغربي"),price:0},
+    {name:n("Gül & Safran","Rose & Saffron","ورد وزعفران"),price:0}]}]},
+  {id:"h2",icon:"cake",hue:320,price:750,kcal:700,prep:15,tags:[],allergens:["gluten","milk","egg"],
+   name:n("Mini Çay Seti (çocuklar için)","Little Guests' Tea Set","طقم الشاي للصغار"),
+   desc:n("Mini sandviçler, scone ve küçük tatlılar; yanında içecek.","Mini sandwiches, a scone and small sweets, with a drink.","شطائر صغيرة وسكون وحلويات صغيرة مع مشروب."),
+   options:[{name:n("İçecek","Drink","المشروب"),type:"single",choices:[{name:n("Gül limonata","Rose lemonade","ليموناضة الورد"),price:0},{name:n("Sıcak çikolata","Hot chocolate","شوكولاتة ساخنة"),price:0}]}]},
+  {id:"h3",icon:"croissant",hue:36,price:360,kcal:480,prep:8,tags:["veg"],allergens:["gluten","milk"],
+   name:n("Scone Seti (2 adet)","Scone Set (2 pieces)","طقم سكون (قطعتان)"),
+   desc:n("Sıcak scone, clotted cream ve çilek reçeli.","Warm scones with clotted cream and strawberry jam.","سكون دافئ مع القشطة ومربى الفراولة."),
+   notes:n("Tereyağı · krema · çilek","Butter · cream · strawberry","زبدة · قشطة · فراولة"), pair:["t1"]}
+ ]},
+ {id:"cold",name:n("Soğuk & Özel","Cold & Special","المشروبات الباردة والخاصة"),items:[
+  {id:"d1",icon:"rose",hue:345,price:190,kcal:110,prep:4,tags:["vegan","gf"],
+   name:n("Gül Limonata","Rose Lemonade","ليموناضة الورد"),
+   desc:n("Taze limon, gül suyu ve nane.","Fresh lemon, rose water and mint.","ليمون طازج وماء ورد ونعناع."),
+   notes:n("Gül · limon · nane","Rose · lemon · mint","ورد · ليمون · نعناع"),meters:{aroma:4,sweetness:3,acidity:4}},
+  {id:"d2",icon:"juice",hue:350,price:210,kcal:90,prep:4,tags:["new","vegan","gf"],
+   name:n("Hibiskus Sparkler","Hibiscus Sparkler","هيبسكس سباركلر"),
+   desc:n("Soğuk demlenmiş hibiskus, zencefil ve gazlı su.","Cold-brewed hibiscus, ginger and sparkling water.","هيبسكس منقوع بارد وزنجبيل وماء فوّار."),
+   notes:n("Ekşi · zencefil · çiçeksi","Tart · ginger · floral","حامض · زنجبيل · زهري")},
+  {id:"d3",icon:"juice",hue:355,price:230,kcal:130,prep:3,tags:["vegan","gf"],
+   name:n("Taze Nar Suyu","Fresh Pomegranate Juice","عصير رمان طازج"),
+   desc:n("Siparişle sıkılır, 250 ml.","Pressed to order, 250 ml.","يُعصر عند الطلب، 250 مل.")},
+  {id:"d4",icon:"cup",hue:18,price:230,kcal:340,prep:5,tags:[],allergens:["milk"],
+   name:n("Belçika Sıcak Çikolata","Belgian Hot Chocolate","شوكولاتة ساخنة بلجيكية"),
+   desc:n("Gerçek çikolata ve süt; kalın, akışkan, kadifemsi.","Real chocolate and milk; thick, flowing, velvety.","شوكولاتة حقيقية وحليب؛ كثيفة وسائلة وحريرية."),
+   meters:{richness:5,sweetness:3},
+   options:[{name:n("Çikolata","Chocolate","الشوكولاتة"),type:"single",choices:[{name:n("Bitter %70","Dark 70%","داكنة 70٪"),price:0},{name:n("Sütlü","Milk","بالحليب"),price:0}]}]},
+  {id:"d5",icon:"soda",hue:200,price:90,tags:["vegan","gf"],
+   name:n("Maden Suyu","Sparkling Mineral Water","مياه معدنية فوّارة"),
+   desc:n("Gazlı, 250 ml.","Sparkling, 250 ml.","فوّارة، 250 مل.")}
+ ]}
+ ]};
+})();
+
+(function(){
+"use strict";
+const M = window.MENU, I = window.ICONS;
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const KEY = "maison-noor:";
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(KEY+k); return v == null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem(KEY+k, JSON.stringify(v)); } catch(e){} }
+};
+const LANGS = ["tr","en","ar"];
+const HOUSE = LANGS.includes(M.orderLang) ? M.orderLang : "tr";
+
+/* ------------------------------------------------------------------ strings */
+const T = {
+ tr:{
+  search:"Menüde ara", filter:"Filtrele", favs:"Favorilerim", favEmpty:"Henüz favoriniz yok. Bir ürünün kalbine dokunarak ekleyin.", clearAll:"Tümünü temizle", results:"sonuç", noResults:"Aramanızla eşleşen ürün yok.",
+  open:"Şu an açık", closed:"Şu an kapalı", closes:"Kapanış", opens:"Açılış",
+  gMorning:"Günaydın", gDay:"İyi günler", gEvening:"İyi akşamlar", gNight:"İyi geceler", tableLbl:"Masa",
+  reserve:"Rezervasyon", info:"Bilgi", pickTitle:"Günün seçimi", sigTitle:"İmza lezzetler", signature:"İmza", isNew:"Yeni",
+  serving:"Şimdi servis", servHours:"Servis saatleri", servFrom:"Servis",
+  add:"Ekle", addToOrder:"Siparişe ekle", viewOrder:"Siparişi gör", yourOrder:"Siparişiniz", total:"Toplam", subtotal:"Ara toplam", tip:"Bahşiş", tipNone:"Yok", empty:"Siparişiniz boş. Menüden bir şey ekleyin.", repeat:"Son siparişi tekrarla",
+  dineIn:"Masada", takeaway:"Gel-al", tableNo:"Masa no", yourName:"Adınız", orderNote:"Sipariş notu", itemNote:"Bu ürün için not", notePh:"Örn. az şekerli, yulaf sütü", orderType:"Sipariş türü", orderTitle:"Yeni sipariş",
+  send:"Siparişi WhatsApp ile gönder", copyOrder:"Sipariş metnini kopyala", copied:"Kopyalandı", clearCart:"Siparişi temizle",
+  tableNeeded:"Lütfen masa numarasını yazın.", nameNeeded:"Lütfen adınızı yazın.",
+  sentTitle:"Siparişiniz hazırlandı", sentText:"WhatsApp açıldıysa mesajı göndermeyi unutmayın. Ekibimiz siparişinizi mesajla onaylar.", sentBack:"Siparişe dön", sentNew:"Yeni sipariş",
+  pairsWith:"Birlikte iyi gider", complete:"Siparişinizi tamamlayın", story:"Hikâyesi", allergens:"Alerjenler",  min:"dk",
+  required:"Zorunlu", optional:"İsteğe bağlı", soldOut:"Tükendi", added:"Siparişe eklendi", remove:"Kaldır",
+  waiter:"Garson çağır", waiterAsk:"Neye ihtiyacınız var?", rWaiter:"Garson", rBill:"Hesap", rWater:"Su / peçete", callNow:"WhatsApp ile çağır", calledMsg:"çağrısı",
+  hours:"Çalışma saatleri", address:"Adres", phone:"Telefon", call:"Ara", wifi:"Wi-Fi", password:"Şifre", copy:"Kopyala", install:"Uygulamayı yükle", iosHint:"Ana ekrana eklemek için Paylaş ▸ Ana Ekrana Ekle'ye dokunun.",
+  toDay:"Gündüz temasına geç", toNight:"Gece temasına geç", currency:"Para birimi", curNote:"Kurlar yaklaşık değerlerdir. Ödeme ₺ ile yapılır.", 
+  share:"Paylaş", linkCopied:"Bağlantı kopyalandı", favAdd:"Favorilere ekle", favRemove:"Favorilerden çıkar", close:"Kapat", 
+  diet:"Beslenme", exclAlg:"Şunları içermesin", onlyAvail:"Yalnızca şu an servis edilenler", algDisc:"Filtre bilgilendirme amaçlıdır. Alerjiniz varsa lütfen sipariş vermeden önce personele bildirin.", reset:"Sıfırla", showResults:"Sonuçları göster",
+  rTitle:"Masa ayırtın", rDate:"Tarih", rTime:"Saat", rGuests:"Kişi sayısı", rName:"Adınız", rPhone:"Telefon (isteğe bağlı)", rOccasion:"Özel gün", occ0:"Yok", occ1:"Doğum günü", occ2:"Yıldönümü", occ3:"İş yemeği", rNote:"Notunuz", rSend:"Talebi WhatsApp ile gönder", rCal:"Takvime ekle",  rTimeNeeded:"Lütfen bir saat seçin.", rNameNeeded:"Lütfen adınızı yazın.", rPhoneBad:"Telefon numarası geçersiz görünüyor.", rNoSlots:"Bu gün için uygun saat kalmadı.", rHint:"Talebiniz ekibimize WhatsApp ile iletilir; onay mesajı alırsınız.", rMsg:"Rezervasyon talebi", rSentTitle:"Talebiniz hazırlandı", rSentText:"WhatsApp açıldıysa mesajı göndermeyi unutmayın. Ekibimiz rezervasyonu mesajla onaylar.", guests:"kişi", today:"Bugün", tomorrow:"Yarın", 
+  demo:"Örnek menü · Demo siparişler QR Menü'ye gider", vat:"Fiyatlara KDV dahildir.", algNote:"Alerjiniz varsa lütfen sipariş vermeden önce personele bildirin.", noteLbl:"Not", dateLbl:"Tarih", timeLbl:"Saat", personLbl:"Kişi", nameLbl:"Ad", phoneLbl:"Telefon", occLbl:"Özel gün", typeLbl:"Sipariş türü", tableLblMsg:"Masa", of5:"/ 5", 
+  days:["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"],
+  tags:{vegan:"Vegan", veg:"Vejetaryen", gf:"Glutensiz", spicy:"Acılı", new:"Yeni", popular:"Popüler"},
+  alg:{gluten:"Gluten", milk:"Süt", egg:"Yumurta", nuts:"Kuruyemiş", sesame:"Susam", soy:"Soya"},
+  meters:{intensity:"Yoğunluk", body:"Gövde", acidity:"Asidite", sweetness:"Tatlılık", aroma:"Aroma", richness:"Zenginlik"}
+ },
+ en:{
+  search:"Search the menu", filter:"Filter", favs:"My favourites", favEmpty:"No favourites yet. Tap the heart on any dish to save it.", clearAll:"Clear all", results:"results", noResults:"No dishes match your search.",
+  open:"Open now", closed:"Closed now", closes:"Closes", opens:"Opens",
+  gMorning:"Good morning", gDay:"Good afternoon", gEvening:"Good evening", gNight:"Good night", tableLbl:"Table",
+  reserve:"Reserve", info:"Info", pickTitle:"Today's selection", sigTitle:"Signature creations", signature:"Signature", isNew:"New",
+  serving:"Now serving", servHours:"Served", servFrom:"Served",
+  add:"Add", addToOrder:"Add to order", viewOrder:"View order", yourOrder:"Your order", total:"Total", subtotal:"Subtotal", tip:"Gratuity", tipNone:"None", empty:"Your order is empty. Add something from the menu.", repeat:"Repeat last order",
+  dineIn:"Dine in", takeaway:"Takeaway", tableNo:"Table no.", yourName:"Your name", orderNote:"Order note", itemNote:"Note for this item", notePh:"e.g. less sugar, oat milk", orderType:"Order type", orderTitle:"New order",
+  send:"Send order on WhatsApp", copyOrder:"Copy order text", copied:"Copied", clearCart:"Clear order",
+  tableNeeded:"Please enter your table number.", nameNeeded:"Please enter your name.",
+  sentTitle:"Your order is ready to send", sentText:"If WhatsApp opened, remember to press send. Our team will confirm your order by message.", sentBack:"Back to order", sentNew:"New order",
+  pairsWith:"Pairs well with", complete:"Complete your order", story:"The story", allergens:"Allergens",  min:"min",
+  required:"Required", optional:"Optional", soldOut:"Sold out", added:"Added to your order", remove:"Remove",
+  waiter:"Call the waiter", waiterAsk:"What do you need?", rWaiter:"Waiter", rBill:"The bill", rWater:"Water / napkins", callNow:"Call on WhatsApp", calledMsg:"request",
+  hours:"Opening hours", address:"Address", phone:"Phone", call:"Call", wifi:"Wi-Fi", password:"Password", copy:"Copy", install:"Install the app", iosHint:"To add to your home screen, tap Share ▸ Add to Home Screen.",
+  toDay:"Switch to day theme", toNight:"Switch to night theme", currency:"Currency", curNote:"Rates are approximate. Payment is taken in ₺.", 
+  share:"Share", linkCopied:"Link copied", favAdd:"Add to favourites", favRemove:"Remove from favourites", close:"Close", 
+  diet:"Dietary", exclAlg:"Exclude allergens", onlyAvail:"Only what's being served now", algDisc:"Filters are for guidance only. If you have an allergy, please tell our staff before ordering.", reset:"Reset", showResults:"Show results",
+  rTitle:"Reserve a table", rDate:"Date", rTime:"Time", rGuests:"Guests", rName:"Your name", rPhone:"Phone (optional)", rOccasion:"Occasion", occ0:"None", occ1:"Birthday", occ2:"Anniversary", occ3:"Business", rNote:"Your note", rSend:"Send request on WhatsApp", rCal:"Add to calendar",  rTimeNeeded:"Please choose a time.", rNameNeeded:"Please enter your name.", rPhoneBad:"That phone number doesn't look right.", rNoSlots:"No times left for this day.", rHint:"Your request is sent to our team on WhatsApp; you'll receive a confirmation message.", rMsg:"Reservation request", rSentTitle:"Your request is ready to send", rSentText:"If WhatsApp opened, remember to press send. Our team will confirm the booking by message.", guests:"guests", today:"Today", tomorrow:"Tomorrow", 
+  demo:"Sample menu · Demo orders go to QR Menü", vat:"All prices include VAT.", algNote:"If you have an allergy, please tell our staff before ordering.", noteLbl:"Note", dateLbl:"Date", timeLbl:"Time", personLbl:"Guests", nameLbl:"Name", phoneLbl:"Phone", occLbl:"Occasion", typeLbl:"Order type", tableLblMsg:"Table", of5:"/ 5", 
+  days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+  tags:{vegan:"Vegan", veg:"Vegetarian", gf:"Gluten-free", spicy:"Spicy", new:"New", popular:"Popular"},
+  alg:{gluten:"Gluten", milk:"Milk", egg:"Egg", nuts:"Nuts", sesame:"Sesame", soy:"Soy"},
+  meters:{intensity:"Intensity", body:"Body", acidity:"Acidity", sweetness:"Sweetness", aroma:"Aroma", richness:"Richness"}
+ },
+ ar:{
+  search:"ابحث في القائمة", filter:"تصفية", favs:"مفضلتي", favEmpty:"لا توجد مفضلات بعد. اضغط على القلب بجانب أي صنف لحفظه.", clearAll:"مسح الكل", results:"نتيجة", noResults:"لا توجد أصناف مطابقة لبحثك.",
+  open:"مفتوح الآن", closed:"مغلق الآن", closes:"يغلق", opens:"يفتح",
+  gMorning:"صباح النور", gDay:"نهارك سعيد", gEvening:"مساء النور", gNight:"ليلة سعيدة", tableLbl:"طاولة",
+  reserve:"احجز", info:"معلومات", pickTitle:"اختيار اليوم", sigTitle:"إبداعاتنا المميزة", signature:"توقيعنا", isNew:"جديد",
+  serving:"يُقدَّم الآن", servHours:"أوقات التقديم", servFrom:"يُقدَّم",
+  add:"أضف", addToOrder:"أضف إلى الطلب", viewOrder:"عرض الطلب", yourOrder:"طلبك", total:"المجموع", subtotal:"المجموع الفرعي", tip:"إكرامية", tipNone:"بدون", empty:"طلبك فارغ. أضف شيئًا من القائمة.", repeat:"كرّر الطلب السابق",
+  dineIn:"في المقهى", takeaway:"سفري", tableNo:"رقم الطاولة", yourName:"اسمك", orderNote:"ملاحظة على الطلب", itemNote:"ملاحظة لهذا الصنف", notePh:"مثلاً: سكر أقل، حليب شوفان", orderType:"نوع الطلب", orderTitle:"طلب جديد",
+  send:"أرسل الطلب عبر واتساب", copyOrder:"انسخ نص الطلب", copied:"تم النسخ", clearCart:"إفراغ الطلب",
+  tableNeeded:"يرجى كتابة رقم الطاولة.", nameNeeded:"يرجى كتابة اسمك.",
+  sentTitle:"طلبك جاهز للإرسال", sentText:"إذا فُتح واتساب فلا تنسَ الضغط على إرسال. سيؤكد فريقنا طلبك برسالة.", sentBack:"العودة إلى الطلب", sentNew:"طلب جديد",
+  pairsWith:"يتناسب جيدًا مع", complete:"أكمل طلبك", story:"القصة", allergens:"مسببات الحساسية",  min:"د",
+  required:"إلزامي", optional:"اختياري", soldOut:"نفد", added:"تمت الإضافة إلى طلبك", remove:"إزالة",
+  waiter:"نادِ النادل", waiterAsk:"ماذا تحتاج؟", rWaiter:"النادل", rBill:"الحساب", rWater:"ماء / مناديل", callNow:"اطلب عبر واتساب", calledMsg:"طلب",
+  hours:"ساعات العمل", address:"العنوان", phone:"الهاتف", call:"اتصل", wifi:"واي فاي", password:"كلمة المرور", copy:"نسخ", install:"ثبّت التطبيق", iosHint:"للإضافة إلى الشاشة الرئيسية اضغط مشاركة ◂ إضافة إلى الشاشة الرئيسية.",
+  toDay:"التبديل إلى المظهر النهاري", toNight:"التبديل إلى المظهر الليلي", currency:"العملة", curNote:"الأسعار تقريبية. يتم الدفع بالليرة ₺.", 
+  share:"مشاركة", linkCopied:"تم نسخ الرابط", favAdd:"أضف إلى المفضلة", favRemove:"أزل من المفضلة", close:"إغلاق", 
+  diet:"النظام الغذائي", exclAlg:"استبعاد مسببات الحساسية", onlyAvail:"ما يُقدَّم الآن فقط", algDisc:"التصفية للاسترشاد فقط. إذا كانت لديك حساسية فيرجى إبلاغ الموظفين قبل الطلب.", reset:"إعادة ضبط", showResults:"عرض النتائج",
+  rTitle:"احجز طاولة", rDate:"التاريخ", rTime:"الوقت", rGuests:"عدد الضيوف", rName:"اسمك", rPhone:"الهاتف (اختياري)", rOccasion:"المناسبة", occ0:"بدون", occ1:"عيد ميلاد", occ2:"ذكرى سنوية", occ3:"عمل", rNote:"ملاحظتك", rSend:"أرسل الطلب عبر واتساب", rCal:"أضف إلى التقويم",  rTimeNeeded:"يرجى اختيار الوقت.", rNameNeeded:"يرجى كتابة اسمك.", rPhoneBad:"رقم الهاتف غير صحيح.", rNoSlots:"لا توجد مواعيد متبقية لهذا اليوم.", rHint:"يُرسل طلبك إلى فريقنا عبر واتساب وستصلك رسالة تأكيد.", rMsg:"طلب حجز", rSentTitle:"طلب الحجز جاهز للإرسال", rSentText:"إذا فُتح واتساب فلا تنسَ الضغط على إرسال. سيؤكد فريقنا الحجز برسالة.", guests:"ضيوف", today:"اليوم", tomorrow:"غدًا", 
+  demo:"قائمة نموذجية · الطلبات التجريبية تصل إلى QR Menü", vat:"جميع الأسعار تشمل ضريبة القيمة المضافة.", algNote:"إذا كانت لديك حساسية، يرجى إبلاغ الموظفين قبل الطلب.", noteLbl:"ملاحظة", dateLbl:"التاريخ", timeLbl:"الوقت", personLbl:"الضيوف", nameLbl:"الاسم", phoneLbl:"الهاتف", occLbl:"المناسبة", typeLbl:"نوع الطلب", tableLblMsg:"طاولة", of5:"/ 5", 
+  days:["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"],
+  tags:{vegan:"نباتي صرف", veg:"نباتي", gf:"خالٍ من الغلوتين", spicy:"حار", new:"جديد", popular:"مميز"},
+  alg:{gluten:"غلوتين", milk:"حليب", egg:"بيض", nuts:"مكسرات", sesame:"سمسم", soy:"صويا"},
+  meters:{intensity:"الشدّة", body:"القوام", acidity:"الحموضة", sweetness:"الحلاوة", aroma:"العطر", richness:"الغنى"}
+ }
+};
+const TH = T[HOUSE];
+
+/* ------------------------------------------------------------------ data */
+const cats = M.categories;
+const items = [];
+cats.forEach(c => c.items.forEach(it => { it.cat = c.id; items.push(it); }));
+const byId = id => items.find(i => i.id === id);
+const catOf = it => cats.find(c => c.id === it.cat);
+const DIET_ORDER = ["veg","vegan","gf"];
+const ALG_ORDER = ["gluten","milk","egg","nuts","sesame","soy"].filter(a => items.some(i => (i.allergens||[]).includes(a)));
+const CUR = {TRY:{sym:"₺", dig:0}, USD:{sym:"$", dig:2}, EUR:{sym:"€", dig:2}, SAR:{sym:"SAR ", dig:2}};
+const CUR_LIST = ["TRY"].concat(Object.keys(M.rates || {}).filter(c => CUR[c] && M.rates[c] > 0));
+
+/* ------------------------------------------------------------------ state */
+let lang = store.get("lang", M.defaultLang || "tr"); if (!T[lang]) lang = "tr";
+let theme = store.get("theme", "night"); if (theme !== "day" && theme !== "night") theme = "night";
+let cur = store.get("cur", "TRY"); if (!CUR_LIST.includes(cur)) cur = "TRY";
+const _sf = store.get("favs", []);
+let favs = new Set(Array.isArray(_sf) ? _sf.filter(id => typeof id === "string" && byId(id)) : []);
+const filt = {fav:false, avail:false, diet:new Set(), excl:new Set()};
+let query = "";
+let orderType = "dine";
+let tipPct = 0;
+
+const t = k => T[lang][k];
+const L = o => o ? (o[lang] || o.en || o.tr || "") : "";
+const LH = o => o ? (o[HOUSE] || o.en || o.tr || "") : "";
+
+/* ------------------------------------------------------------------ clock (demo-able) */
+let clockOffset = 0;
+(function(){
+  if (!M.demo) return;
+  const m = /^([01]?\d|2[0-3]):([0-5]\d)$/.exec(new URLSearchParams(location.search).get("time") || "");
+  if (!m) return;
+  const d = new Date();
+  clockOffset = ((+m[1]*60 + +m[2]) - (d.getHours()*60 + d.getMinutes()))*60000 - d.getSeconds()*1000 - d.getMilliseconds();
+})();
+const now = () => new Date(Date.now() + clockOffset);
+const toMin = s => { const [h, m] = s.split(":").map(Number); return h*60 + m; };
+const hhmm = m => { m = ((m % 1440) + 1440) % 1440; return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0"); };
+const nowMin = () => { const n = now(); return n.getHours()*60 + n.getMinutes(); };
+
+/* ------------------------------------------------------------------ money */
+const locale = l => l === "tr" ? "tr-TR" : l === "ar" ? "ar-u-nu-latn" : "en-US";
+function numFmt(v, digits, loc){ return new Intl.NumberFormat(loc, {minimumFractionDigits: digits, maximumFractionDigits: digits}).format(v); }
+function fmt(n){                       // display currency, current language
+  const c = CUR[cur], v = cur === "TRY" ? n : n * M.rates[cur];
+  const digits = cur === "TRY" ? (Number.isInteger(n) ? 0 : 2) : c.dig;
+  return c.sym + numFmt(v, digits, locale(lang));
+}
+const money = n => `<bdi class="m" dir="ltr">${esc(fmt(n))}</bdi>`;
+const tl = n => numFmt(n, Number.isInteger(n) ? 0 : 2, locale(HOUSE)) + " ₺";   // plain TRY for WhatsApp, house language
+
+/* ------------------------------------------------------------------ hours / availability */
+function status(){
+  const r = M.restaurant, n = now(), d = n.getDay(), mins = n.getHours()*60 + n.getMinutes();
+  const today = r.hours[d], y = r.hours[(d+6)%7];
+  if (y){ const o = toMin(y[0]), c = toMin(y[1]); if (c <= o && mins < c) return {open:true, text:`${t("closes")} ${y[1]}`}; }
+  if (today){
+    const o = toMin(today[0]); let c = toMin(today[1]); if (c <= o) c += 1440;
+    if (mins >= o && mins < c) return {open:true, text:`${t("closes")} ${today[1]}`};
+    if (mins < o) return {open:false, text:`${t("opens")} ${today[0]}`};
+  }
+  for (let i = 1; i <= 7; i++){ const nx = r.hours[(d+i)%7]; if (nx) return {open:false, text:`${t("opens")} ${i === 1 ? "" : T[lang].days[(d+i)%7] + " "}${nx[0]}`}; }
+  return {open:false, text:""};
+}
+function inWindow(w, mins){ const o = toMin(w[0]); let c = toMin(w[1]); return c <= o ? (mins >= o || mins < c) : (mins >= o && mins < c); }
+function avail(it){
+  const w = it.serve || (catOf(it) || {}).serve;
+  if (!w) return {ok:true, w:null};
+  return {ok: inWindow(w, nowMin()), w};
+}
+const winText = w => `${w[0]}–${w[1]}`;
+const winHtml = w => `<bdi dir="ltr">${winText(w)}</bdi>`;
+function greetKey(){ const h = now().getHours(); return h >= 5 && h < 11 ? "gMorning" : h >= 11 && h < 17 ? "gDay" : h >= 17 && h < 22 ? "gEvening" : "gNight"; }
+
+/* ------------------------------------------------------------------ helpers */
+function norm(s){
+  return String(s || "").toLocaleLowerCase("en").normalize("NFD").replace(/[\u0300-\u036f\u064b-\u065f\u0670]/g, "")
+    .replace(/ı/g, "i").replace(/[أإآ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه");
+}
+const hay = it => it._hay || (it._hay = norm(LANGS.map(l => [it.name, it.desc, it.notes].map(o => o && o[l] || "").join(" ")).join(" ")));
+function plate(it, cls = ""){ return `<div class="plate ${cls}" style="--h:${+it.hue || 30}" aria-hidden="true">${I[it.icon] || I.plate}</div>`; }
+const isFiltering = () => !!(query.trim() || filt.fav || filt.avail || filt.diet.size || filt.excl.size);
+function matches(it){
+  if (filt.fav && !favs.has(it.id)) return false;
+  if (filt.avail && !avail(it).ok) return false;
+  const tg = it.tags || [];
+  for (const d of filt.diet){ if (d === "veg" ? !(tg.includes("veg") || tg.includes("vegan")) : !tg.includes(d)) return false; }
+  for (const a of filt.excl){ if ((it.allergens || []).includes(a)) return false; }
+  const q = norm(query.trim());
+  if (q && !hay(it).includes(q)) return false;
+  return true;
+}
+
+/* ------------------------------------------------------------------ item markup */
+function badgesHtml(it){
+  const tg = it.tags || [], out = [];
+  if (it.sig) out.push(`<span class="lab sig-l">${I.t_sig}${esc(t("signature"))}</span>`);
+  if (tg.includes("new")) out.push(`<span class="lab new-l">${esc(t("isNew"))}</span>`);
+  if (tg.includes("vegan")) out.push(`<span class="dot-badge" title="${esc(T[lang].tags.vegan)}" aria-label="${esc(T[lang].tags.vegan)}">VG</span>`);
+  else if (tg.includes("veg")) out.push(`<span class="dot-badge" title="${esc(T[lang].tags.veg)}" aria-label="${esc(T[lang].tags.veg)}">V</span>`);
+  if (tg.includes("gf")) out.push(`<span class="dot-badge" title="${esc(T[lang].tags.gf)}" aria-label="${esc(T[lang].tags.gf)}">GF</span>`);
+  if (tg.includes("spicy")) out.push(`<span class="dot-badge" title="${esc(T[lang].tags.spicy)}" aria-label="${esc(T[lang].tags.spicy)}">${I.t_spicy || "!"}</span>`);
+  out.push(`<span class="av" data-avnote="${it.id}"></span>`);
+  return out.join("");
+}
+const heartBtn = it => `<button type="button" class="heart" data-fav="${it.id}" aria-pressed="${favs.has(it.id)}" aria-label="${esc(favs.has(it.id) ? t("favRemove") : t("favAdd"))}: ${esc(L(it.name))}">${I.heart}</button>`;
+function itemHtml(it){
+  return `<article class="item" data-id="${it.id}" data-av="${it.id}">
+    <div class="i-head"><h3 class="name"><button type="button" class="name-btn" data-id="${it.id}">${esc(L(it.name))}</button></h3><span class="leader" aria-hidden="true"></span><span class="price">${money(it.price)}</span></div>
+    ${it.notes ? `<p class="i-notes">${esc(L(it.notes))}</p>` : ""}
+    <p class="i-desc">${esc(L(it.desc))}</p>
+    <div class="i-foot"><div class="badges">${it.soldOut ? `<span class="lab">${esc(t("soldOut"))}</span>` : ""}${badgesHtml(it)}</div>
+      <div class="acts">${heartBtn(it)}<button type="button" class="add" data-quick="${it.id}" aria-label="${esc(t("add"))}: ${esc(L(it.name))}"${it.soldOut ? " disabled" : ""}>${I.plus}</button></div></div>
+  </article>`;
+}
+function serveBadge(c){
+  if (!c.serve) return "";
+  return `<span class="serve" data-serve="${c.id}"><i></i><span></span></span>`;
+}
+
+/* ------------------------------------------------------------------ render */
+function renderChrome(){
+  const r = M.restaurant, root = document.documentElement;
+  root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr"; root.setAttribute("data-theme", theme);
+  $("#metaTheme").setAttribute("content", theme === "day" ? "#f6f0e3" : "#0b1310");
+  $("#tagline").textContent = L(r.tagline);
+  $$(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  $("#themeBtn").innerHTML = theme === "night" ? I.sun : I.moon;
+  $("#themeBtn").setAttribute("aria-label", theme === "night" ? t("toDay") : t("toNight"));
+  $("#curLabel").textContent = `${CUR[cur].sym.trim()} ${cur}`;
+  $("#curBtn").setAttribute("aria-label", `${t("currency")}: ${cur}`);
+  $("#curBtn").hidden = CUR_LIST.length < 2;
+  $("#reserveBtn").innerHTML = `${I.calendar}<span>${esc(t("reserve"))}</span>`;
+  $("#infoBtn").innerHTML = `${I.info}<span>${esc(t("info"))}</span>`;
+  $("#reserveBar").innerHTML = `${I.calendar}<span>${esc(t("rTitle"))}</span>`;
+  $("#waiterBtn").innerHTML = I.bell; $("#waiterBtn").setAttribute("aria-label", t("waiter")); $("#waiterBtn").title = t("waiter");
+  $("#q").placeholder = t("search"); $("#q").setAttribute("aria-label", t("search"));
+  $("#favBtn").innerHTML = `${I.heart}<b class="badge" id="favCount" hidden></b>`;
+  $("#favBtn").setAttribute("aria-label", t("favs")); $("#favBtn").title = t("favs");
+  $("#filterBtn").innerHTML = `${I.sliders}<b class="badge" id="filtCount" hidden></b>`;
+  $("#filterBtn").setAttribute("aria-label", t("filter")); $("#filterBtn").title = t("filter");
+  $("#vat").textContent = t("vat"); $("#algNote").textContent = t("algNote"); $("#demoNote").textContent = t("demo");
+  const keepCat = activeCat;
+  $("#cats").innerHTML = cats.map(c => `<button type="button" data-cat="${c.id}">${esc(L(c.name))}</button>`).join("");
+  activeCat = null; if (keepCat) setActiveCat(keepCat);
+  tickChrome(); updateCounters();
+}
+function tickChrome(){
+  const st = status();
+  const s = $("#status");
+  s.className = "status " + (st.open ? "is-open" : "is-closed");
+  s.innerHTML = `<i></i>${esc(st.open ? t("open") : t("closed"))}<em>${esc(st.text)}</em>`;
+  const tbl = tableParam();
+  $("#greet").textContent = t(greetKey());
+  const chip = $("#tableChip");
+  chip.hidden = !tbl;
+  if (tbl) chip.innerHTML = `${I.pin}<span>${esc(t("tableLbl"))} ${esc(tbl)}</span>`;
+}
+let _table = null;
+function tableParam(){
+  if (_table !== null) return _table;
+  const v = new URLSearchParams(location.search).get("table") || "";
+  _table = /^[A-Za-z0-9-]{1,6}$/.test(v) ? v : "";
+  return _table;
+}
+function updateCounters(){
+  const fc = $("#favCount"), xc = $("#filtCount");
+  if (fc){ fc.hidden = favs.size === 0; fc.textContent = favs.size; }
+  const n = filt.diet.size + filt.excl.size + (filt.avail ? 1 : 0);
+  if (xc){ xc.hidden = n === 0; xc.textContent = n; }
+  $("#favBtn").setAttribute("aria-pressed", String(filt.fav));
+}
+function pickItem(){
+  const id = (M.daily || {})[now().getDay()];
+  const it = id && byId(id);
+  return it || items.find(i => i.sig) || null;
+}
+function renderMenu(){
+  const filtering = isFiltering();
+  let html = "", count = 0;
+  const lists = cats.map(c => ({c, list: c.items.filter(matches)}));
+  lists.forEach(x => count += x.list.length);
+  if (!filtering){
+    const pk = pickItem();
+    if (pk) html += `<section class="pick" data-id="${pk.id}" data-av="${pk.id}">
+      ${plate(pk)}
+      <div><span class="eyebrow">${esc(t("pickTitle"))}</span><h2><button type="button" class="name-btn" data-id="${pk.id}">${esc(L(pk.name))}</button></h2><p>${esc(L(pk.desc))}</p>
+      <div class="pick-foot"><span class="price">${money(pk.price)}</span><span class="av" data-avnote="${pk.id}"></span></div></div></section>`;
+    const sigs = items.filter(i => i.sig && !i.soldOut);
+    if (sigs.length) html += `<section class="sigs"><h2 class="sec-title sm">${esc(t("sigTitle"))}</h2><div class="sig-row">${sigs.map(it => `
+      <button type="button" class="sig" data-id="${it.id}" data-av="${it.id}">${plate(it)}<b>${esc(L(it.name))}</b><span class="price">${money(it.price)}</span></button>`).join("")}</div></section>`;
+  } else {
+    const chips = [];
+    if (query.trim()) chips.push(["q", `“${query.trim()}”`]);
+    if (filt.fav) chips.push(["fav", t("favs")]);
+    filt.diet.forEach(d => chips.push(["diet:" + d, T[lang].tags[d]]));
+    filt.excl.forEach(a => chips.push(["excl:" + a, "– " + T[lang].alg[a]]));
+    if (filt.avail) chips.push(["avail", t("serving")]);
+    html += `<div class="afbar"><div class="af-chips">${chips.map(([k, label]) => `<button type="button" class="af-chip" data-rm="${esc(k)}">${esc(label)}<span aria-hidden="true">${I.x}</span><span class="sr-only">${esc(t("close"))}</span></button>`).join("")}</div>
+      <div class="af-meta"><span>${count} ${esc(t("results"))}</span><button type="button" class="link" data-clear>${esc(t("clearAll"))}</button></div></div>`;
+  }
+  lists.forEach(({c, list}) => {
+    if (!list.length) return;
+    html += `<section class="cat" id="cat-${c.id}" data-cat="${c.id}">
+      <header class="cat-head"><div class="cat-ornament" aria-hidden="true"><i></i></div><h2 class="sec-title">${esc(L(c.name))}</h2>${c.note ? `<p class="cat-note">${esc(L(c.note))}</p>` : ""}${serveBadge(c)}</header>
+      <div class="list">${list.map(itemHtml).join("")}</div></section>`;
+  });
+  if (!count) html += `<p class="none">${esc(filt.fav && favs.size === 0 && !query.trim() ? t("favEmpty") : t("noResults"))}</p>`;
+  $("#menu").innerHTML = html;
+  $("#live").textContent = filtering ? `${count} ${t("results")}` : "";
+  patchAvail(); spy(); updateCounters();
+}
+/* in-place time-window patching (no re-render, so no scroll disturbance) */
+function patchAvail(){
+  $$("[data-av]").forEach(el => {
+    const it = byId(el.dataset.av); if (!it) return;
+    const a = avail(it);
+    el.classList.toggle("off", !a.ok);
+    const note = $("[data-avnote]", el);
+    if (note) note.innerHTML = (!a.ok && a.w) ? `${esc(t("servFrom"))} ${winHtml(a.w)}` : "";
+    const add = $(".add", el);
+    if (add) add.disabled = !a.ok || !!it.soldOut;
+  });
+  $$("[data-serve]").forEach(el => {
+    const c = cats.find(x => x.id === el.dataset.serve); if (!c || !c.serve) return;
+    const ok = inWindow(c.serve, nowMin()) && status().open;   // "now serving" only while the café is actually open
+    el.classList.toggle("off", !ok);
+    el.lastElementChild.innerHTML = ok ? `${esc(t("serving"))} · ${winHtml(c.serve)}` : `${esc(t("servHours"))} ${winHtml(c.serve)}`;
+  });
+}
+
+/* ------------------------------------------------------------------ cart */
+function revalidate(l){
+  const it = byId(l && l.id); if (!it || !Array.isArray(l.opts)) return false;
+  if (!Number.isInteger(l.qty) || l.qty < 1) return false;
+  l.qty = Math.min(l.qty, 30);
+  const all = (it.options || []).flatMap(g => g.choices);
+  for (const o of l.opts){
+    const c = o && o.n && all.find(x => x.name.en === o.n.en); if (!c) return false;
+    o.price = c.price || 0;
+  }
+  l.note = typeof l.note === "string" ? l.note.slice(0, 200) : "";
+  l.key = l.id + "|" + l.opts.map(o => o.n.en).join(",") + "|" + l.note;
+  return true;
+}
+let cart = store.get("cart", []);
+if (!Array.isArray(cart) || Date.now() - store.get("cartTs", 0) > 12*3600e3) cart = [];
+cart = cart.filter(revalidate);
+const lineUnit = l => byId(l.id).price + l.opts.reduce((a, o) => a + o.price, 0);
+const cartSub = () => cart.reduce((a, l) => a + lineUnit(l)*l.qty, 0);
+const tipAmt = () => Math.round(cartSub()*tipPct/100);
+const cartTotal = () => cartSub() + tipAmt();
+const cartCount = () => cart.reduce((a, l) => a + l.qty, 0);
+function saveCart(){ store.set("cart", cart); store.set("cartTs", Date.now()); renderCartBar(); }
+function renderCartBar(){
+  const n = cartCount(), bar = $("#cartBar");
+  bar.hidden = n === 0;
+  bar.innerHTML = `<span class="cb-count">${n}</span><span class="cb-label">${esc(t("viewOrder"))}</span><span class="cb-total">${money(cartSub())}</span>`;
+  document.body.classList.toggle("has-cart", n > 0);
+}
+function addToCart(it, opts, qty, note){
+  const key = it.id + "|" + opts.map(o => o.n.en).join(",") + "|" + note;
+  const ex = cart.find(l => l.key === key);
+  if (ex) ex.qty = Math.min(30, ex.qty + qty); else cart.push({key, id:it.id, opts, qty:Math.min(30, qty), note});
+  saveCart(); toast(t("added"));
+  const bar = $("#cartBar"); bar.classList.remove("bump"); void bar.offsetWidth; bar.classList.add("bump");
+}
+
+/* ------------------------------------------------------------------ sheets */
+let lastFocus = null, pushed = false, ignorePop = 0, returnToCart = false, tt;
+let onClick = null, onInput = null, onChange = null;
+function openSheet(html, cls = ""){
+  const sheet = $("#sheet");
+  clearTimeout(tt); $("#toast").classList.remove("show"); $("#toast").hidden = true;
+  if (sheet.hidden) lastFocus = document.activeElement;
+  onClick = onInput = onChange = null;
+  $("#sheetBody").innerHTML = html;
+  sheet.className = "sheet " + cls; sheet.hidden = false;
+  $("#app").inert = true; $("#dock").inert = true;
+  document.body.classList.add("locked");
+  if (!pushed){ try { history.pushState({noorSheet:1}, ""); pushed = true; } catch(e){} }
+  const sc = $(".sheet-scroll"); if (sc) sc.scrollTop = 0;
+  const c = $("#sheetBody .close"); (c || $("#panel")).focus({preventScroll:true});
+}
+function closeSheet(fromPop){
+  const sheet = $("#sheet"); if (sheet.hidden) return;
+  sheet.hidden = true; sheet.className = "sheet"; $("#sheetBody").innerHTML = "";
+  onClick = onInput = onChange = null;
+  $("#app").inert = false; $("#dock").inert = false;
+  document.body.classList.remove("locked");
+  if (pushed){ pushed = false; if (!fromPop){ ignorePop++; try { history.back(); } catch(e){ ignorePop--; } } }
+  returnToCart = false;
+  const f = lastFocus; lastFocus = null;
+  if (f && f.isConnected && typeof f.focus === "function") f.focus({preventScroll:true});
+}
+const closeBtn = () => `<button type="button" class="close" aria-label="${esc(t("close"))}">${I.x}</button>`;
+
+/* ----- item sheet ----- */
+function selectedOpts(it){
+  const out = [];
+  $$("#sheetBody fieldset.opt").forEach(fs => {
+    const g = it.options[+fs.dataset.g];
+    $$("input:checked", fs).forEach(inp => { const c = g.choices[+inp.value]; out.push({g:g.name, n:c.name, price:c.price || 0}); });
+  });
+  return out;
+}
+function metersHtml(it){
+  const m = it.meters; if (!m) return "";
+  const rows = Object.keys(m).filter(k => T[lang].meters[k]).map(k => {
+    const v = Math.max(0, Math.min(5, +m[k] || 0));
+    return `<div class="meter" role="img" aria-label="${esc(T[lang].meters[k])} ${v}${t("of5")}"><span>${esc(T[lang].meters[k])}</span><span class="dots" aria-hidden="true">${[1,2,3,4,5].map(i => `<i class="${i <= v ? "on" : ""}"></i>`).join("")}</span></div>`;
+  });
+  return rows.length ? `<div class="meters">${rows.join("")}</div>` : "";
+}
+function openItem(id){
+  const it = byId(id); if (!it) return;
+  const a = avail(it), c = catOf(it);
+  let qty = 1;
+  const groups = (it.options || []).map((g, gi) => `
+    <fieldset class="opt" data-g="${gi}"><legend>${esc(L(g.name))}<small>${esc(g.type === "single" ? t("required") : t("optional"))}</small></legend>
+    ${g.choices.map((ch, ci) => `<label class="choice"><input type="${g.type === "single" ? "radio" : "checkbox"}" name="g${gi}" value="${ci}"${g.type === "single" && ci === 0 ? " checked" : ""}><span class="c-name">${esc(L(ch.name))}</span><span class="c-price">${ch.price ? "+" + money(ch.price) : ""}</span></label>`).join("")}</fieldset>`).join("");
+  const facts = [];
+  if (it.prep) facts.push(`<span class="fact">${I.clock}${it.prep} ${esc(t("min"))}</span>`);
+  if (it.kcal) facts.push(`<span class="fact"><bdi dir="ltr">${it.kcal} kcal</bdi></span>`);
+  (it.tags || []).filter(x => x !== "popular" && x !== "new" && T[lang].tags[x]).forEach(x => facts.push(`<span class="fact">${esc(T[lang].tags[x])}</span>`));
+  const pairs = (it.pair || []).map(byId).filter(p => p && !p.soldOut);
+  const canAdd = a.ok && !it.soldOut;
+  const addLabel = it.soldOut ? esc(t("soldOut")) : !a.ok ? `${esc(t("servFrom"))} ${winHtml(a.w)}` : esc(t("addToOrder"));
+  openSheet(`
+    <div class="sheet-acts"><div class="l">${heartBtn(it).replace('class="heart"', 'class="icon-btn"')}<button type="button" class="icon-btn" id="shareBtn" aria-label="${esc(t("share"))}">${I.share}</button></div>${closeBtn()}</div>
+    <div class="sheet-scroll">
+      <div class="plate-wrap">${plate(it)}</div>
+      <div class="sheet-pad">
+        <p class="eyebrow">${esc(L(c.name))}${it.sig ? " · ✦ " + esc(t("signature")) : ""}</p>
+        <h2 class="sheet-title" id="sheetTitle">${esc(L(it.name))}</h2>
+        ${it.notes ? `<p class="notes">${esc(L(it.notes))}</p>` : ""}
+        <p class="sheet-desc">${esc(L(it.desc))}</p>
+        <div class="facts">${facts.join("")}</div>
+        ${metersHtml(it)}
+        ${it.story ? `<section class="story"><h3 class="sub">${esc(t("story"))}</h3><p>${esc(L(it.story))}</p></section>` : ""}
+        ${pairs.length ? `<h3 class="sub">${esc(t("pairsWith"))}</h3><div class="pair-row">${pairs.map(p => `<button type="button" class="pair" data-open="${p.id}">${plate(p)}<span><b>${esc(L(p.name))}</b><small>${money(p.price)}</small></span></button>`).join("")}</div>` : ""}
+        ${(it.allergens || []).length ? `<p class="alg"><b>${esc(t("allergens"))}:</b> ${it.allergens.map(x => esc(T[lang].alg[x] || x)).join(", ")}</p>` : ""}
+        ${canAdd ? `${groups}<label class="field"><span>${esc(t("itemNote"))}</span><textarea id="itemNote" rows="2" maxlength="200" placeholder="${esc(t("notePh"))}"></textarea></label>` : ""}
+      </div>
+    </div>
+    <div class="sheet-foot">
+      ${canAdd ? `<div class="stepper"><button type="button" data-step="-1" aria-label="−" disabled>${I.minus}</button><output id="qty" aria-live="polite">1</output><button type="button" data-step="1" aria-label="+">${I.plus}</button></div>` : ""}
+      <button type="button" class="primary" id="addItem"${canAdd ? "" : " disabled"}><span>${addLabel}${canAdd ? ` · <span id="itemTotal">${money(it.price)}</span>` : ""}</span></button>
+    </div>`, "item-sheet");
+  const recalc = () => {
+    const tot = $("#itemTotal"); if (!tot) return;
+    tot.innerHTML = money((it.price + selectedOpts(it).reduce((s, o) => s + o.price, 0))*qty);
+    $("#qty").textContent = qty;
+    $("[data-step='-1']").disabled = qty <= 1; $("[data-step='1']").disabled = qty >= 30;
+  };
+  onChange = recalc;
+  onClick = e => {
+    const s = e.target.closest("[data-step]");
+    if (s){ qty = Math.max(1, Math.min(30, qty + +s.dataset.step)); recalc(); return; }
+    const hb = e.target.closest("[data-fav]");
+    if (hb){ toggleFav(hb.dataset.fav); return; }
+    if (e.target.closest("#shareBtn")){ shareItem(it); return; }
+    const po = e.target.closest("[data-open]");
+    if (po){ openItem(po.dataset.open); return; }
+    if (e.target.closest("#addItem") && canAdd){
+      addToCart(it, selectedOpts(it), qty, ($("#itemNote").value || "").trim().slice(0, 200));
+      if (returnToCart){ returnToCart = false; openCart(); } else closeSheet();
+    }
+  };
+}
+function shareItem(it){
+  const url = location.href.split("#")[0] + "#i=" + it.id;
+  const data = {title: `${M.restaurant.name} · ${L(it.name)}`, text: L(it.desc), url};
+  if (navigator.share){ navigator.share(data).catch(() => {}); return; }
+  copy(url, t("linkCopied"));
+}
+
+/* ----- favourites ----- */
+function toggleFav(id){
+  if (favs.has(id)) favs.delete(id); else favs.add(id);
+  store.set("favs", [...favs]);
+  $$(`[data-fav="${id}"]`).forEach(b => {
+    const on = favs.has(id), it = byId(id);
+    b.setAttribute("aria-pressed", String(on));
+    b.setAttribute("aria-label", `${on ? t("favRemove") : t("favAdd")}: ${L(it.name)}`);
+  });
+  updateCounters();
+  if (filt.fav) renderMenu();
+}
+
+/* ----- cart sheet ----- */
+function orderText(){
+  const r = M.restaurant;
+  const tblV = ($("#tableNo") && $("#tableNo").value.trim()) || "-";
+  const nameV = ($("#custName") && $("#custName").value.trim()) || "-";
+  let s = `*${TH.orderTitle} · ${r.name}*\n`;
+  s += orderType === "dine" ? `${TH.typeLbl}: ${TH.dineIn} · ${TH.tableLblMsg} ${tblV}\n` : `${TH.typeLbl}: ${TH.takeaway} · ${nameV}\n`;
+  s += "\n";
+  cart.forEach(l => {
+    const it = byId(l.id);
+    s += `${l.qty} × ${LH(it.name)} — ${tl(lineUnit(l)*l.qty)}\n`;
+    if (l.opts.length) s += `   ${l.opts.map(o => LH(o.n)).join(", ")}\n`;
+    if (l.note) s += `   ✎ ${l.note}\n`;
+  });
+  const nt = ($("#orderNote") && $("#orderNote").value.trim()) || "";
+  if (nt) s += `\n${TH.noteLbl}: ${nt}\n`;
+  if (tipPct) s += `\n${TH.tip}: %${tipPct} · ${tl(tipAmt())}`;
+  s += `\n\n*${TH.total}: ${tl(cartTotal())}*`;
+  return s;
+}
+const waUrl = text => `https://wa.me/${String(M.whatsapp).replace(/\D/g, "")}?text=${encodeURIComponent(text)}`;
+function linesHtml(){
+  return cart.map((l, i) => { const it = byId(l.id); return `
+    <li class="cline">${plate(it)}
+      <div class="cl-body"><b>${esc(L(it.name))}</b>${l.opts.length ? `<small>${l.opts.map(o => esc(L(o.n))).join(" · ")}</small>` : ""}${l.note ? `<small>✎ ${esc(l.note)}</small>` : ""}<span class="cl-price">${money(lineUnit(l)*l.qty)}</span></div>
+      <div class="stepper sm"><button type="button" data-line="${i}" data-d="-1" aria-label="${esc(l.qty === 1 ? t("remove") : "−")}">${l.qty === 1 ? I.trash : I.minus}</button><output>${l.qty}</output><button type="button" data-line="${i}" data-d="1" aria-label="+"${l.qty >= 30 ? " disabled" : ""}>${I.plus}</button></div>
+    </li>`; }).join("");
+}
+function upsellHtml(){
+  const inCart = new Set(cart.map(l => l.id)), seen = new Set(), out = [];
+  cart.forEach(l => (byId(l.id).pair || []).forEach(pid => {
+    const p = byId(pid);
+    if (p && !inCart.has(pid) && !seen.has(pid) && !p.soldOut && avail(p).ok){ seen.add(pid); out.push(p); }
+  }));
+  if (!out.length) return "";
+  return `<h3 class="sub">${esc(t("complete"))}</h3><div class="pair-row upsell">${out.slice(0, 4).map(p => `<button type="button" class="pair" data-up="${p.id}">${plate(p)}<span><b>${esc(L(p.name))}</b><small>${money(p.price)}</small></span></button>`).join("")}</div>`;
+}
+function sumHtml(){
+  const sub = cartSub(), tp = tipAmt(), tot = cartTotal();
+  return `${tipPct ? `<div><span>${esc(t("subtotal"))}</span><span>${money(sub)}</span></div><div><span>${esc(t("tip"))} · %${tipPct}</span><span>${money(tp)}</span></div>` : ""}
+    <div class="total"><span>${esc(t("total"))}</span><span>${money(tot)}</span></div>
+    ${cur !== "TRY" ? `<div class="approx"><span>${esc(t("curNote"))}</span><bdi class="m" dir="ltr">₺${esc(numFmt(tot, Number.isInteger(tot) ? 0 : 2, locale(lang)))}</bdi></div>` : ""}`;
+}
+function openCart(){
+  if (!cart.length){
+    const last = store.get("last", null);
+    const lastLines = Array.isArray(last) ? last.map(l => JSON.parse(JSON.stringify(l))).filter(revalidate) : [];
+    openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sheet-pad"><h2 class="sheet-title plain" id="sheetTitle">${esc(t("yourOrder"))}</h2>
+      <div class="empty">${I.bag}<p>${esc(t("empty"))}</p>${lastLines.length ? `<button type="button" class="btn ghost" id="repeatBtn">${esc(t("repeat"))}</button>` : ""}</div></div></div>`, "cart-sheet");
+    onClick = e => { if (e.target.closest("#repeatBtn")){ cart = lastLines; saveCart(); openCart(); } };
+    return;
+  }
+  const tbl = store.get("table", "") || tableParam();
+  const nm = store.get("name", "");
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div>
+    <div class="sheet-scroll"><div class="sheet-pad">
+      <h2 class="sheet-title plain" id="sheetTitle">${esc(t("yourOrder"))}</h2>
+      <ul class="lines" id="lines">${linesHtml()}</ul>
+      <div id="upsell" class="upsell">${upsellHtml()}</div>
+      <div class="seg" role="radiogroup" aria-label="${esc(t("orderType"))}">
+        <button type="button" role="radio" data-type="dine" aria-checked="${orderType === "dine"}">${esc(t("dineIn"))}</button>
+        <button type="button" role="radio" data-type="take" aria-checked="${orderType === "take"}">${esc(t("takeaway"))}</button>
+      </div>
+      <label class="field" id="fTable"${orderType === "dine" ? "" : " hidden"}><span>${esc(t("tableNo"))}</span><input id="tableNo" inputmode="text" autocapitalize="characters" maxlength="6" value="${esc(tbl)}" placeholder="12"></label>
+      <label class="field" id="fName"${orderType === "take" ? "" : " hidden"}><span>${esc(t("yourName"))}</span><input id="custName" maxlength="40" autocomplete="given-name" value="${esc(nm)}"></label>
+      <label class="field"><span>${esc(t("orderNote"))}</span><textarea id="orderNote" rows="2" maxlength="300" placeholder="${esc(t("notePh"))}"></textarea></label>
+      <div class="field"><span>${esc(t("tip"))}</span><div class="tips" id="tips">${[0,5,10,15].map(p => `<button type="button" data-tip="${p}" aria-pressed="${tipPct === p}">${p ? "%" + p : esc(t("tipNone"))}</button>`).join("")}</div></div>
+      <div class="sum" id="sum">${sumHtml()}</div>
+      <p class="err" id="err" role="alert" hidden></p>
+      <button type="button" class="link-btn" id="copyOrder">${I.copy}${esc(t("copyOrder"))}</button><br>
+      <button type="button" class="link-btn danger" id="clearCart">${I.trash}${esc(t("clearCart"))}</button>
+    </div></div>
+    <div class="sheet-foot"><a class="primary" id="sendWa" href="#" target="_blank" rel="noopener">${I.wa}${esc(t("send"))}</a></div>`, "cart-sheet");
+  const upd = () => { $("#sendWa").href = waUrl(orderText()); };
+  const refresh = () => { $("#sum").innerHTML = sumHtml(); upd(); renderCartBar(); };
+  const redraw = () => {
+    if (!cart.length){ saveCart(); openCart(); return; }
+    $("#lines").innerHTML = linesHtml(); $("#upsell").innerHTML = upsellHtml(); saveCart(); refresh();
+  };
+  upd();
+  onInput = e => {
+    if (e.target.id === "tableNo") store.set("table", e.target.value.trim());
+    if (e.target.id === "custName") store.set("name", e.target.value.trim());
+    if (e.target.closest(".field")) e.target.closest(".field").classList.remove("invalid");
+    upd();
+  };
+  onClick = e => {
+    const b = e.target.closest("[data-line]");
+    if (b){ const i = +b.dataset.line, l = cart[i]; l.qty = Math.min(30, l.qty + +b.dataset.d); if (l.qty <= 0) cart.splice(i, 1); redraw(); return; }
+    const up = e.target.closest("[data-up]");
+    if (up){ const p = byId(up.dataset.up); if (p.options && p.options.length){ returnToCart = true; openItem(p.id); } else { addToCart(p, [], 1, ""); redraw(); } return; }
+    const ty = e.target.closest("[data-type]");
+    if (ty){ orderType = ty.dataset.type; $$("[data-type]").forEach(x => x.setAttribute("aria-checked", String(x === ty))); $("#fTable").hidden = orderType !== "dine"; $("#fName").hidden = orderType !== "take"; $("#err").hidden = true; upd(); return; }
+    const tp = e.target.closest("[data-tip]");
+    if (tp){ tipPct = +tp.dataset.tip; $$("[data-tip]").forEach(x => x.setAttribute("aria-pressed", String(x === tp))); refresh(); return; }
+    if (e.target.closest("#clearCart")){ cart = []; saveCart(); closeSheet(); return; }
+    if (e.target.closest("#copyOrder")){ copy(orderText(), t("copied")); return; }
+    if (e.target.closest("#sendWa")){
+      const need = orderType === "dine" ? $("#tableNo") : $("#custName");
+      if (!need.value.trim()){
+        e.preventDefault();
+        const er = $("#err"); er.hidden = false; er.textContent = orderType === "dine" ? t("tableNeeded") : t("nameNeeded");
+        need.closest(".field").classList.add("invalid"); need.focus(); return;
+      }
+      upd();
+      store.set("last", cart);
+      setTimeout(showSent, 60);
+    }
+  };
+}
+function showSent(){
+  if ($("#sheet").hidden) return;
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sent"><div class="tickc">${I.check}</div>
+    <h2 class="sheet-title" id="sheetTitle">${esc(t("sentTitle"))}</h2><p>${esc(t("sentText"))}</p></div></div>
+    <div class="sheet-foot"><button type="button" class="btn ghost" id="backBtn" style="flex:1">${esc(t("sentBack"))}</button><button type="button" class="primary" id="newBtn">${esc(t("sentNew"))}</button></div>`, "sent-sheet");
+  onClick = e => {
+    if (e.target.closest("#backBtn")) openCart();
+    if (e.target.closest("#newBtn")){ cart = []; saveCart(); closeSheet(); }
+  };
+}
+
+/* ----- waiter ----- */
+function openWaiter(){
+  const tbl = store.get("table", "") || tableParam();
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sheet-pad">
+    <h2 class="sheet-title plain" id="sheetTitle">${esc(t("waiter"))}</h2><p class="sheet-desc">${esc(t("waiterAsk"))}</p>
+    <div class="seg" role="radiogroup" aria-label="${esc(t("waiterAsk"))}">
+      <button type="button" role="radio" data-r="rWaiter" aria-checked="true">${I.bell}${esc(t("rWaiter"))}</button>
+      <button type="button" role="radio" data-r="rBill" aria-checked="false">${I.receipt}${esc(t("rBill"))}</button>
+      <button type="button" role="radio" data-r="rWater" aria-checked="false">${I.drop}${esc(t("rWater"))}</button>
+    </div>
+    <label class="field"><span>${esc(t("tableNo"))}</span><input id="tableNo" inputmode="text" autocapitalize="characters" maxlength="6" value="${esc(tbl)}" placeholder="12"></label>
+    <p class="err" id="err" role="alert" hidden></p></div></div>
+    <div class="sheet-foot"><a class="primary" id="callWa" href="#" target="_blank" rel="noopener">${I.wa}${esc(t("callNow"))}</a></div>`, "waiter-sheet");
+  let r = "rWaiter";
+  const upd = () => { $("#callWa").href = waUrl(`*${M.restaurant.name}* · ${TH.tableLblMsg} ${$("#tableNo").value.trim() || "-"}\n${TH[r]} ${TH.calledMsg}`); };
+  upd();
+  onInput = e => { if (e.target.id === "tableNo") store.set("table", e.target.value.trim()); e.target.closest(".field").classList.remove("invalid"); upd(); };
+  onClick = e => {
+    const b = e.target.closest("[data-r]");
+    if (b){ r = b.dataset.r; $$("[data-r]").forEach(x => x.setAttribute("aria-checked", String(x === b))); upd(); return; }
+    if (e.target.closest("#callWa") && !$("#tableNo").value.trim()){
+      e.preventDefault(); const er = $("#err"); er.hidden = false; er.textContent = t("tableNeeded");
+      $("#tableNo").closest(".field").classList.add("invalid"); $("#tableNo").focus();
+    }
+  };
+}
+
+/* ----- info ----- */
+let deferredInstall = null;
+function openInfo(){
+  const r = M.restaurant, d = now().getDay();
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !navigator.standalone && !matchMedia("(display-mode: standalone)").matches;
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sheet-pad">
+    <h2 class="sheet-title plain" id="sheetTitle">${esc(r.name)}</h2><p class="notes">${esc(L(r.tagline))}</p>
+    <h3 class="sub">${I.clock}${esc(t("hours"))}</h3>
+    <ul class="hours">${[1,2,3,4,5,6,0].map(i => `<li${i === d ? ' class="today"' : ""}><span>${esc(T[lang].days[i])}</span><span dir="ltr">${r.hours[i] ? esc(r.hours[i].join(" – ")) : "—"}</span></li>`).join("")}</ul>
+    <h3 class="sub">${I.pin}${esc(t("address"))}</h3><p class="sel">${esc(r.address)}</p>
+    ${r.mapUrl ? `<a class="link-btn" href="${esc(r.mapUrl)}" target="_blank" rel="noopener">${I.pin}Google Maps</a>` : ""}
+    <h3 class="sub">${I.phone}${esc(t("phone"))}</h3><p><bdi dir="ltr" class="sel">${esc(r.phone)}</bdi></p>
+    <a class="link-btn" href="tel:${esc(String(r.phone).replace(/[^\d+]/g, ""))}">${I.phone}${esc(t("call"))}</a>
+    <h3 class="sub">${I.wifi}${esc(t("wifi"))}</h3>
+    <div class="wifi"><span dir="ltr">${esc(r.wifi.ssid)}</span><span>${esc(t("password"))}: <b class="sel" dir="ltr">${esc(r.wifi.pass)}</b></span><button type="button" class="link-btn" id="copyWifi">${I.copy}${esc(t("copy"))}</button></div>
+    <h3 class="sub">${esc(t("allergens"))}</h3><p class="alg">${Object.values(T[lang].alg).map(esc).join(" · ")}</p>
+    <p class="fine">${esc(t("algNote"))} ${esc(t("vat"))}</p>
+    ${deferredInstall ? `<button type="button" class="btn ghost" id="installBtn" style="margin-top:18px">${I.download}<span>${esc(t("install"))}</span></button>` : ""}
+    ${ios ? `<p class="fine">${esc(t("iosHint"))}</p>` : ""}
+  </div></div>`, "info-sheet");
+  onClick = e => {
+    if (e.target.closest("#copyWifi")) copy(r.wifi.pass, t("copied"));
+    if (e.target.closest("#installBtn") && deferredInstall){ const p = deferredInstall; deferredInstall = null; p.prompt(); p.userChoice && p.userChoice.finally(() => closeSheet()); }
+  };
+}
+
+/* ----- currency ----- */
+function openCurrency(){
+  const names = {TRY:{tr:"Türk lirası", en:"Turkish lira", ar:"الليرة التركية"}, USD:{tr:"ABD doları", en:"US dollar", ar:"الدولار الأمريكي"}, EUR:{tr:"Euro", en:"Euro", ar:"اليورو"}, SAR:{tr:"Suudi riyali", en:"Saudi riyal", ar:"الريال السعودي"}};
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sheet-pad">
+    <h2 class="sheet-title plain" id="sheetTitle">${esc(t("currency"))}</h2><p class="sheet-desc">${esc(t("curNote"))}</p>
+    <div class="rows" role="radiogroup" aria-label="${esc(t("currency"))}">${CUR_LIST.map(c => `<button type="button" class="rowbtn" role="radio" data-cur="${c}" aria-checked="${c === cur}"><span class="sym">${esc(CUR[c].sym.trim())}</span><span><b>${c}</b><small>${esc(names[c] ? names[c][lang] : c)}</small></span><span class="tick">${I.check}</span></button>`).join("")}</div>
+  </div></div>`, "cur-sheet");
+  onClick = e => {
+    const b = e.target.closest("[data-cur]"); if (!b) return;
+    cur = b.dataset.cur; store.set("cur", cur);
+    closeSheet(); renderChrome(); renderMenu(); renderCartBar();
+  };
+}
+
+/* ----- filters ----- */
+function openFilters(){
+  const body = () => `
+    <h3 class="sub" style="margin-top:6px">${esc(t("diet"))}</h3>
+    <div class="chips">${DIET_ORDER.filter(d => items.some(i => (i.tags || []).includes(d))).map(d => `<button type="button" class="chip" data-diet="${d}" aria-pressed="${filt.diet.has(d)}">${esc(T[lang].tags[d])}</button>`).join("")}</div>
+    <h3 class="sub">${esc(t("exclAlg"))}</h3>
+    <div class="chips">${ALG_ORDER.map(a => `<button type="button" class="chip" data-excl="${a}" aria-pressed="${filt.excl.has(a)}">${esc(T[lang].alg[a])}</button>`).join("")}</div>
+    <p class="hint">${esc(t("algDisc"))}</p>
+    <h3 class="sub">${esc(t("serving"))}</h3>
+    <div class="chips"><button type="button" class="chip" data-avail aria-pressed="${filt.avail}">${I.clock}${esc(t("onlyAvail"))}</button></div>`;
+  const total = () => cats.reduce((n, c) => n + c.items.filter(matches).length, 0);
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sheet-pad">
+    <h2 class="sheet-title plain" id="sheetTitle">${esc(t("filter"))}</h2><div id="fbody">${body()}</div></div></div>
+    <div class="sheet-foot"><button type="button" class="btn ghost" id="resetF">${esc(t("reset"))}</button><button type="button" class="primary" id="doneF"><span>${esc(t("showResults"))} (<span id="fcount">${total()}</span>)</span></button></div>`, "filter-sheet");
+  const sync = () => { renderMenu(); $("#fbody").innerHTML = body(); $("#fcount").textContent = total(); };
+  onClick = e => {
+    const d = e.target.closest("[data-diet]"), a = e.target.closest("[data-excl]"), v = e.target.closest("[data-avail]");
+    if (d){ const k = d.dataset.diet; filt.diet.has(k) ? filt.diet.delete(k) : filt.diet.add(k); sync(); $(`[data-diet="${k}"]`).focus(); return; }
+    if (a){ const k = a.dataset.excl; filt.excl.has(k) ? filt.excl.delete(k) : filt.excl.add(k); sync(); $(`[data-excl="${k}"]`).focus(); return; }
+    if (v){ filt.avail = !filt.avail; sync(); $("[data-avail]").focus(); return; }
+    if (e.target.closest("#resetF")){ filt.diet.clear(); filt.excl.clear(); filt.avail = false; sync(); return; }
+    if (e.target.closest("#doneF")) closeSheet();
+  };
+}
+
+/* ----- reservation ----- */
+function dayStart(d){ const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
+function slotsFor(date){
+  const h = M.restaurant.hours[date.getDay()]; if (!h) return [];
+  const o = toMin(h[0]); let c = toMin(h[1]); if (c <= o) c += 1440;
+  const last = c - (M.restaurant.lastSeatingMins ?? 30), out = [];
+  for (let m = o; m <= last; m += 30) out.push(m);
+  return out;
+}
+const slotTime = (date, m) => new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, m, 0, 0);
+const icsDate = d => `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}T${String(d.getHours()).padStart(2,"0")}${String(d.getMinutes()).padStart(2,"0")}00`;
+const icsEsc = s => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+function buildIcs(date, m, guests, name){
+  const s = slotTime(date, m), e = new Date(s.getTime() + 90*60000), st = new Date();
+  const stamp = `${st.getUTCFullYear()}${String(st.getUTCMonth()+1).padStart(2,"0")}${String(st.getUTCDate()).padStart(2,"0")}T${String(st.getUTCHours()).padStart(2,"0")}${String(st.getUTCMinutes()).padStart(2,"0")}${String(st.getUTCSeconds()).padStart(2,"0")}Z`;
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Maison Noor//Menu//EN","CALSCALE:GREGORIAN","BEGIN:VEVENT",
+    `UID:noor-${s.getTime()}-${guests}@maison-noor`, `DTSTAMP:${stamp}`, `DTSTART:${icsDate(s)}`, `DTEND:${icsDate(e)}`,
+    `SUMMARY:${icsEsc(`${M.restaurant.name} · ${guests} ${TH.guests}`)}`, `LOCATION:${icsEsc(M.restaurant.address)}`,
+    `DESCRIPTION:${icsEsc(`${TH.rMsg}: ${name}`)}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n") + "\r\n";
+}
+function downloadIcs(text){
+  const blob = new Blob([text], {type:"text/calendar;charset=utf-8"}), url = URL.createObjectURL(blob);
+  const a = document.createElement("a"); a.href = url; a.download = "maison-noor-reservation.ics"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+}
+function openReserve(){
+  const base = dayStart(now()), days = [];
+  for (let i = 0; i < 14; i++){ const d = new Date(base); d.setDate(base.getDate() + i); days.push(d); }
+  const hasSlots = d => { const n = now(); return slotsFor(d).some(m => slotTime(d, m).getTime() > n.getTime() + 30*60000); };
+  let sel = days.findIndex(hasSlots); if (sel < 0) sel = 0;
+  let slot = null, guests = 2, occ = 0;
+  const loc = locale(lang);
+  const dateChip = (d, i) => {
+    const lbl = i === 0 ? t("today") : i === 1 ? t("tomorrow") : new Intl.DateTimeFormat(loc, {weekday:"short"}).format(d);
+    return `<button type="button" class="date" data-d="${i}" aria-pressed="${i === sel}"${hasSlots(d) ? "" : " disabled"}><small>${esc(lbl)}</small><b>${d.getDate()}</b><em>${esc(new Intl.DateTimeFormat(loc, {month:"short"}).format(d))}</em></button>`;
+  };
+  const slotsHtml = () => {
+    const d = days[sel], n = now();
+    const list = slotsFor(d).filter(m => slotTime(d, m).getTime() > n.getTime() + 30*60000);
+    return list.length ? list.map(m => `<button type="button" class="slot" data-slot="${m}" dir="ltr" aria-pressed="${m === slot}">${hhmm(m)}</button>`).join("") : `<p class="hint" style="grid-column:1/-1">${esc(t("rNoSlots"))}</p>`;
+  };
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sheet-pad" id="rform">
+    <h2 class="sheet-title plain" id="sheetTitle">${esc(t("rTitle"))}</h2><p class="sheet-desc">${esc(t("rHint"))}</p>
+    <h3 class="sub">${I.calendar}${esc(t("rDate"))}</h3><div class="dates" id="dates">${days.map(dateChip).join("")}</div>
+    <h3 class="sub">${I.clock}${esc(t("rTime"))}</h3><div class="slots" id="slots">${slotsHtml()}</div>
+    <h3 class="sub">${esc(t("rGuests"))}</h3>
+    <div class="guests"><div class="stepper"><button type="button" data-g="-1" aria-label="−">${I.minus}</button><output id="gcount" aria-live="polite">${guests}</output><button type="button" data-g="1" aria-label="+">${I.plus}</button></div></div>
+    <label class="field"><span>${esc(t("rName"))}</span><input id="rName" maxlength="40" autocomplete="name" value="${esc(store.get("name", ""))}"></label>
+    <label class="field"><span>${esc(t("rPhone"))}</span><input id="rPhone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" dir="ltr" value="${esc(store.get("phone", ""))}"></label>
+    <h3 class="sub">${esc(t("rOccasion"))}</h3>
+    <div class="chips" id="occs">${[0,1,2,3].map(i => `<button type="button" class="chip" data-occ="${i}" aria-pressed="${i === occ}">${esc(t("occ" + i))}</button>`).join("")}</div>
+    <label class="field"><span>${esc(t("rNote"))}</span><textarea id="rNote" rows="2" maxlength="300"></textarea></label>
+    <p class="err" id="err" role="alert" hidden></p>
+  </div></div>
+  <div class="sheet-foot"><a class="primary" id="rSend" href="#" target="_blank" rel="noopener">${I.wa}${esc(t("rSend"))}</a></div>`, "reserve-sheet");
+  const fail = (msg, el) => {
+    const er = $("#err"); er.hidden = false; er.textContent = msg;
+    const f = el && el.closest(".field"); if (f) f.classList.add("invalid");
+    (el || er).scrollIntoView({block:"center"}); if (el && el.focus) el.focus({preventScroll:true});
+  };
+  const validate = () => {
+    $$(".field.invalid").forEach(f => f.classList.remove("invalid"));
+    const name = $("#rName").value.trim(), phone = $("#rPhone").value.trim();
+    if (!hasSlots(days[sel])) return {err:t("rNoSlots"), el:$("#slots")};
+    if (slot === null) return {err:t("rTimeNeeded"), el:$("#slots")};
+    if (name.length < 2) return {err:t("rNameNeeded"), el:$("#rName")};
+    if (phone && !(/^[+\d][\d\s()\-]{5,18}$/.test(phone) && phone.replace(/\D/g, "").length >= 7)) return {err:t("rPhoneBad"), el:$("#rPhone")};
+    return null;
+  };
+  const text = () => {
+    const d = days[sel], f = new Intl.DateTimeFormat(locale(HOUSE), {weekday:"long", day:"numeric", month:"long", year:"numeric"});
+    let s = `*${TH.rMsg} · ${M.restaurant.name}*\n${TH.dateLbl}: ${f.format(d)}\n${TH.timeLbl}: ${slot === null ? "-" : hhmm(slot)}\n${TH.personLbl}: ${guests}\n${TH.nameLbl}: ${$("#rName").value.trim() || "-"}\n`;
+    const ph = $("#rPhone").value.trim(); if (ph) s += `${TH.phoneLbl}: ${ph}\n`;
+    if (occ) s += `${TH.occLbl}: ${TH["occ" + occ]}\n`;
+    const nt = $("#rNote").value.trim(); if (nt) s += `${TH.noteLbl}: ${nt}\n`;
+    return s.trim();
+  };
+  const upd = () => { $("#rSend").href = waUrl(text()); };
+  upd();
+  onInput = e => {
+    const f = e.target.closest(".field"); if (f) f.classList.remove("invalid");
+    if (e.target.id === "rName") store.set("name", e.target.value.trim());
+    if (e.target.id === "rPhone") store.set("phone", e.target.value.trim());
+    upd();
+  };
+  onClick = e => {
+    const dd = e.target.closest("[data-d]");
+    if (dd){ sel = +dd.dataset.d; slot = null; $$("[data-d]").forEach(x => x.setAttribute("aria-pressed", String(x === dd))); $("#slots").innerHTML = slotsHtml(); $("#err").hidden = true; upd(); return; }
+    const sl = e.target.closest("[data-slot]");
+    if (sl){ slot = +sl.dataset.slot; $$("[data-slot]").forEach(x => x.setAttribute("aria-pressed", String(x === sl))); $("#err").hidden = true; upd(); return; }
+    const g = e.target.closest("[data-g]");
+    if (g){ guests = Math.max(1, Math.min(12, guests + +g.dataset.g)); $("#gcount").textContent = guests; upd(); return; }
+    const oc = e.target.closest("[data-occ]");
+    if (oc){ occ = +oc.dataset.occ; $$("[data-occ]").forEach(x => x.setAttribute("aria-pressed", String(x === oc))); upd(); return; }
+    if (e.target.closest("#rSend")){
+      const v = validate();
+      if (v){ e.preventDefault(); fail(v.err, v.el); return; }
+      upd();
+      setTimeout(() => showReserveSent(days[sel], slot, guests, $("#rName").value.trim()), 60);
+    }
+  };
+}
+function showReserveSent(date, m, guests, name){
+  if ($("#sheet").hidden) return;
+  openSheet(`<div class="sheet-acts"><span></span>${closeBtn()}</div><div class="sheet-scroll"><div class="sent"><div class="tickc">${I.check}</div>
+    <h2 class="sheet-title" id="sheetTitle">${esc(t("rSentTitle"))}</h2><p>${esc(t("rSentText"))}</p></div></div>
+    <div class="sheet-foot"><button type="button" class="btn ghost" id="calBtn" style="flex:1">${I.calendar}<span>${esc(t("rCal"))}</span></button><button type="button" class="primary" id="okBtn">${esc(t("close"))}</button></div>`, "sent-sheet");
+  onClick = e => {
+    if (e.target.closest("#calBtn")) downloadIcs(buildIcs(date, m, guests, name));
+    if (e.target.closest("#okBtn")) closeSheet();
+  };
+}
+
+/* ------------------------------------------------------------------ utils */
+function toast(msg){
+  const el = $("#toast"); el.textContent = msg; el.hidden = false; void el.offsetWidth; el.classList.add("show");
+  const lv = $("#live"); lv.textContent = ""; setTimeout(() => { lv.textContent = msg; }, 60);   // screen readers get the message via the live region
+  clearTimeout(tt); tt = setTimeout(() => { el.classList.remove("show"); setTimeout(() => { if (!el.classList.contains("show")) el.hidden = true; }, 250); }, 1700);
+}
+function copy(text, msg){
+  const done = () => toast(msg || t("copied"));
+  const fallback = () => { const ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", ""); ta.style.cssText = "position:fixed;opacity:0;top:0;left:0"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch(e){} ta.remove(); done(); };
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+}
+
+/* ------------------------------------------------------------------ scrollspy (never scrolls the page) */
+let io, activeCat = null;
+const reduced = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+function setActiveCat(id){
+  if (id === activeCat) return;
+  activeCat = id;
+  const nav = $("#cats");
+  $$("button", nav).forEach(b => {
+    const on = b.dataset.cat === id;
+    b.classList.toggle("on", on);
+    if (on) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
+    if (on){
+      const br = b.getBoundingClientRect(), nr = nav.getBoundingClientRect();
+      const dx = (br.left + br.width/2) - (nr.left + nr.width/2);
+      if (Math.abs(dx) > 4) nav.scrollBy({left: dx, behavior: reduced() ? "auto" : "smooth"});
+    }
+  });
+}
+function spy(){
+  io && io.disconnect();
+  const tb = $("#toolbar").offsetHeight;
+  document.documentElement.style.setProperty("--tb", tb + "px");
+  const secs = $$("section.cat");
+  if (!secs.length){ activeCat = null; $$("#cats button").forEach(b => b.classList.remove("on")); return; }
+  io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) setActiveCat(e.target.dataset.cat); }); }, {rootMargin: `-${tb + 10}px 0px -70% 0px`});
+  secs.forEach(s => io.observe(s));
+}
+
+/* ------------------------------------------------------------------ events */
+function bind(){
+  $(".lang").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; lang = b.dataset.lang; store.set("lang", lang); renderChrome(); renderMenu(); renderCartBar(); });
+  $("#themeBtn").addEventListener("click", () => { theme = theme === "night" ? "day" : "night"; store.set("theme", theme); renderChrome(); });
+  $("#curBtn").addEventListener("click", openCurrency);
+  $("#q").addEventListener("input", e => { query = e.target.value; renderMenu(); });
+  $("#favBtn").addEventListener("click", () => { filt.fav = !filt.fav; renderMenu(); });
+  $("#filterBtn").addEventListener("click", openFilters);
+  $("#reserveBtn").addEventListener("click", openReserve);
+  $("#reserveBar").addEventListener("click", openReserve);
+  $("#infoBtn").addEventListener("click", openInfo);
+  $("#waiterBtn").addEventListener("click", openWaiter);
+  $("#cartBar").addEventListener("click", openCart);
+  $("#cats").addEventListener("click", e => {
+    const b = e.target.closest("[data-cat]"); if (!b) return;
+    if (isFiltering()){ query = ""; $("#q").value = ""; filt.fav = false; filt.avail = false; filt.diet.clear(); filt.excl.clear(); renderMenu(); }
+    const s = $("#cat-" + b.dataset.cat); if (s) s.scrollIntoView({behavior: reduced() ? "auto" : "smooth", block: "start"});
+  });
+  $("#menu").addEventListener("click", e => {
+    const rm = e.target.closest("[data-rm]");
+    if (rm){
+      const [k, v] = rm.dataset.rm.split(":");
+      if (k === "q"){ query = ""; $("#q").value = ""; } else if (k === "fav") filt.fav = false; else if (k === "avail") filt.avail = false;
+      else if (k === "diet") filt.diet.delete(v); else if (k === "excl") filt.excl.delete(v);
+      renderMenu(); return;
+    }
+    if (e.target.closest("[data-clear]")){ query = ""; $("#q").value = ""; filt.fav = false; filt.avail = false; filt.diet.clear(); filt.excl.clear(); renderMenu(); return; }
+    const hb = e.target.closest("[data-fav]"); if (hb){ e.stopPropagation(); toggleFav(hb.dataset.fav); return; }
+    const q = e.target.closest("[data-quick]");
+    if (q){
+      e.stopPropagation();
+      const it = byId(q.dataset.quick);
+      if (it.options && it.options.length) openItem(it.id); else if (avail(it).ok) addToCart(it, [], 1, "");
+      return;
+    }
+    const c = e.target.closest("[data-id]"); if (c) openItem(c.dataset.id);
+  });
+  $("#sheetBody").addEventListener("click", e => { if (e.target.closest(".close")) { closeSheet(); return; } onClick && onClick(e); });
+  $("#sheetBody").addEventListener("input", e => onInput && onInput(e));
+  $("#sheetBody").addEventListener("change", e => onChange && onChange(e));
+  $("#sheetBg").addEventListener("click", () => closeSheet());
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#sheet").hidden) closeSheet(); });
+  addEventListener("popstate", () => {
+    if (ignorePop > 0){ ignorePop--; return; }
+    if (!$("#sheet").hidden){ pushed = false; closeSheet(true); }
+  });
+  let lastW = innerWidth, rt;
+  addEventListener("resize", () => { if (innerWidth === lastW) return; lastW = innerWidth; clearTimeout(rt); rt = setTimeout(spy, 150); });
+  addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredInstall = e; });
+  addEventListener("appinstalled", () => { deferredInstall = null; });
+  let sig = "";
+  setInterval(() => {
+    tickChrome();
+    const s = items.map(i => avail(i).ok ? 1 : 0).join("") + cats.map(c => c.serve && inWindow(c.serve, nowMin()) ? 1 : 0).join("") + greetKey() + status().text;
+    if (s !== sig){ sig = s; patchAvail(); }
+  }, 30000);
+}
+
+/* ------------------------------------------------------------------ boot */
+renderChrome(); renderMenu(); renderCartBar(); bind();
+function deepLink(){
+  const h = location.hash;
+  let m;
+  if ((m = /^#i=([\w-]+)$/.exec(h)) && byId(m[1])) openItem(m[1]);
+  else if (h === "#cart") openCart();
+  else if (h === "#reserve") openReserve();
+  else if (h === "#info") openInfo();
+}
+deepLink();
+addEventListener("hashchange", deepLink);
+if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol) && document.querySelector('link[rel="manifest"]')){
+  addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
+}
+})();
+
+</script>
+
+</body>
+</html>

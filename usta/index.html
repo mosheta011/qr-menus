@@ -26,7 +26,7 @@
 
 [hidden]{display:none!important}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:calc(var(--tb,120px) + 8px)}
+html{scroll-padding-top:calc(var(--tb,120px) + 4px)}
 body{background:var(--bg);color:var(--ink);font-family:var(--font-b);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;margin:0}
 html[dir=rtl] body{font-family:var(--font-ar)}
 html[dir=rtl] .name,html[dir=rtl] .sheet-title,html[dir=rtl] .sec-title{font-family:var(--font-ar);letter-spacing:0;text-transform:none}
@@ -37,7 +37,7 @@ svg{display:block;width:100%;height:100%}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .app{max-width:560px;margin:0 auto;padding-bottom:110px;min-height:100%}
 .hero{padding:20px 16px 14px;display:grid;gap:10px}
-.hero-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hero-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 12px}
 .brand{display:flex;align-items:center;gap:10px;min-width:0}
 .logo{width:42px;height:42px;flex:none}
 .brand-name{font-family:var(--font-d);margin:0;line-height:1;font-size:26px;overflow-wrap:anywhere}
@@ -56,7 +56,7 @@ svg{display:block;width:100%;height:100%}
 .toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);padding:8px 16px 0;display:grid;gap:8px;border-bottom:1px solid var(--line)}
 .search{position:relative}
 .search svg{position:absolute;inset-inline-start:12px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--muted)}
-.search input{width:100%;padding:11px 14px;padding-inline-start:38px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);outline:none}
+.search input{width:100%;font-size:16px;padding:11px 14px;padding-inline-start:38px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);outline:none}
 .search input:focus{border-color:var(--accent)}
 .cats{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 8px}
 .cats::-webkit-scrollbar,.pop-row::-webkit-scrollbar,#filters::-webkit-scrollbar{display:none}
@@ -76,7 +76,7 @@ main{padding:0 16px}
 .pop-thumb{aspect-ratio:1;max-width:100%;border-radius:var(--radius);display:grid;place-items:center;padding:24%;background:hsl(var(--h) var(--ts) var(--tl));color:hsl(var(--h) var(--tis) var(--til));overflow:hidden}
 .pop-name{font-weight:700;font-size:14px;line-height:1.2}
 .pop-price{font-size:13px;color:var(--price);font-weight:700;font-variant-numeric:tabular-nums}
-.cat{padding-top:26px;scroll-margin-top:calc(var(--tb,120px) + 6px)}
+.cat{padding-top:26px}
 .cat-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
 .cat-ico{width:28px;height:28px;color:var(--accent);flex:none}
 .cat-note{flex-basis:100%;margin:0;color:var(--muted);font-size:13px}
@@ -88,23 +88,32 @@ main{padding:0 16px}
 .line{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
 .name{margin:0;font-size:16.5px;line-height:1.25;font-weight:700}
 .leader{display:none}
+.name-btn{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit;line-height:inherit;text-align:inherit;display:inline;background:none;border:0;padding:0;margin:0;cursor:pointer}
+.name-btn::after{content:"";position:absolute;inset:0;z-index:1}
+.name-btn:focus-visible{outline:none}
+.item:has(.name-btn:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.banner:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+a.tel{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .price{font-weight:700;color:var(--price);font-variant-numeric:tabular-nums;white-space:nowrap}
 .price small{font-weight:500;opacity:.7;margin-inline-end:1px}
 .desc{margin:0;color:var(--muted);font-size:13.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
 .tag{display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:999px;background:var(--surface2);color:var(--muted)}
 .tag svg{width:12px;height:12px}
-.tag-popular{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
-.tag-new{color:#b7791f;background:color-mix(in srgb,#e8a33d 18%,transparent)}
-.tag-vegan,.tag-veg,.tag-gf{color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}
-.tag-spicy{color:var(--bad);background:color-mix(in srgb,var(--bad) 13%,transparent)}
-.tag-sold{color:var(--accent-ink);background:var(--muted)}
-.item.sold{opacity:.55}
-.add{position:absolute;inset-inline-end:-6px;bottom:6px;width:34px;height:34px;padding:8px;border-radius:50%;background:var(--accent);color:var(--accent-ink);box-shadow:0 2px 8px rgb(0 0 0/.18);transition:transform .15s}
+.tag-popular{color:color-mix(in srgb,var(--accent) 68%,var(--ink));background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.tag-new{color:color-mix(in srgb,#b7791f 65%,var(--ink));background:color-mix(in srgb,#e8a33d 18%,transparent)}
+.tag-vegan,.tag-veg,.tag-gf{color:color-mix(in srgb,var(--ok) 66%,var(--ink));background:color-mix(in srgb,var(--ok) 14%,transparent)}
+.tag-spicy{color:color-mix(in srgb,var(--bad) 66%,var(--ink));background:color-mix(in srgb,var(--bad) 13%,transparent)}
+.tag-sold{color:var(--bg);background:var(--ink)}
+.item.sold .thumb{opacity:.45;filter:grayscale(1)}
+.item.sold .price{text-decoration:line-through;text-decoration-thickness:1.5px}
+.item.sold .name-btn{color:var(--muted)}
+.add{z-index:2;position:absolute;inset-inline-end:-6px;bottom:6px;width:34px;height:34px;padding:8px;border-radius:50%;background:var(--accent);color:var(--accent-ink);box-shadow:0 2px 8px rgb(0 0 0/.18);transition:transform .15s}
 .add:active{transform:scale(.9)}
 .none{padding:40px 0;text-align:center;color:var(--muted)}
 .foot{padding:30px 16px 0;color:var(--muted);font-size:12.5px;display:grid;gap:4px;text-align:center}
-.foot .demo{opacity:.8}
+.foot .demo{font-weight:600}
 /* floating */
 .dock{position:fixed;inset-inline:0;bottom:0;z-index:30;padding:10px 16px calc(12px + env(safe-area-inset-bottom,0px));display:flex;gap:8px;justify-content:center;pointer-events:none}
 .dock>*{pointer-events:auto}
@@ -123,8 +132,8 @@ body:not(.has-cart) .dock{justify-content:flex-end}
 /* sheet */
 .sheet{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center}
 .sheet-bg{position:absolute;inset:0;background:rgb(10 10 12/.5);animation:fade .2s}
-.panel{position:relative;width:100%;max-width:560px;max-height:92%;display:flex;flex-direction:column;background:var(--bg);border-radius:22px 22px 0 0;animation:up .28s cubic-bezier(.2,.8,.2,1);overflow:hidden}
-#sheetBody{overflow-y:auto;display:flex;flex-direction:column;min-height:0;flex:1}
+.panel{outline:none;overscroll-behavior:contain;position:relative;width:100%;max-width:560px;max-height:92%;display:flex;flex-direction:column;background:var(--bg);border-radius:22px 22px 0 0;animation:up .28s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+#sheetBody{overscroll-behavior:contain;overflow-y:auto;display:flex;flex-direction:column;min-height:0;flex:1}
 @keyframes up{from{transform:translateY(40px);opacity:.4}}
 @keyframes fade{from{opacity:0}}
 .close{position:absolute;top:12px;inset-inline-end:12px;z-index:2;width:36px;height:36px;padding:8px;border-radius:50%;background:var(--surface);border:1px solid var(--line)}
@@ -143,13 +152,13 @@ body:not(.has-cart) .dock{justify-content:flex-end}
 .c-name{flex:1}
 .c-price{color:var(--muted);font-size:13.5px;font-variant-numeric:tabular-nums}
 .field{display:grid;gap:5px;font-size:13px;font-weight:600;color:var(--muted)}
-.field input,.field textarea{font-weight:500;color:var(--ink);padding:11px 12px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);resize:vertical;outline:none;width:100%}
+.field input,.field textarea{font-size:16px;font-weight:500;color:var(--ink);padding:11px 12px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);resize:vertical;outline:none;width:100%}
 .field input:focus,.field textarea:focus{border-color:var(--accent)}
 .sheet-foot{position:sticky;bottom:0;display:flex;gap:10px;padding:12px 18px calc(14px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);margin-top:auto}
 .primary{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 16px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;text-align:center}
 .primary svg{width:20px;height:20px;flex:none}
 .primary[disabled]{opacity:.5}
-.primary.wa{background:#1f9d55;color:#fff}
+.primary.wa{background:#167a43;color:#fff}
 .stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;flex:none}
 .stepper button{width:44px;height:48px;padding:14px}
 .stepper output{min-width:24px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
@@ -163,7 +172,7 @@ body:not(.has-cart) .dock{justify-content:flex-end}
 .cl-price{font-weight:700;color:var(--price);font-size:14px;font-variant-numeric:tabular-nums}
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:999px;background:var(--surface2)}
 .seg.three{grid-template-columns:repeat(3,1fr);border-radius:calc(var(--radius) + 4px)}
-.seg button{padding:9px 6px;border-radius:999px;font-weight:600;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px}
+.seg button{padding:9px 6px;border-radius:999px;font-weight:600;font-size:14px;color:color-mix(in srgb,var(--muted) 78%,var(--ink));display:flex;align-items:center;justify-content:center;gap:6px}
 .seg.three button{flex-direction:column;border-radius:var(--radius);font-size:13px}
 .seg.three svg{width:22px;height:22px}
 .seg button[aria-checked=true]{background:var(--surface);color:var(--ink);box-shadow:0 1px 4px rgb(0 0 0/.12)}
@@ -206,7 +215,7 @@ html[dir=rtl] .bn-cta{padding:6px 14px 6px 6px}
 .hero::after{content:"";position:absolute;inset:auto 0 -12px;height:6px;background:repeating-linear-gradient(90deg,var(--accent) 0 14px,#fff 14px 28px)}
 .brand-name{font-weight:400;font-size:32px;letter-spacing:.01em;text-shadow:3px 3px 0 #8f1309}
 .logo{width:48px;height:48px}
-.tagline{color:#ffe1dc;font-weight:500}
+.tagline{color:#fff;font-weight:500}
 .hero .lang{background:#ffffff1f;border-color:#ffffff55}
 .hero .lang button{color:#ffe1dc}
 .hero .lang button[aria-pressed=true]{background:#fff;color:var(--accent)}
@@ -244,14 +253,14 @@ html[dir=rtl] .bn-cta{padding:6px 14px 6px 6px}
     <div class="hero-top">
       <div class="brand"><div class="logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#fff"/><g fill="none" stroke="#d3261a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6v36"/><path d="M16 12c0-3 16-3 16 0l2 19c0 4-20 4-20 0z"/><path d="M15.5 18h17M15 24h18M14.5 30h19"/></g><path d="M14 41h20" stroke="#1d6b3a" stroke-width="3" stroke-linecap="round"/></svg></div><h1 class="brand-name">Usta Dönerci</h1></div>
       <div class="lang" role="group" aria-label="Language">
-        <button data-lang="tr" aria-pressed="true">TR</button><button data-lang="en" aria-pressed="false">EN</button><button data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
       </div>
     </div>
     <p class="tagline" id="tagline"></p>
-    <div class="meta"><span class="status" id="status"></span><button class="pill-btn" id="infoBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg><span>Bilgi</span></button></div>
+    <div class="meta"><span class="status" id="status"></span><button type="button" class="pill-btn" id="infoBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg><span>Bilgi</span></button></div>
   </header>
   <div class="toolbar" id="toolbar">
-    <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" autocomplete="off" aria-label="Search"></div>
+    <div class="search" role="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" autocomplete="off" aria-label="Search"></div>
     <nav class="cats" id="cats" aria-label="Categories"></nav>
     <div id="filters"></div>
   </div>
@@ -259,11 +268,12 @@ html[dir=rtl] .bn-cta{padding:6px 14px 6px 6px}
   <footer class="foot"><span id="vat"></span><span id="algNote"></span><span class="demo" id="demoNote"></span></footer>
 </div>
 <div class="dock">
-  <button class="waiter" id="waiterBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span>Garson</span></button>
-  <button class="cartbar" id="cartBar" hidden></button>
+  <button type="button" class="waiter" id="waiterBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><span>Garson</span></button>
+  <button type="button" class="cartbar" id="cartBar" hidden></button>
 </div>
-<div class="sheet" id="sheet" hidden><div class="sheet-bg" id="sheetBackdrop"></div><div class="panel" role="dialog" aria-modal="true"><div id="sheetBody"></div></div></div>
-<div class="toast" id="toast" hidden role="status"></div>
+<div class="sheet" id="sheet" hidden><div class="sheet-bg" id="sheetBackdrop"></div><div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" tabindex="-1"><div id="sheetBody"></div></div></div>
+<p class="sr-only" id="live" role="status" aria-live="polite"></p>
+<div class="toast" id="toast" hidden aria-hidden="true"></div>
 <script>
 window.ICONS = (function(){
 const s = (d, vb="0 0 48 48") => `<svg viewBox="${vb}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
@@ -411,15 +421,15 @@ return {
 "use strict";
 const M = window.MENU;
 const T = {
- tr:{search:"Menüde ara",popular:"En sevilenler",add:"Ekle",addToCart:"Sepete ekle",cart:"Sepetim",viewCart:"Sepeti gör",items:"ürün",total:"Toplam",empty:"Sepetiniz boş. Menüden ürün ekleyin.",table:"Masa no",dineIn:"Masada",takeaway:"Gel-al",yourName:"Adınız",note:"Sipariş notu",notePh:"Örn. az şekerli, soğansız",itemNote:"Bu ürün için not",send:"WhatsApp ile siparişi gönder",copy:"Sipariş metnini kopyala",copied:"Kopyalandı",waiter:"Garson çağır",waiterAsk:"Ne için çağırıyorsunuz?",rWaiter:"Garson",rBill:"Hesap",rWater:"Su / peçete",callNow:"WhatsApp ile çağır",openNow:"Şu an açık",closedNow:"Şu an kapalı",closes:"Kapanış",opens:"Açılış",info:"Bilgi",hours:"Çalışma saatleri",address:"Adres",phone:"Telefon",wifi:"Wi-Fi",password:"Şifre",allergens:"Alerjenler",vat:"Fiyatlara KDV dahildir.",allergenNote:"Alerjiniz varsa lütfen siparişten önce personele bildirin.",soldOut:"Tükendi",required:"Zorunlu",optional:"İsteğe bağlı",noResults:"Aramanızla eşleşen ürün yok.",added:"Sepete eklendi",follow:"Instagram",clear:"Sepeti boşalt",min:"dk",orderTitle:"Yeni sipariş",orderType:"Sipariş türü",qty:"Adet",calledMsg:"çağrısı",tableNeeded:"Lütfen masa numarasını yazın.",nameNeeded:"Lütfen adınızı yazın.",demo:"Örnek menü · Demo siparişler QR Menü'ye gider",filters:"Filtre",all:"Tümü",close:"Kapat",remove:"Kaldır",
+ tr:{search:"Menüde ara",popular:"En sevilenler",add:"Ekle",addToCart:"Sepete ekle",cart:"Sepetim",viewCart:"Sepeti gör",items:"ürün",total:"Toplam",empty:"Sepetiniz boş. Menüden ürün ekleyin.",table:"Masa no",dineIn:"Masada",takeaway:"Gel-al",yourName:"Adınız",note:"Sipariş notu",notePh:"Örn. az şekerli, soğansız",itemNote:"Bu ürün için not",send:"WhatsApp ile siparişi gönder",copy:"Sipariş metnini kopyala",copied:"Kopyalandı",waiter:"Garson çağır",waiterAsk:"Ne için çağırıyorsunuz?",rWaiter:"Garson",rBill:"Hesap",rWater:"Su / peçete",callNow:"WhatsApp ile çağır",openNow:"Şu an açık",closedNow:"Şu an kapalı",closes:"Kapanış",opens:"Açılış",info:"Bilgi",hours:"Çalışma saatleri",address:"Adres",phone:"Telefon",wifi:"Wi-Fi",password:"Şifre",allergens:"Alerjenler",vat:"Fiyatlara KDV dahildir.",allergenNote:"Alerjiniz varsa lütfen siparişten önce personele bildirin.",soldOut:"Tükendi",required:"Zorunlu",optional:"İsteğe bağlı",noResults:"Aramanızla eşleşen ürün yok.",added:"Sepete eklendi",follow:"Instagram",clear:"Sepeti boşalt",min:"dk",orderTitle:"Yeni sipariş",orderType:"Sipariş türü",qty:"Adet",calledMsg:"çağrısı",tableNeeded:"Lütfen masa numarasını yazın.",nameNeeded:"Lütfen adınızı yazın.",demo:"Örnek menü · Demo siparişler QR Menü'ye gider",filters:"Filtre",all:"Tümü",close:"Kapat",remove:"Kaldır",dec:"Azalt",inc:"Artır",copyShort:"Kopyala",tableLbl:"Masa",
   days:["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"],
   tags:{popular:"Popüler",new:"Yeni",vegan:"Vegan",veg:"Vejetaryen",spicy:"Acılı",gf:"Glutensiz"},
   alg:{gluten:"Gluten",milk:"Süt",egg:"Yumurta",nuts:"Kuruyemiş",sesame:"Susam",soy:"Soya"}},
- en:{search:"Search the menu",popular:"Most loved",add:"Add",addToCart:"Add to order",cart:"Your order",viewCart:"View order",items:"items",total:"Total",empty:"Your order is empty. Add something from the menu.",table:"Table no.",dineIn:"Dine in",takeaway:"Takeaway",yourName:"Your name",note:"Order note",notePh:"e.g. less sugar, no onions",itemNote:"Note for this item",send:"Send order on WhatsApp",copy:"Copy order text",copied:"Copied",waiter:"Call waiter",waiterAsk:"What do you need?",rWaiter:"Waiter",rBill:"The bill",rWater:"Water / napkins",callNow:"Call on WhatsApp",openNow:"Open now",closedNow:"Closed now",closes:"Closes",opens:"Opens",info:"Info",hours:"Opening hours",address:"Address",phone:"Phone",wifi:"Wi-Fi",password:"Password",allergens:"Allergens",vat:"All prices include VAT.",allergenNote:"If you have an allergy, please tell our staff before ordering.",soldOut:"Sold out",required:"Required",optional:"Optional",noResults:"No dishes match your search.",added:"Added to your order",follow:"Instagram",clear:"Clear order",min:"min",orderTitle:"New order",orderType:"Order type",qty:"Qty",calledMsg:"request",tableNeeded:"Please enter your table number.",nameNeeded:"Please enter your name.",demo:"Sample menu · Demo orders go to QR Menü",filters:"Filter",all:"All",close:"Close",remove:"Remove",
+ en:{search:"Search the menu",popular:"Most loved",add:"Add",addToCart:"Add to order",cart:"Your order",viewCart:"View order",items:"items",total:"Total",empty:"Your order is empty. Add something from the menu.",table:"Table no.",dineIn:"Dine in",takeaway:"Takeaway",yourName:"Your name",note:"Order note",notePh:"e.g. less sugar, no onions",itemNote:"Note for this item",send:"Send order on WhatsApp",copy:"Copy order text",copied:"Copied",waiter:"Call waiter",waiterAsk:"What do you need?",rWaiter:"Waiter",rBill:"The bill",rWater:"Water / napkins",callNow:"Call on WhatsApp",openNow:"Open now",closedNow:"Closed now",closes:"Closes",opens:"Opens",info:"Info",hours:"Opening hours",address:"Address",phone:"Phone",wifi:"Wi-Fi",password:"Password",allergens:"Allergens",vat:"All prices include VAT.",allergenNote:"If you have an allergy, please tell our staff before ordering.",soldOut:"Sold out",required:"Required",optional:"Optional",noResults:"No dishes match your search.",added:"Added to your order",follow:"Instagram",clear:"Clear order",min:"min",orderTitle:"New order",orderType:"Order type",qty:"Qty",calledMsg:"request",tableNeeded:"Please enter your table number.",nameNeeded:"Please enter your name.",demo:"Sample menu · Demo orders go to QR Menü",filters:"Filter",all:"All",close:"Close",remove:"Remove",dec:"Decrease",inc:"Increase",copyShort:"Copy",tableLbl:"Table",
   days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
   tags:{popular:"Popular",new:"New",vegan:"Vegan",veg:"Vegetarian",spicy:"Spicy",gf:"Gluten-free"},
   alg:{gluten:"Gluten",milk:"Milk",egg:"Egg",nuts:"Nuts",sesame:"Sesame",soy:"Soy"}},
- ar:{search:"ابحث في القائمة",popular:"الأكثر طلبًا",add:"أضف",addToCart:"أضف إلى الطلب",cart:"طلبك",viewCart:"عرض الطلب",items:"منتجات",total:"المجموع",empty:"طلبك فارغ. أضف شيئًا من القائمة.",table:"رقم الطاولة",dineIn:"في المطعم",takeaway:"سفري",yourName:"اسمك",note:"ملاحظة على الطلب",notePh:"مثلاً: سكر قليل، بدون بصل",itemNote:"ملاحظة لهذا الصنف",send:"أرسل الطلب عبر واتساب",copy:"انسخ نص الطلب",copied:"تم النسخ",waiter:"نادِ النادل",waiterAsk:"ماذا تحتاج؟",rWaiter:"النادل",rBill:"الحساب",rWater:"ماء / مناديل",callNow:"اطلب عبر واتساب",openNow:"مفتوح الآن",closedNow:"مغلق الآن",closes:"يغلق",opens:"يفتح",info:"معلومات",hours:"ساعات العمل",address:"العنوان",phone:"الهاتف",wifi:"واي فاي",password:"كلمة المرور",allergens:"مسببات الحساسية",vat:"جميع الأسعار تشمل ضريبة القيمة المضافة.",allergenNote:"إذا كانت لديك حساسية، يرجى إبلاغ الموظفين قبل الطلب.",soldOut:"نفد",required:"إلزامي",optional:"اختياري",noResults:"لا توجد أصناف مطابقة لبحثك.",added:"تمت الإضافة إلى طلبك",follow:"إنستغرام",clear:"إفراغ الطلب",min:"د",orderTitle:"طلب جديد",orderType:"نوع الطلب",qty:"الكمية",calledMsg:"طلب",tableNeeded:"يرجى كتابة رقم الطاولة.",nameNeeded:"يرجى كتابة اسمك.",demo:"قائمة نموذجية · الطلبات التجريبية تصل إلى QR Menü",filters:"تصفية",all:"الكل",close:"إغلاق",remove:"حذف",
+ ar:{search:"ابحث في القائمة",popular:"الأكثر طلبًا",add:"أضف",addToCart:"أضف إلى الطلب",cart:"طلبك",viewCart:"عرض الطلب",items:"منتجات",total:"المجموع",empty:"طلبك فارغ. أضف شيئًا من القائمة.",table:"رقم الطاولة",dineIn:"في المطعم",takeaway:"سفري",yourName:"اسمك",note:"ملاحظة على الطلب",notePh:"مثلاً: سكر قليل، بدون بصل",itemNote:"ملاحظة لهذا الصنف",send:"أرسل الطلب عبر واتساب",copy:"انسخ نص الطلب",copied:"تم النسخ",waiter:"نادِ النادل",waiterAsk:"ماذا تحتاج؟",rWaiter:"النادل",rBill:"الحساب",rWater:"ماء / مناديل",callNow:"اطلب عبر واتساب",openNow:"مفتوح الآن",closedNow:"مغلق الآن",closes:"يغلق",opens:"يفتح",info:"معلومات",hours:"ساعات العمل",address:"العنوان",phone:"الهاتف",wifi:"واي فاي",password:"كلمة المرور",allergens:"مسببات الحساسية",vat:"جميع الأسعار تشمل ضريبة القيمة المضافة.",allergenNote:"إذا كانت لديك حساسية، يرجى إبلاغ الموظفين قبل الطلب.",soldOut:"نفد",required:"إلزامي",optional:"اختياري",noResults:"لا توجد أصناف مطابقة لبحثك.",added:"تمت الإضافة إلى طلبك",follow:"إنستغرام",clear:"إفراغ الطلب",min:"د",orderTitle:"طلب جديد",orderType:"نوع الطلب",qty:"الكمية",calledMsg:"طلب",tableNeeded:"يرجى كتابة رقم الطاولة.",nameNeeded:"يرجى كتابة اسمك.",demo:"قائمة نموذجية · الطلبات التجريبية تصل إلى QR Menü",filters:"تصفية",all:"الكل",close:"إغلاق",remove:"حذف",dec:"إنقاص",inc:"زيادة",copyShort:"انسخ",tableLbl:"طاولة",
   days:["الأحد","الاثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت"],
   tags:{popular:"مميز",new:"جديد",vegan:"نباتي صرف",veg:"نباتي",spicy:"حار",gf:"خالٍ من الغلوتين"},
   alg:{gluten:"غلوتين",milk:"حليب",egg:"بيض",nuts:"مكسرات",sesame:"سمسم",soy:"صويا"}}
@@ -432,22 +442,68 @@ const store = {get(k,d){try{const v=localStorage.getItem(M.id+":"+k);return v?JS
 
 let lang = store.get("lang", M.defaultLang || "tr");
 if(!T[lang]) lang = "tr";
-let cart = store.get("cart", []);
+let cart = [];
 let filters = new Set();
 let query = "";
 let orderType = "dine";
 const t = k => T[lang][k];
 const L = o => o ? (o[lang] || o.en || o.tr || "") : "";
-const money = n => "\u2066" + new Intl.NumberFormat("tr-TR",{maximumFractionDigits:2}).format(n) + " ₺\u2069";
+const moneyPlain = n => new Intl.NumberFormat("tr-TR",{maximumFractionDigits:2}).format(n) + " ₺";
+const money = n => "\u2066" + moneyPlain(n) + "\u2069";
+/* orders are written in the house language so staff can always read them */
+const HL = (M.orderLang && T[M.orderLang]) ? M.orderLang : "tr";
+const th = k => T[HL][k];
+const LH = o => o ? (o[HL] || o.tr || o.en || "") : "";
+const MAXQ = 30;
 const items = [];
 M.categories.forEach(c => c.items.forEach(it => { it.cat = c.id; items.push(it); }));
 const byId = id => items.find(i => i.id === id);
+/* a saved cart can outlive a menu update: drop lines that no longer exist, re-price options, cap quantities */
+function sanitizeCart(raw){
+  if (!Array.isArray(raw)) return [];
+  const out = [];
+  raw.forEach(l => {
+    if (!l || typeof l !== "object") return;
+    const it = byId(l.id); if (!it || it.soldOut) return;
+    const qty = Math.min(MAXQ, Math.floor(+l.qty) || 0); if (qty < 1) return;
+    const opts = []; let ok = true;
+    (Array.isArray(l.opts) ? l.opts : []).forEach(o => {
+      if (!ok) return;
+      const en = o && o.n && o.n.en; let hit = null;
+      (it.options||[]).forEach((g,gi) => g.choices.forEach(c => { if (!hit && c.name.en === en) hit = {gi, g:g.name, n:c.name, price:c.price||0}; }));
+      if (hit) opts.push(hit); else ok = false;
+    });
+    if (!ok) return;
+    (it.options||[]).forEach((g,gi) => { if (g.type === "single" && opts.filter(o => o.gi === gi).length !== 1) ok = false; });
+    if (!ok) return;
+    const note = String(l.note || "").slice(0,120);
+    out.push({key: it.id + "|" + opts.map(o=>o.n.en).join(",") + "|" + note, id: it.id, opts: opts.map(({g,n,price}) => ({g,n,price})), qty, note});
+  });
+  return out;
+}
+cart = Date.now() - store.get("cartTs", 0) > 12*3600e3 ? [] : sanitizeCart(store.get("cart", []));
+/* table number: from the table QR (?table=12), else remembered for a few hours only */
+const tableParam = (() => { const v = new URLSearchParams(location.search).get("table") || ""; return /^[A-Za-z0-9-]{1,6}$/.test(v) ? v : ""; })();
+function savedTable(){ const s = store.get("table", null); return s && typeof s === "object" && typeof s.v === "string" && Date.now() - (+s.t||0) < 4*3600e3 ? s.v : ""; }
+const draft = {table: null, name: "", note: ""};
+const curTable = () => draft.table !== null ? draft.table : (tableParam || savedTable());
+const saveTable = v => { draft.table = v; store.set("table", {v: String(v).trim().slice(0,6), t: Date.now()}); };
 const thumb = (it, cls="thumb") => `<div class="${cls}" style="--h:${it.hue ?? 30}">${it.img ? `<img src="${esc(it.img)}" alt="">` : (I[it.icon] || I.plate)}</div>`;
 
 /* ---------- hours ---------- */
 function toMin(s){const [h,m]=s.split(":").map(Number);return h*60+m}
+const TZ = M.restaurant.tz || "Europe/Istanbul";
+let dtf = null; try { dtf = new Intl.DateTimeFormat("en-US",{timeZone:TZ,hour12:false,weekday:"short",hour:"2-digit",minute:"2-digit"}); } catch(e){}
+function nowIn(){
+  if (dtf){ try {
+    const p = Object.fromEntries(dtf.formatToParts(new Date()).map(x => [x.type, x.value]));
+    const d = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[p.weekday]; let h = +p.hour; if (h === 24) h = 0;
+    if (d !== undefined && !isNaN(h)) return {d, mins: h*60 + +p.minute};
+  } catch(e){} }
+  const n = new Date(); return {d: n.getDay(), mins: n.getHours()*60 + n.getMinutes()};
+}
 function status(){
-  const now = new Date(), d = now.getDay(), mins = now.getHours()*60+now.getMinutes();
+  const {d, mins} = nowIn();
   const today = M.restaurant.hours[d], y = M.restaurant.hours[(d+6)%7];
   if (y){ const o=toMin(y[0]), c=toMin(y[1]); if (c<o && mins<c) return {open:true, text:`${t("closes")} ${y[1]}`}; }
   if (today){ const o=toMin(today[0]); let c=toMin(today[1]); if(c<=o) c+=1440;
@@ -464,15 +520,20 @@ function tagsHtml(it){
   return out.join("");
 }
 function itemHtml(it){
-  return `<article class="item${it.soldOut?" sold":""}" data-id="${it.id}" tabindex="0" role="button" aria-label="${esc(L(it.name))}">
+  return `<article class="item${it.soldOut?" sold":""}" data-id="${it.id}">
    ${thumb(it)}
    <div class="body">
-     <div class="line"><h3 class="name">${esc(L(it.name))}</h3><span class="leader" aria-hidden="true"></span><span class="price">${money(it.price)}</span></div>
+     <div class="line"><h3 class="name"><button type="button" class="name-btn" data-open="${it.id}">${esc(L(it.name))}</button></h3><span class="leader" aria-hidden="true"></span><span class="price">${money(it.price)}</span></div>
      <p class="desc">${esc(L(it.desc))}</p>
      <div class="tags">${it.soldOut?`<span class="tag tag-sold">${t("soldOut")}</span>`:""}${tagsHtml(it)}</div>
    </div>
    ${it.soldOut?"":`<button class="add" data-quick="${it.id}" aria-label="${t("add")}: ${esc(L(it.name))}">${I.plus}</button>`}
   </article>`;
+}
+function renderStatus(){
+  const st = status();
+  $("#status").className = "status " + (st.open?"is-open":"is-closed");
+  $("#status").innerHTML = `<i></i>${st.open?t("openNow"):t("closedNow")}<em>${esc(st.text)}</em>`;
 }
 function renderStatic(){
   document.documentElement.lang = lang;
@@ -485,9 +546,8 @@ function renderStatic(){
   $("#demoNote").textContent = t("demo");
   $("#vat").textContent = t("vat");
   $("#algNote").textContent = t("allergenNote");
-  const st = status();
-  $("#status").className = "status " + (st.open?"is-open":"is-closed");
-  $("#status").innerHTML = `<i></i>${st.open?t("openNow"):t("closedNow")}<em>${esc(st.text)}</em>`;
+  renderStatus();
+  $("#q").setAttribute("aria-label", t("search"));
   $("#cats").innerHTML = M.categories.map(c=>`<button data-cat="${c.id}">${I[c.icon]||""}<span>${esc(L(c.name))}</span></button>`).join("");
   const fl = ["veg","vegan","spicy","gf","new"].filter(f=>items.some(i=>(i.tags||[]).includes(f)));
   $("#filters").innerHTML = fl.map(f=>`<button class="chip" data-f="${f}" aria-pressed="${filters.has(f)}">${I["t_"+f]||""}${esc(T[lang].tags[f])}</button>`).join("");
@@ -503,10 +563,10 @@ function renderMenu(){
   const bn = M.banner;
   if (bn && !q && !filters.size){
     const bi = bn.item && byId(bn.item);
-    html += `<section class="banner"${bi?` data-id="${bi.id}" role="button" tabindex="0"`:""} style="--h:${bn.hue ?? 30}">
+    html += `<div class="banner"${bi?` data-id="${bi.id}" role="button" tabindex="0" aria-label="${esc(L(bn.title))}"`:""} style="--h:${bn.hue ?? 30}">
       <div class="bn-art" aria-hidden="true">${bn.img?`<img src="${esc(bn.img)}" alt="">`:(I[bn.icon]||I.plate)}</div>
       <div class="bn-text"><span class="bn-eye">${esc(L(bn.eyebrow))}</span><h2 class="bn-title">${esc(L(bn.title))}</h2><p class="bn-desc">${esc(L(bn.text))}</p>
-      ${bi?`<span class="bn-cta">${money(bi.price)}<i>${I.plus}</i></span>`:""}</div></section>`;
+      ${bi?`<span class="bn-cta">${money(bi.price)}<i>${I.plus}</i></span>`:""}</div></div>`;
   }
   const pop = items.filter(i => (i.tags||[]).includes("popular") && !i.soldOut);
   if (!q && !filters.size && pop.length && M.showPopular !== false){
@@ -534,23 +594,31 @@ function renderCartBar(){
 }
 const lineUnit = l => { const it = byId(l.id); return it.price + l.opts.reduce((a,o)=>a+o.price,0); };
 const cartTotal = () => cart.reduce((a,l)=>a+lineUnit(l)*l.qty,0);
-function saveCart(){ store.set("cart", cart); renderCartBar(); }
+function saveCart(){ store.set("cart", cart); store.set("cartTs", Date.now()); renderCartBar(); }
 
 /* ---------- sheet ---------- */
-let lastFocus = null;
+let lastFocus = null, pushed = false, ignorePop = 0;
 function openSheet(html, cls=""){
-  lastFocus = document.activeElement;
+  const sheet = $("#sheet");
+  clearTimeout(tt); $("#toast").classList.remove("show"); $("#toast").hidden = true;
+  if (sheet.hidden) lastFocus = document.activeElement;
   const sb = $("#sheetBody"); sb.onclick = sb.oninput = sb.onchange = null;
   sb.innerHTML = html;
-  $("#sheet").className = "sheet open " + cls;
-  $("#sheet").hidden = false;
+  sheet.className = "sheet open " + cls;
+  sheet.hidden = false;
+  $(".app").inert = true; $(".dock").inert = true;
   document.body.classList.add("locked");
-  setTimeout(()=>{ const f = $("#sheetBody .close") ; f && f.focus(); }, 30);
+  if (!pushed){ try { history.pushState({sheet:1}, ""); pushed = true; } catch(e){} }
+  const c = $("#sheetBody .close"); (c || $("#panel")).focus({preventScroll:true});
 }
-function closeSheet(){
-  $("#sheet").hidden = true; $("#sheet").className = "sheet";
+function closeSheet(fromPop){
+  const sheet = $("#sheet"); if (sheet.hidden) return;
+  sheet.hidden = true; sheet.className = "sheet";
+  $(".app").inert = false; $(".dock").inert = false;
   document.body.classList.remove("locked");
-  lastFocus && lastFocus.focus && lastFocus.focus();
+  if (pushed){ pushed = false; if (!fromPop){ ignorePop++; try { history.back(); } catch(e){ ignorePop--; } } }
+  const f = lastFocus; lastFocus = null;
+  if (f && f.isConnected && typeof f.focus === "function") f.focus({preventScroll:true});
 }
 const closeBtn = () => `<button class="close" aria-label="${t("close")}">${I.x}</button>`;
 
@@ -564,7 +632,7 @@ function openItem(id){
   openSheet(`${closeBtn()}
     ${thumb(it,"sheet-thumb")}
     <div class="sheet-pad">
-      <h2 class="sheet-title">${esc(L(it.name))}</h2>
+      <h2 class="sheet-title" id="sheetTitle">${esc(L(it.name))}</h2>
       <p class="sheet-desc">${esc(L(it.desc))}</p>
       <div class="tags">${tagsHtml(it)}${it.prep?`<span class="tag tag-kcal">${I.clock}${it.prep} ${t("min")}</span>`:""}</div>
       ${(it.allergens||[]).length?`<p class="alg"><b>${t("allergens")}:</b> ${it.allergens.map(a=>esc(T[lang].alg[a])).join(", ")}</p>`:""}
@@ -573,7 +641,7 @@ function openItem(id){
     </div>
     ${it.soldOut?`<div class="sheet-foot"><button class="primary" disabled>${t("soldOut")}</button></div>`:`
     <div class="sheet-foot">
-      <div class="stepper"><button data-step="-1" aria-label="-">${I.minus}</button><output id="qty">1</output><button data-step="1" aria-label="+">${I.plus}</button></div>
+      <div class="stepper"><button type="button" data-step="-1" aria-label="${t("dec")}">${I.minus}</button><output id="qty" aria-live="polite">1</output><button type="button" data-step="1" aria-label="${t("inc")}">${I.plus}</button></div>
       <button class="primary" id="addItem" data-id="${it.id}">${t("addToCart")} · <span id="itemTotal">${money(it.price)}</span></button>
     </div>`}`, "item-sheet");
   const recalc = () => {
@@ -584,7 +652,7 @@ function openItem(id){
   $("#qty") && ($("#qty").value = 1);
   $("#sheetBody").onclick = e => {
     const s = e.target.closest("[data-step]");
-    if (s){ const q = Math.max(1, +$("#qty").value + +s.dataset.step); $("#qty").value = q; recalc(); }
+    if (s){ const q = Math.max(1, Math.min(MAXQ, +$("#qty").value + +s.dataset.step)); $("#qty").value = q; recalc(); }
     if (e.target.closest("#addItem")){
       addToCart(it, selectedOpts(it), +$("#qty").value, $("#itemNote").value.trim());
       closeSheet();
@@ -602,107 +670,107 @@ function selectedOpts(it){
 function addToCart(it, opts, qty, note){
   const key = it.id + "|" + opts.map(o=>o.n.en).join(",") + "|" + note;
   const ex = cart.find(l => l.key === key);
-  if (ex) ex.qty += qty; else cart.push({key, id:it.id, opts, qty, note});
+  if (ex) ex.qty = Math.min(MAXQ, ex.qty + qty); else cart.push({key, id:it.id, opts, qty:Math.min(MAXQ, qty), note});
   saveCart(); toast(t("added"));
   const bar = $("#cartBar"); bar.classList.remove("bump"); void bar.offsetWidth; bar.classList.add("bump");
 }
 
 function orderText(){
   const r = M.restaurant;
-  let s = `*${t("orderTitle")} · ${r.name}*\n`;
-  s += orderType==="dine" ? `${t("orderType")}: ${t("dineIn")} · ${t("table")} ${$("#tableNo")?.value||"-"}\n` : `${t("orderType")}: ${t("takeaway")} · ${$("#custName")?.value||"-"}\n`;
+  let s = `*${th("orderTitle")} · ${r.name}*\n`;
+  s += orderType==="dine" ? `${th("orderType")}: ${th("dineIn")} · ${th("table")} ${(draft.table !== null ? draft.table : curTable()).trim()||"-"}\n` : `${th("orderType")}: ${th("takeaway")} · ${draft.name.trim()||"-"}\n`;
   s += `\n`;
   cart.forEach(l => {
     const it = byId(l.id);
-    s += `${l.qty} × ${L(it.name)} — ${money(lineUnit(l)*l.qty)}\n`;
-    if (l.opts.length) s += `   ${l.opts.map(o=>L(o.n)).join(", ")}\n`;
+    s += `${l.qty} × ${LH(it.name)} — ${moneyPlain(lineUnit(l)*l.qty)}\n`;
+    if (l.opts.length) s += `   ${l.opts.map(o=>LH(o.n)).join(", ")}\n`;
     if (l.note) s += `   ✎ ${l.note}\n`;
   });
-  const n = $("#orderNote")?.value.trim();
-  if (n) s += `\n${t("note")}: ${n}\n`;
-  s += `\n*${t("total")}: ${money(cartTotal())}*`;
+  const n = draft.note.trim();
+  if (n) s += `\n${th("note")}: ${n}\n`;
+  s += `\n*${th("total")}: ${moneyPlain(cartTotal())}*`;
   return s;
 }
 const waUrl = text => `https://wa.me/${M.whatsapp}?text=${encodeURIComponent(text)}`;
 
 function openCart(){
-  if (!cart.length){ openSheet(`${closeBtn()}<div class="sheet-pad"><h2 class="sheet-title">${t("cart")}</h2><p class="empty">${I.bag}${t("empty")}</p></div>`, "cart-sheet"); return; }
-  const tbl = store.get("table","");
+  if (!cart.length){ openSheet(`${closeBtn()}<div class="sheet-pad"><h2 class="sheet-title" id="sheetTitle">${t("cart")}</h2><p class="empty">${I.bag}${t("empty")}</p></div>`, "cart-sheet"); return; }
+  const tbl = curTable();
   openSheet(`${closeBtn()}
     <div class="sheet-pad">
-      <h2 class="sheet-title">${t("cart")}</h2>
+      <h2 class="sheet-title" id="sheetTitle">${t("cart")}</h2>
       <ul class="lines">${cart.map((l,i)=>{ const it = byId(l.id); return `
         <li class="cline">${thumb(it,"cl-thumb")}
           <div class="cl-body"><b>${esc(L(it.name))}</b>${l.opts.length?`<small>${l.opts.map(o=>esc(L(o.n))).join(", ")}</small>`:""}${l.note?`<small class="cl-note">${esc(l.note)}</small>`:""}
           <span class="cl-price">${money(lineUnit(l)*l.qty)}</span></div>
-          <div class="stepper sm"><button data-line="${i}" data-d="-1" aria-label="-">${l.qty===1?I.trash:I.minus}</button><output>${l.qty}</output><button data-line="${i}" data-d="1" aria-label="+">${I.plus}</button></div>
+          <div class="stepper sm"><button type="button" data-line="${i}" data-d="-1" aria-label="${l.qty===1?t("remove"):t("dec")}: ${esc(L(it.name))}">${l.qty===1?I.trash:I.minus}</button><output>${l.qty}</output><button type="button" data-line="${i}" data-d="1" aria-label="${t("inc")}: ${esc(L(it.name))}">${I.plus}</button></div>
         </li>`;}).join("")}</ul>
       <div class="seg" role="radiogroup">
-        <button role="radio" data-type="dine" aria-checked="${orderType==="dine"}">${t("dineIn")}</button>
-        <button role="radio" data-type="take" aria-checked="${orderType==="take"}">${t("takeaway")}</button>
+        <button type="button" role="radio" data-type="dine" aria-checked="${orderType==="dine"}">${t("dineIn")}</button>
+        <button type="button" role="radio" data-type="take" aria-checked="${orderType==="take"}">${t("takeaway")}</button>
       </div>
-      ${orderType==="dine"?`<label class="field"><span>${t("table")}</span><input id="tableNo" inputmode="numeric" maxlength="4" value="${esc(tbl)}" placeholder="12"></label>`
-      :`<label class="field"><span>${t("yourName")}</span><input id="custName" maxlength="40" autocomplete="given-name"></label>`}
-      <label class="field"><span>${t("note")}</span><textarea id="orderNote" rows="2" placeholder="${esc(t("notePh"))}"></textarea></label>
+      ${orderType==="dine"?`<label class="field"><span>${t("table")}</span><input id="tableNo" maxlength="6" autocomplete="off" value="${esc(tbl)}" placeholder="12"></label>`
+      :`<label class="field"><span>${t("yourName")}</span><input id="custName" maxlength="40" autocomplete="given-name" value="${esc(draft.name)}"></label>`}
+      <label class="field"><span>${t("note")}</span><textarea id="orderNote" rows="2" maxlength="300" placeholder="${esc(t("notePh"))}">${esc(draft.note)}</textarea></label>
       <div class="sum"><span>${t("total")}</span><b>${money(cartTotal())}</b></div>
-      <p class="err" id="err" hidden></p>
-      <button class="link-btn" id="copyOrder">${I.copy}${t("copy")}</button>
-      <button class="link-btn danger" id="clearCart">${I.trash}${t("clear")}</button>
+      <p class="err" id="err" role="alert" hidden></p>
+      <button type="button" class="link-btn" id="copyOrder">${I.copy}${t("copy")}</button>
+      <button type="button" class="link-btn danger" id="clearCart">${I.trash}${t("clear")}</button>
     </div>
     <div class="sheet-foot"><a class="primary wa" id="sendWa" href="#" target="_blank" rel="noopener">${I.wa}${t("send")}</a></div>`, "cart-sheet");
   const upd = () => { $("#sendWa").href = waUrl(orderText()); };
   upd();
-  $("#sheetBody").oninput = e => { if (e.target.id==="tableNo") store.set("table", e.target.value); upd(); };
+  $("#sheetBody").oninput = e => { if (e.target.id==="tableNo") saveTable(e.target.value); else if (e.target.id==="custName") draft.name = e.target.value; else if (e.target.id==="orderNote") draft.note = e.target.value; upd(); };
   $("#sheetBody").onclick = e => {
     const b = e.target.closest("[data-line]");
-    if (b){ const l = cart[+b.dataset.line]; l.qty += +b.dataset.d; if (l.qty<=0) cart.splice(+b.dataset.line,1); saveCart(); openCart(); return; }
+    if (b){ const l = cart[+b.dataset.line]; if (!l) return; l.qty = Math.min(MAXQ, l.qty + +b.dataset.d); if (l.qty<=0) cart.splice(+b.dataset.line,1); saveCart(); openCart(); return; }
     const ty = e.target.closest("[data-type]");
     if (ty){ orderType = ty.dataset.type; openCart(); return; }
-    if (e.target.closest("#clearCart")){ cart = []; saveCart(); closeSheet(); return; }
+    if (e.target.closest("#clearCart")){ cart = []; draft.note = ""; saveCart(); closeSheet(); return; }
     if (e.target.closest("#copyOrder")){ copy(orderText()); return; }
     if (e.target.closest("#sendWa")){
       const need = orderType==="dine" ? $("#tableNo") : $("#custName");
-      if (!need.value.trim()){ e.preventDefault(); const er=$("#err"); er.hidden=false; er.textContent = orderType==="dine"?t("tableNeeded"):t("nameNeeded"); need.focus(); return; }
+      if (!need.value.trim()){ e.preventDefault(); const er=$("#err"); er.hidden=false; er.textContent = orderType==="dine"?t("tableNeeded"):t("nameNeeded"); need.setAttribute("aria-invalid","true"); need.focus(); return; }
       upd();
     }
   };
 }
 function openWaiter(){
-  const tbl = store.get("table","");
+  const tbl = curTable();
   openSheet(`${closeBtn()}<div class="sheet-pad">
-    <h2 class="sheet-title">${t("waiter")}</h2>
+    <h2 class="sheet-title" id="sheetTitle">${t("waiter")}</h2>
     <p class="sheet-desc">${t("waiterAsk")}</p>
     <div class="seg three" role="radiogroup">
-      <button role="radio" data-r="rWaiter" aria-checked="true">${I.bell}${t("rWaiter")}</button>
-      <button role="radio" data-r="rBill" aria-checked="false">${I.receipt}${t("rBill")}</button>
-      <button role="radio" data-r="rWater" aria-checked="false">${I.drop}${t("rWater")}</button>
+      <button type="button" role="radio" data-r="rWaiter" aria-checked="true">${I.bell}${t("rWaiter")}</button>
+      <button type="button" role="radio" data-r="rBill" aria-checked="false">${I.receipt}${t("rBill")}</button>
+      <button type="button" role="radio" data-r="rWater" aria-checked="false">${I.drop}${t("rWater")}</button>
     </div>
-    <label class="field"><span>${t("table")}</span><input id="tableNo" inputmode="numeric" maxlength="4" value="${esc(tbl)}" placeholder="12"></label>
-    <p class="err" id="err" hidden></p></div>
+    <label class="field"><span>${t("table")}</span><input id="tableNo" maxlength="6" autocomplete="off" value="${esc(tbl)}" placeholder="12"></label>
+    <p class="err" id="err" role="alert" hidden></p></div>
     <div class="sheet-foot"><a class="primary wa" id="callWa" href="#" target="_blank" rel="noopener">${I.wa}${t("callNow")}</a></div>`, "waiter-sheet");
   let r = "rWaiter";
-  const upd = () => { $("#callWa").href = waUrl(`*${M.restaurant.name}* · ${t("table")} ${$("#tableNo").value||"-"}\n${t(r)} ${t("calledMsg")}`); };
+  const upd = () => { $("#callWa").href = waUrl(`*${M.restaurant.name}* · ${th("table")} ${$("#tableNo").value.trim()||"-"}\n${th(r)} ${th("calledMsg")}`); };
   upd();
-  $("#sheetBody").oninput = e => { store.set("table", e.target.value); upd(); };
+  $("#sheetBody").oninput = e => { saveTable(e.target.value); upd(); };
   $("#sheetBody").onclick = e => {
     const b = e.target.closest("[data-r]");
     if (b){ r = b.dataset.r; $$("[data-r]").forEach(x=>x.setAttribute("aria-checked", x===b)); upd(); }
-    if (e.target.closest("#callWa") && !$("#tableNo").value.trim()){ e.preventDefault(); const er=$("#err"); er.hidden=false; er.textContent=t("tableNeeded"); $("#tableNo").focus(); }
+    if (e.target.closest("#callWa") && !$("#tableNo").value.trim()){ e.preventDefault(); const er=$("#err"); er.hidden=false; er.textContent=t("tableNeeded"); $("#tableNo").setAttribute("aria-invalid","true"); $("#tableNo").focus(); }
   };
 }
 function openInfo(){
-  const r = M.restaurant, d = new Date().getDay();
+  const r = M.restaurant, d = nowIn().d;
   const order = [1,2,3,4,5,6,0];
   openSheet(`${closeBtn()}<div class="sheet-pad">
-    <h2 class="sheet-title">${esc(r.name)}</h2>
+    <h2 class="sheet-title" id="sheetTitle">${esc(r.name)}</h2>
     <p class="sheet-desc">${esc(L(r.tagline))}</p>
     <h3 class="sub">${I.clock}${t("hours")}</h3>
     <ul class="hours">${order.map(i=>`<li${i===d?' class="today"':''}><span>${T[lang].days[i]}</span><span dir="ltr">${r.hours[i]?r.hours[i].join(" – "):"—"}</span></li>`).join("")}</ul>
     <h3 class="sub">${I.pin}${t("address")}</h3><p class="sel">${esc(r.address)}</p>
     ${r.mapUrl?`<a class="link-btn" href="${esc(r.mapUrl)}" target="_blank" rel="noopener">${I.pin}Google Maps</a>`:""}
-    <h3 class="sub">${I.phone}${t("phone")}</h3><p class="sel"><bdi dir="ltr">${esc(r.phone)}</bdi></p>
+    <h3 class="sub">${I.phone}${t("phone")}</h3><p class="sel"><a class="tel" href="tel:${esc(String(r.phone).replace(/[^\d+]/g,""))}"><bdi dir="ltr">${esc(r.phone)}</bdi></a></p>
     <h3 class="sub">${I.wifi}${t("wifi")}</h3>
-    <div class="wifi"><span>${esc(r.wifi.ssid)}</span><span>${t("password")}: <b class="sel">${esc(r.wifi.pass)}</b></span><button class="link-btn" id="copyWifi">${I.copy}${t("copy").split(" ")[0]}</button></div>
+    <div class="wifi"><span>${esc(r.wifi.ssid)}</span><span>${t("password")}: <b class="sel">${esc(r.wifi.pass)}</b></span><button type="button" class="link-btn" id="copyWifi">${I.copy}${t("copyShort")}</button></div>
     ${r.instagram?`<a class="link-btn" href="https://instagram.com/${esc(r.instagram)}" target="_blank" rel="noopener">${I.insta}@${esc(r.instagram)}</a>`:""}
     <h3 class="sub">${t("allergens")}</h3>
     <p class="alg">${Object.values(T[lang].alg).join(" · ")}</p>
@@ -713,7 +781,7 @@ function openInfo(){
 
 /* ---------- utils ---------- */
 let tt;
-function toast(msg){ const el=$("#toast"); el.textContent=msg; el.hidden=false; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>{el.classList.remove("show"); setTimeout(()=>el.hidden=true,250)},1600); }
+function toast(msg){ const el=$("#toast"); const lv=$("#live"); if (lv){ lv.textContent=""; setTimeout(()=>{ lv.textContent=msg; }, 30); } el.textContent=msg; el.hidden=false; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>{el.classList.remove("show"); setTimeout(()=>el.hidden=true,250)},1600); }
 function copy(text){
   const done = () => toast(t("copied"));
   try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
@@ -759,13 +827,15 @@ function bind(){
     if (q){ e.stopPropagation(); const it = byId(q.dataset.quick); if (it.options && it.options.length) openItem(it.id); else addToCart(it, [], 1, ""); return; }
     const c = e.target.closest("[data-id]"); if (c) openItem(c.dataset.id);
   };
-  $("#menu").onkeydown = e => { if ((e.key==="Enter"||e.key===" ") && e.target.matches(".item, .banner")){ e.preventDefault(); openItem(e.target.dataset.id); } };
+  $("#menu").onkeydown = e => { if ((e.key==="Enter"||e.key===" ") && e.target.matches(".banner[role=button]")){ e.preventDefault(); openItem(e.target.dataset.id); } };
   $("#cartBar").onclick = openCart;
   $("#waiterBtn").onclick = openWaiter;
   $("#infoBtn").onclick = openInfo;
   $("#sheet").addEventListener("click", e => { if (e.target.id==="sheetBackdrop" || e.target.closest(".close")) closeSheet(); });
+  setInterval(renderStatus, 60000);
   document.addEventListener("keydown", e => { if (e.key==="Escape" && !$("#sheet").hidden) closeSheet(); });
   let lastW = innerWidth, rt;
+  addEventListener("popstate", () => { if (ignorePop > 0){ ignorePop--; return; } if (!$("#sheet").hidden){ pushed = false; closeSheet(true); } });
   addEventListener("resize", () => { if (innerWidth === lastW) return; lastW = innerWidth; clearTimeout(rt); rt = setTimeout(spy, 150); });
 }
 renderStatic(); renderMenu(); renderCartBar(); bind();

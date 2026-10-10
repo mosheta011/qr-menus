@@ -1,6 +1,6 @@
 # QR Menus
 
-Six ready-to-use digital QR menu designs for restaurants, plus a showcase page for clients.
+Seven ready-to-use digital QR menu designs for restaurants and cafés, plus a showcase page for clients.
 
 **Live showcase:** https://mosheta011.github.io/qr-menus/
 
@@ -12,10 +12,21 @@ Six ready-to-use digital QR menu designs for restaurants, plus a showcase page f
 | Usta Dönerci | Döner · kebab | [/usta/](https://mosheta011.github.io/qr-menus/usta/) |
 | Hanedan | Fine dining restaurant | [/hanedan/](https://mosheta011.github.io/qr-menus/hanedan/) |
 | Balkaymak | Breakfast house · kahvaltı | [/balkaymak/](https://mosheta011.github.io/qr-menus/balkaymak/) |
+| **Maison Noor** (premium) | Luxury café · patisserie · afternoon-tea salon | [/noor/](https://mosheta011.github.io/qr-menus/noor/) |
 
 Every menu includes Turkish / English / Arabic (right-to-left), categories, search and diet filters,
 item options and add-ons, allergens and calories, open/closed status, Wi-Fi and info, a cart,
-WhatsApp ordering and a call-waiter button.
+WhatsApp ordering and a call-waiter button. Orders are always written in the house language (Turkish by
+default, set `orderLang` in `window.MENU` to change it) so staff can read them whatever language the guest used.
+
+**Maison Noor** adds night and day themes, a menu that follows service hours (brunch, high tea), a currency
+converter, favourites, allergen-exclusion filters, table booking (WhatsApp + calendar file), tip choice,
+a daily pick, and works offline / installs to the home screen. In `noor/index.html`, update `rates:{…}`
+(sample exchange rates) before using it for a real client.
+
+**Table QR codes:** add `?table=12` to a menu address (e.g. `…/kor/?table=12`) and the table number is
+pre-filled in the order and waiter call. Hours use the venue's time zone (`restaurant.tz`, default `Europe/Istanbul`),
+not the guest's phone clock. For demos, Noor also accepts `?time=14:30` to preview a service window.
 
 ## Making a menu for a client
 
